@@ -1,5 +1,6 @@
 ---
 import Icon from "./Icon.astro";
+import Pill from "./Pill.astro";
 ---
 
 <!-- <h2>My Strengths</h2> -->
@@ -13,9 +14,8 @@ import Icon from "./Icon.astro";
     />
     <h2>Technology and Software Driven</h2>
     <p>
-      With a strong focus on leveraging cutting-edge technology and software, I
-      strive to develop efficient and impactful solutions that drive business
-      success.
+      I am passionate about leveraging technology and software to develop
+      efficient and impactful solutions to complex, real-world problems.
     </p>
   </div>
   <div class="stack gap-2 lg:gap-4">
@@ -27,9 +27,8 @@ import Icon from "./Icon.astro";
     />
     <h2>Continuous and Adaptive Learner</h2>
     <p>
-      As a continuous and adaptive learner, I thrive on expanding my knowledge
-      and skills in technology while also exploring diverse subjects adjacent to
-      or beyond the realm of tech.
+      I thrive on expanding my knowledge and skills in technology while also
+      exploring diverse subjects adjacent to or beyond the realm of tech.
     </p>
   </div>
   <div class="stack gap-2 lg:gap-4">
@@ -46,11 +45,104 @@ import Icon from "./Icon.astro";
       deliver results.
     </p>
   </div>
-  <!-- Center view skills button div -->
-  <div class="flex justify-center">
-    <a href="/technical-skills" class="btn"
-      >View Full List of Technical Skills</a
-    >
+</section>
+<h2>Technical Skills</h2>
+<section class="box skills">
+  <!-- Programming Languages -->
+  <div class="skills-category" style="text-align: center;">
+    <h3>Languages</h3>
+    <ul class="skills-list">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <Pill>Python</Pill>
+        <Pill>Go</Pill>
+        <Pill>Java</Pill>
+        <Pill>JavaScript</Pill>
+        <Pill>SQL</Pill>
+        <Pill>PHP</Pill>
+        <Pill>HTML</Pill>
+        <Pill>CSS</Pill>
+        <Pill>Markdown</Pill>
+      </div>
+    </ul>
+  </div>
+
+  <!-- Back-End Technologies -->
+  <div class="skills-category" style="text-align: center;">
+    <h3>Back-End</h3>
+    <ul class="skills-list">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <Pill>Django</Pill>
+        <Pill>FastAPI</Pill>
+        <Pill>Flask</Pill>
+        <Pill>Express.js</Pill>
+        <Pill>PostgreSQL</Pill>
+        <Pill>MySQL</Pill>
+        <Pill>Spring</Pill>
+      </div>
+    </ul>
+  </div>
+
+  <!-- Front-End Technologies -->
+  <div class="skills-category" style="text-align: center;">
+    <h3>Front-End</h3>
+    <ul class="skills-list">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <Pill>React</Pill>
+        <Pill>Lit</Pill>
+        <Pill>Bootstrap</Pill>
+        <Pill>Tailwind CSS</Pill>
+        <Pill>Chart.js</Pill>
+        <Pill>Vaadin</Pill>
+        <Pill>Svelte</Pill>
+      </div>
+    </ul>
+  </div>
+
+  <!-- Python Libraries -->
+  <div class="skills-category" style="text-align: center;">
+    <h3>AI and Big Data</h3>
+    <ul class="skills-list">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <Pill>PyTorch</Pill>
+        <Pill>Pandas</Pill>
+        <Pill>TensorFlow</Pill>
+        <Pill>Seaborn</Pill>
+        <Pill>Numpy</Pill>
+        <Pill>NLTK</Pill>
+        <Pill>Snowflake</Pill>
+      </div>
+    </ul>
+  </div>
+
+  <!-- Software Development -->
+  <div class="skills-category" style="text-align: center;">
+    <h3>Cloud and Agile</h3>
+    <ul class="skills-list">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <Pill>AWS</Pill>
+        <Pill>GCP</Pill>
+        <Pill>Git</Pill>
+        <Pill>Jira</Pill>
+        <Pill>Jenkins</Pill>
+        <Pill>Confluence</Pill>
+        <Pill>REST APIs</Pill>
+        <Pill>CI/CD</Pill>
+        <Pill>Locust</Pill>
+      </div>
+    </ul>
+  </div>
+
+  <!-- Finance Skills -->
+  <div class="skills-category" style="text-align: center;">
+    <h3>Finance Skills</h3>
+    <ul class="skills-list">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <Pill>Excel</Pill>
+        <Pill>Financial Modeling</Pill>
+        <Pill>Quantitative Investing</Pill>
+        <Pill>Financial Statement Analysis</Pill>
+      </div>
+    </ul>
   </div>
 </section>
 
