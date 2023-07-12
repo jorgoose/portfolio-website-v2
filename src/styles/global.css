@@ -130,12 +130,30 @@
     0px 4px 9px rgba(255, 255, 255, 0.12);
 }
 
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--gray-999);
   color: var(--gray-200);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 a {
