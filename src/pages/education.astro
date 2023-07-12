@@ -1,0 +1,345 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Grid from "../components/Grid.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout
+  title="Projects | Logan Jorgensen"
+  description="Learn about Logan Jorgensen's most recent projects"
+>
+  <div class="stack gap-20">
+    <main class="wrapper stack gap-8 justify-content-center">
+      <Hero
+        title="Formal Education"
+        tagline="See my most recent projects below to get an idea of my past experience."
+        align="start"
+      />
+      <!-- List of previous employers with name of role and associated dates. They should each have a picture for a logo and centered on the page -->
+      <div class="stack gap-8 justify-content-center">
+        <div class="stack gap-4 justify-content-center">
+          <div class="card gap-2 justify-content-center">
+            <h3>Iowa State University</h3>
+            <p>GPA: 3.8</p>
+            <p>BS, Computer Science</p>
+            <p>Minor: Data Science</p>
+            <p>Ames, IA</p>
+          </div>
+          <!-- Horizontal Line to Seperate Job -->
+          <hr class="line" />
+          <div class="card gap-2 justify-content-center">
+            <h3>Nihon University</h3>
+            <p>Software Engineering Intern</p>
+            <p>May 2023 - October 2022</p>
+          </div>
+          <hr class="line" />
+          <div class="card gap-2 justify-content-center">
+            <h3>Capital One</h3>
+            <p>Software Engineering Intern</p>
+            <p>June 2022 - August 2022</p>
+          </div>
+          <hr class="line" />
+          <div class="card gap-2 justify-content-center">
+            <h3>Iowa State University</h3>
+            <p>IT Support Specialist</p>
+            <p>November 2021 - June 2022</p>
+          </div>
+          <hr class="line" />
+          <div class="card gap-2 justify-content-center">
+            <h3>DoorDash</h3>
+            <p>Delivery Driver</p>
+            <p>February 2021 - November 2021</p>
+          </div>
+          <!-- Render Non-Software Projects, Hard Coded. Do not use the component types (PortfolioPreview). Just use HTML and CSS. -->
+          <!-- Each Non-Software Project will be rendered in the grid -->
+          <Hero title="Involvement" align="start" />
+          <Grid variant="offset">
+            <li>
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://media.licdn.com/dms/image/D5622AQEFwwa82hidrw/feedshare-shrink_2048_1536/0/1682280226200?e=1692230400&v=beta&t=MSZPZFvn8oJgG2vH1fGixljseFAQqF3wDoGW6Th8ugQ"
+                    alt="Other Project 1"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">Iowa State Investment Group</h3>
+                  <!-- Similar to tag styling in the div below -->
+                  <div class="card__tags">
+                    <span class="card__tag"
+                      >Technology Sector Leader, Previous Technology Sector
+                      Analyst</span
+                    >
+                    <p class="card__description">
+                      This is a description of the project.
+                    </p>
+                    <a href="#" class="card__link">View Project</a>
+                  </div>
+                </div>
+              </div>
+              <li>
+                <div class="card">
+                  <div class="card__image">
+                    <img
+                      src="https://developers.google.com/community/gdsc/images/gdsc-social-share.png"
+                      alt="Other Project 2"
+                    />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">Google Developer Student Clubs</h3>
+                    <div class="card__tags">
+                      <span class="card__tag">Member</span>
+                      <p class="card__description">
+                        This is a description of the project.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card">
+                  <div class="card__image">
+                    <img
+                      src="https://www.stuorg.iastate.edu/uploads/org-site/ckuploads/2120/Logo_WSC_ISU_Red%20%286%29.png"
+                      alt="Other Project 2"
+                    />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">Iowa State Wall Street Club</h3>
+                    <div class="card__tags">
+                      <span class="card__tag">Member</span>
+                      <p class="card__description">
+                        This is a description of the project.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card">
+                  <div class="card__image">
+                    <img
+                      src="https://cse.cs.iastate.edu/files/styles/banner/public/2021-02/CSE_Club.jpg?itok=KZTnhjK8"
+                      alt="Other Project 2"
+                    />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">Iowa State CSE Club</h3>
+                    <div class="card__tags">
+                      <span class="card__tag">Member</span>
+                      <p class="card__description">
+                        This is a description of the project.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </li>
+          </Grid>
+
+          <Hero title="Competitions" align="start" />
+          <Grid variant="offset">
+            <li>
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://source.colostate.edu/wp-content/uploads/2017/04/Frank-Smith.jpg"
+                    alt="Other Project 1"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">
+                    Rocky Mountain Investment Challenge
+                  </h3>
+                  <!-- Similar to tag styling in the div below -->
+                  <div class="card__tags">
+                    <span class="card__tag">3rd Place</span>
+                    <p class="card__description">
+                      This is a description of the project.
+                    </p>
+                    <a href="#" class="card__link">View Project</a>
+                  </div>
+                </div>
+              </div>
+              <li>
+                <div class="card">
+                  <div class="card__image">
+                    <img
+                      src="/assets/projects/non-software/prosperity.jpg"
+                      alt="Other Project 2"
+                    />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      IMC Trading Algorithmic Trading Challenge
+                    </h3>
+                    <div class="card__tags">
+                      <span class="card__tag">Participant</span>
+                      <p class="card__description">
+                        This is a description of the project.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card">
+                  <div class="card__image">
+                    <img
+                      src="https://higherlogicdownload.s3.amazonaws.com/CFAI/e2a1529c-2ed1-405a-8785-3ebb089a06e1/UploadedImages/Team_2.jpg"
+                      alt="Other Project 3"
+                    />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">CFA Research Challenge (Iowa)</h3>
+                    <div class="card__tags">
+                      <span class="card__tag">1st Place</span>
+                      <p class="card__description">
+                        This is a description of the project.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card">
+                  <div class="card__image">
+                    <img
+                      src="https://logos-world.net/wp-content/uploads/2022/01/Iowa-State-University-Symbol.png"
+                      alt="Other Project 2"
+                    />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      Iowa State University CS Hackathon
+                    </h3>
+                    <div class="card__tags">
+                      <span class="card__tag">2nd Place</span>
+                      <p class="card__description">
+                        This is a description of the project.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card">
+                  <div class="card__image">
+                    <img
+                      src="https://logos-world.net/wp-content/uploads/2022/01/Iowa-State-University-Symbol.png"
+                      alt="Other Project 2"
+                    />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      Iowa State University CSE Club Programming Contest
+                    </h3>
+                    <div class="card__tags">
+                      <span class="card__tag">3rd Place</span>
+                      <p class="card__description">
+                        This is a description of the project.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card">
+                  <div class="card__image">
+                    <img
+                      src="https://content.cdntwrk.com/files/aHViPTExOTYyMCZjbWQ9aXRlbWVkaXRvcmltYWdlJmZpbGVuYW1lPWl0ZW1lZGl0b3JpbWFnZV81ZmMxNDkxNmU3YjA1LnBuZyZ2ZXJzaW9uPTAwMDAmc2lnPTBmZTM4MGIxMGVjNTEwNzNmOGU5ZTE4YTVmNWQyNDI2"
+                      alt="Other Project 2"
+                    />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">
+                      Capital One SWE Summit Hackathon
+                    </h3>
+                    <div class="card__tags">
+                      <span class="card__tag">2nd Place</span>
+                      <p class="card__description">
+                        This is a description of the project.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </li>
+          </Grid>
+          <ContactCTA />
+        </div>
+      </div>
+
+      <style>
+        /* Logo styling for each company in a card */
+        .logo {
+          width: 25%;
+          height: 100%;
+          object-fit: contain;
+          border-radius: 0.25rem;
+        }
+
+        /* Keep same logo height but stretch the image slightly horizontally. It should occupy the same space overall, but the image should be stretched. */
+        .logo--stretch {
+          width: 20rem;
+          height: 5rem;
+          object-fit: stretch;
+        }
+
+        .line {
+          width: 100%;
+          height: 1px;
+          background-color: var(--color-gray-300);
+        }
+
+        /* Style for card__tag that makes it like a post tag or button type shape */
+        .card__tag {
+          display: inline-block;
+          border-radius: 0.25rem;
+          background-color: var(--color-primary);
+          color: var(--color-white);
+          font-size: 0.75rem;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        /* Style for card, card__image, and card__content */
+        /* .card {
+          display: flex;
+          flex-direction: column;
+          border-radius: 0.5rem;
+          overflow: hidden;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        } */
+
+        /* card but with padding for formatting */
+        .card {
+          display: flex;
+          flex-direction: column;
+          border-radius: 0.5rem;
+          overflow: hidden;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          padding: 1rem;
+        }
+
+        .card__image {
+          position: relative;
+          padding-top: 56.25%;
+          overflow: hidden;
+          border-radius: 0.5rem;
+        }
+
+        .card__image img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      </style>
+    </main>
+  </div>
+</BaseLayout>
