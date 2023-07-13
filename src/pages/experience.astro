@@ -23,27 +23,19 @@ import Hero from "../components/Hero.astro";
         <div class="stack gap-4 justify-content-center">
           <div class="card gap-2 justify-content-center">
             <h3>Capital One</h3>
-            <p class="job-detail" style="font-weight: bold;">
-              Software Engineer Intern
-            </p>
+            <p class="job-detail">Software Engineer Intern</p>
             <p class="job-detail">June 2023 - Present</p>
             <p class="job-detail">New York, NY</p>
-            <span class="card__tag" style="margin-top: 2rem;"
-              >Python · AWS · Jenkins · Locust</span
-            >
+            <span class="card__tag">Python · AWS · Jenkins · Locust</span>
           </div>
           <!-- Horizontal Line to Seperate Job -->
           <hr class="line" />
           <div class="card gap-2 justify-content-center">
             <h3>Setwise Technology</h3>
-            <p class="job-detail" style="font-weight: bold;">
-              Software Engineer Intern
-            </p>
+            <p class="job-detail">Software Engineer Intern</p>
             <p class="job-detail">May 2023 - October 2022</p>
             <p class="job-detail">Ames, IA</p>
-            <span class="card__tag" style="margin-top: 2rem;"
-              >PHP · Laravel · Vue.js</span
-            >
+            <span class="card__tag">PHP · Laravel · Vue.js</span>
           </div>
           <hr class="line" />
           <div class="card gap-2 justify-content-center">
@@ -53,7 +45,7 @@ import Hero from "../components/Hero.astro";
             </p>
             <p class="job-detail">June 2022 - August 2022</p>
             <p class="job-detail">McLean, VA</p>
-            <span class="card__tag" style="margin-top: 2rem;"
+            <span class="card__tag"
               >Python · Go · Git · PostgreSQL · FastAPI · Lit</span
             >
           </div>
@@ -65,7 +57,7 @@ import Hero from "../components/Hero.astro";
             </p>
             <p class="job-detail">November 2021 - June 2022</p>
             <p class="job-detail">Ames, IA</p>
-            <span class="card__tag" style="margin-top: 2rem;"
+            <span class="card__tag"
               >Troubleshooting · Technical Communication · Customer Service</span
             >
           </div>
@@ -75,52 +67,106 @@ import Hero from "../components/Hero.astro";
             <p class="job-detail" style="font-weight: bold;">Delivery Driver</p>
             <p class="job-detail">February 2021 - November 2021</p>
             <p class="job-detail">Ames, IA</p>
-            <span class="card__tag" style="margin-top: 2rem;"
+            <span class="card__tag"
               >Problem Solving · Time Management · Customer Service
             </span>
-            <hr class="line" />
-            <!-- Render Non-Software Projects, Hard Coded. Do not use the component types (PortfolioPreview). Just use HTML and CSS. -->
-            <!-- Each Non-Software Project will be rendered in the grid -->
-            <Hero title="Involvement" align="start" />
-            <Grid variant="offset">
-              <li>
-                <div class="card">
-                  <div class="card__image">
-                    <img
-                      src="https://media.licdn.com/dms/image/D5622AQEFwwa82hidrw/feedshare-shrink_2048_1536/0/1682280226200?e=1692230400&v=beta&t=MSZPZFvn8oJgG2vH1fGixljseFAQqF3wDoGW6Th8ugQ"
-                      alt="Other Project 1"
-                    />
+          </div>
+          <hr
+            class="line"
+            style="margin-top: 1rem; margin-top: 1rem; margin-bottom: 1rem;"
+          />
+          <!-- Render Non-Software Projects, Hard Coded. Do not use the component types (PortfolioPreview). Just use HTML and CSS. -->
+          <!-- Each Non-Software Project will be rendered in the grid -->
+          <Hero title="Involvement" align="start" />
+          <Grid>
+            <li>
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://media.licdn.com/dms/image/D5622AQEFwwa82hidrw/feedshare-shrink_2048_1536/0/1682280226200?e=1692230400&v=beta&t=MSZPZFvn8oJgG2vH1fGixljseFAQqF3wDoGW6Th8ugQ"
+                    alt="Other Project 1"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3
+                    class="card__title"
+                    style="margin-top: 2rem; margin-bottom: 1rem;"
+                  >
+                    Iowa State Investment Group
+                  </h3>
+                  <!-- Similar to tag styling in the div below -->
+                  <div
+                    class="card__tags"
+                    style="margin-top: 1rem; margin-bottom: 1rem;"
+                  >
+                    <p
+                      class="job-detail"
+                      style="font-weight: bold; margin-bottom: 1rem;"
+                    >
+                      Technology Sector Leader, Previous Technology Sector
+                      Analyst
+                    </p>
+                    <p class="card__description">
+                      <ul>
+                        <li>
+                          Coordinated team of analysts to cover technology
+                          companies with total AUM of over $40,000 across three
+                          consecutive semesters
+                        </li>
+                        <li>
+                          Conducted financial analysis, researched and
+                          presentations regarding technology companies including
+                          Sony, Applied Materials, Intel, Microsoft, Qualcomm,
+                          and Verizon, as well as macroeconomic trends in the
+                          technology sector
+                        </li>
+                      </ul>
+                    </p>
                   </div>
-                  <div class="card__content">
-                    <h3 class="card__title">Iowa State Investment Group</h3>
-                    <!-- Similar to tag styling in the div below -->
-                    <div class="card__tags">
-                      <p class="job-detail" style="font-weight: bold;">
-                        Technology Sector Leader, Previous Technology Sector
-                        Analyst
-                      </p>
-                      <p class="card__description">
-                        <ul>
-                          <li>
-                            Coordinated team of analysts to cover technology
-                            companies with total AUM of over $40,000 across
-                            three consecutive semesters
-                          </li>
-                          <li>
-                            Conducted financial analysis, researched and
-                            presentations regarding technology companies
-                            including Sony, Applied Materials, Intel, Microsoft,
-                            Qualcomm, and Verizon, as well as macroeconomic
-                            trends in the technology sector
-                          </li>
-                        </ul>
-                      </p>
+                  <!-- Button that links to group website -->
+                  <div style="text-align: center">
+                    <button class="card__button">
+                      <a
+                        class="learn__more"
+                        href="https://www.isuig.com/"
+                        target="_blank"
+                        rel="noopener noreferrer">Learn More</a
+                      >
+                    </button>
+                  </div>
+                </div>
+                <li>
+                  <div class="card">
+                    <div class="card__image">
+                      <img
+                        src="https://developers.google.com/community/gdsc/images/gdsc-social-share.png"
+                        alt="Other Project 2"
+                      />
+                    </div>
+                    <div class="card__content">
+                      <h3
+                        class="card__title"
+                        style="margin-top: 2rem; margin-bottom: 1rem;"
+                      >
+                        Google Developer Student Clubs
+                      </h3>
+                      <div class="card__tags">
+                        <p
+                          class="job-detail"
+                          style="font-weight: bold; margin-bottom: 1rem;"
+                        >
+                          Member
+                        </p>
+                        <p class="card__description">
+                          This is a description of the project.
+                        </p>
+                      </div>
                     </div>
                     <!-- Button that links to group website -->
                     <div style="text-align: center">
                       <button class="card__button">
                         <a
-                          style="color: white; text-decoration: none;"
+                          class="learn__more"
                           href="https://www.isuig.com/"
                           target="_blank"
                           rel="noopener noreferrer">Learn More</a
@@ -128,241 +174,334 @@ import Hero from "../components/Hero.astro";
                       </button>
                     </div>
                   </div>
-                  <li>
-                    <div class="card">
-                      <div class="card__image">
-                        <img
-                          src="https://developers.google.com/community/gdsc/images/gdsc-social-share.png"
-                          alt="Other Project 2"
-                        />
-                      </div>
-                      <div class="card__content">
-                        <h3 class="card__title">
-                          Google Developer Student Clubs
-                        </h3>
-                        <div class="card__tags">
-                          <p class="job-detail" style="font-weight: bold;">
-                            Member
-                          </p>
-                          <p class="card__description">
-                            This is a description of the project.
-                          </p>
-                        </div>
-                      </div>
-                      <!-- Button that links to group website -->
-                      <div style="text-align: center">
-                        <button class="card__button">
-                          <a
-                            style="color: white; text-decoration: none;"
-                            href="https://www.isuig.com/"
-                            target="_blank"
-                            rel="noopener noreferrer">Learn More</a
-                          >
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="card">
-                      <div class="card__image">
-                        <img
-                          src="https://www.stuorg.iastate.edu/uploads/org-site/ckuploads/2120/Logo_WSC_ISU_Red%20%286%29.png"
-                          alt="Other Project 2"
-                        />
-                      </div>
-                      <div class="card__content">
-                        <h3 class="card__title">Iowa State Wall Street Club</h3>
-                        <div class="card__tags">
-                          <p class="job-detail" style="font-weight: bold;">
-                            Member
-                          </p>
-                          <p class="card__description">
-                            This is a description of the project.
-                          </p>
-                        </div>
-                      </div>
-                      <!-- Button that links to group website -->
-                      <div style="text-align: center">
-                        <button class="card__button">
-                          <a
-                            style="color: white; text-decoration: none;"
-                            href="https://www.isuig.com/"
-                            target="_blank"
-                            rel="noopener noreferrer">Learn More</a
-                          >
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="card">
-                      <div class="card__image">
-                        <img
-                          src="https://cse.cs.iastate.edu/files/styles/banner/public/2021-02/CSE_Club.jpg?itok=KZTnhjK8"
-                          alt="Other Project 2"
-                        />
-                      </div>
-                      <div class="card__content">
-                        <h3 class="card__title">Iowa State CSE Club</h3>
-                        <div class="card__tags">
-                          <p class="job-detail" style="font-weight: bold;">
-                            Member
-                          </p>
-                          <p class="card__description">
-                            This is a description of the project.
-                          </p>
-                        </div>
-                      </div>
-                      <!-- Button that links to group website -->
-                      <div style="text-align: center">
-                        <button class="card__button">
-                          <a
-                            style="color: white; text-decoration: none;"
-                            href="https://www.isuig.com/"
-                            target="_blank"
-                            rel="noopener noreferrer">Learn More</a
-                          >
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                </div>
-              </li>
-
-              <Hero title="Competitions" align="start" />
-              <Grid variant="offset">
+                </li>
                 <li>
                   <div class="card">
                     <div class="card__image">
                       <img
-                        src="https://source.colostate.edu/wp-content/uploads/2017/04/Frank-Smith.jpg"
-                        alt="Other Project 1"
+                        src="https://www.stuorg.iastate.edu/uploads/org-site/ckuploads/2120/Logo_WSC_ISU_Red%20%286%29.png"
+                        alt="Other Project 2"
                       />
                     </div>
                     <div class="card__content">
-                      <h3 class="card__title">
-                        Rocky Mountain Investment Challenge
+                      <h3
+                        class="card__title"
+                        style="margin-top: 2rem; margin-bottom: 1rem;"
+                      >
+                        Iowa State Wall Street Club
                       </h3>
-                      <!-- Similar to tag styling in the div below -->
                       <div class="card__tags">
-                        <span class="card__tag">3rd Place</span>
+                        <p
+                          class="job-detail"
+                          style="font-weight: bold; margin-bottom: 1rem;"
+                        >
+                          Member
+                        </p>
                         <p class="card__description">
                           This is a description of the project.
                         </p>
-                        <a href="#" class="card__link">View Project</a>
                       </div>
+                    </div>
+                    <!-- Button that links to group website -->
+                    <div style="text-align: center">
+                      <button class="card__button">
+                        <a
+                          class="learn__more"
+                          href="https://www.isuig.com/"
+                          target="_blank"
+                          rel="noopener noreferrer">Learn More</a
+                        >
+                      </button>
                     </div>
                   </div>
-                  <li>
-                    <div class="card">
-                      <div class="card__image">
-                        <img
-                          src="/assets/projects/non-software/prosperity.jpg"
-                          alt="Other Project 2"
-                        />
-                      </div>
-                      <div class="card__content">
-                        <h3 class="card__title">
-                          IMC Trading Algorithmic Trading Challenge
-                        </h3>
-                        <div class="card__tags">
-                          <span class="card__tag">Participant</span>
-                          <p class="card__description">
-                            This is a description of the project.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="card">
-                      <div class="card__image">
-                        <img
-                          src="https://higherlogicdownload.s3.amazonaws.com/CFAI/e2a1529c-2ed1-405a-8785-3ebb089a06e1/UploadedImages/Team_2.jpg"
-                          alt="Other Project 3"
-                        />
-                      </div>
-                      <div class="card__content">
-                        <h3 class="card__title">
-                          CFA Research Challenge (Iowa)
-                        </h3>
-                        <div class="card__tags">
-                          <span class="card__tag">1st Place</span>
-                          <p class="card__description">
-                            This is a description of the project.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="card">
-                      <div class="card__image">
-                        <img
-                          src="https://logos-world.net/wp-content/uploads/2022/01/Iowa-State-University-Symbol.png"
-                          alt="Other Project 2"
-                        />
-                      </div>
-                      <div class="card__content">
-                        <h3 class="card__title">
-                          Iowa State University CS Hackathon
-                        </h3>
-                        <div class="card__tags">
-                          <span class="card__tag">2nd Place</span>
-                          <p class="card__description">
-                            This is a description of the project.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="card">
-                      <div class="card__image">
-                        <img
-                          src="https://logos-world.net/wp-content/uploads/2022/01/Iowa-State-University-Symbol.png"
-                          alt="Other Project 2"
-                        />
-                      </div>
-                      <div class="card__content">
-                        <h3 class="card__title">
-                          Iowa State University CSE Club Programming Contest
-                        </h3>
-                        <div class="card__tags">
-                          <span class="card__tag">3rd Place</span>
-                          <p class="card__description">
-                            This is a description of the project.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="card">
-                      <div class="card__image">
-                        <img
-                          src="https://content.cdntwrk.com/files/aHViPTExOTYyMCZjbWQ9aXRlbWVkaXRvcmltYWdlJmZpbGVuYW1lPWl0ZW1lZGl0b3JpbWFnZV81ZmMxNDkxNmU3YjA1LnBuZyZ2ZXJzaW9uPTAwMDAmc2lnPTBmZTM4MGIxMGVjNTEwNzNmOGU5ZTE4YTVmNWQyNDI2"
-                          alt="Other Project 2"
-                        />
-                      </div>
-                      <div class="card__content">
-                        <h3 class="card__title">
-                          Capital One SWE Summit Hackathon
-                        </h3>
-                        <div class="card__tags">
-                          <span class="card__tag">2nd Place</span>
-                          <p class="card__description">
-                            This is a description of the project.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
                 </li>
-              </Grid>
-              <ContactCTA />
-            </Grid>
-          </div>
+                <li>
+                  <div class="card">
+                    <div class="card__image">
+                      <img
+                        src="https://cse.cs.iastate.edu/files/styles/banner/public/2021-02/CSE_Club.jpg?itok=KZTnhjK8"
+                        alt="Other Project 2"
+                      />
+                    </div>
+                    <div class="card__content">
+                      <h3
+                        class="card__title"
+                        style="margin-top: 2rem; margin-bottom: 1rem;"
+                      >
+                        Iowa State CSE Club
+                      </h3>
+                      <div class="card__tags">
+                        <p
+                          class="job-detail"
+                          style="font-weight: bold; margin-bottom: 1rem;"
+                        >
+                          Member
+                        </p>
+                        <p class="card__description">
+                          This is a description of the project.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Button that links to group website -->
+                    <div style="text-align: center">
+                      <button class="card__button">
+                        <a
+                          class="learn__more"
+                          href="https://www.isuig.com/"
+                          target="_blank"
+                          rel="noopener noreferrer">Learn More</a
+                        >
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </li>
+          </Grid>
+          <Hero title="Competitions" align="start" />
+          <Grid variant="offset">
+            <li>
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://source.colostate.edu/wp-content/uploads/2017/04/Frank-Smith.jpg"
+                    alt="Other Project 2"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3
+                    class="card__title"
+                    style="margin-top: 2rem; margin-bottom: 1rem;"
+                  >
+                    Rocky Mountain Investment Challenge
+                  </h3>
+                  <div class="card__tags">
+                    <p
+                      class="job-detail"
+                      style="font-weight: bold; margin-bottom: 1rem;"
+                    >
+                      3rd Place
+                    </p>
+                    <p class="card__description">
+                      This is a description of the project.
+                    </p>
+                  </div>
+                </div>
+                <!-- Button that links to group website -->
+                <div style="text-align: center">
+                  <button class="card__button">
+                    <a
+                      class="learn__more"
+                      href="https://www.isuig.com/"
+                      target="_blank"
+                      rel="noopener noreferrer">Learn More</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="/assets/projects/non-software/prosperity.jpg"
+                    alt="Other Project 2"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3
+                    class="card__title"
+                    style="margin-top: 2rem; margin-bottom: 1rem;"
+                  >
+                    IMC Trading Trading Competition
+                  </h3>
+                  <div class="card__tags">
+                    <p
+                      class="job-detail"
+                      style="font-weight: bold; margin-bottom: 1rem;"
+                    >
+                      Participant
+                    </p>
+                    <p class="card__description">
+                      This is a description of the project.
+                    </p>
+                  </div>
+                </div>
+                <!-- Button that links to group website -->
+                <div style="text-align: center">
+                  <button class="card__button">
+                    <a
+                      class="learn__more"
+                      href="https://www.isuig.com/"
+                      target="_blank"
+                      rel="noopener noreferrer">Learn More</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://higherlogicdownload.s3.amazonaws.com/CFAI/e2a1529c-2ed1-405a-8785-3ebb089a06e1/UploadedImages/Team_2.jpg"
+                    alt="Other Project 2"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3
+                    class="card__title"
+                    style="margin-top: 2rem; margin-bottom: 1rem;"
+                  >
+                    CFA Research Challenge (Iowa)
+                  </h3>
+                  <div class="card__tags">
+                    <p
+                      class="job-detail"
+                      style="font-weight: bold; margin-bottom: 1rem;"
+                    >
+                      1st Place
+                    </p>
+                    <p class="card__description">
+                      This is a description of the project.
+                    </p>
+                  </div>
+                </div>
+                <!-- Button that links to group website -->
+                <div style="text-align: center">
+                  <button class="card__button">
+                    <a
+                      class="learn__more"
+                      href="https://www.isuig.com/"
+                      target="_blank"
+                      rel="noopener noreferrer">Learn More</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://logos-world.net/wp-content/uploads/2022/01/Iowa-State-University-Symbol.png"
+                    alt="Other Project 2"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3
+                    class="card__title"
+                    style="margin-top: 2rem; margin-bottom: 1rem;"
+                  >
+                    Iowa State University Hackathon
+                  </h3>
+                  <div class="card__tags">
+                    <p
+                      class="job-detail"
+                      style="font-weight: bold; margin-bottom: 1rem;"
+                    >
+                      2nd Place
+                    </p>
+                    <p class="card__description">
+                      This is a description of the project.
+                    </p>
+                  </div>
+                </div>
+                <!-- Button that links to group website -->
+                <div style="text-align: center">
+                  <button class="card__button">
+                    <a
+                      class="learn__more"
+                      href="https://www.isuig.com/"
+                      target="_blank"
+                      rel="noopener noreferrer">Learn More</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://logos-world.net/wp-content/uploads/2022/01/Iowa-State-University-Symbol.png"
+                    alt="Other Project 2"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3
+                    class="card__title"
+                    style="margin-top: 2rem; margin-bottom: 1rem;"
+                  >
+                    Iowa State University CSE Club Programmning Contest
+                  </h3>
+                  <div class="card__tags">
+                    <p
+                      class="job-detail"
+                      style="font-weight: bold; margin-bottom: 1rem;"
+                    >
+                      3rd Place
+                    </p>
+                    <p class="card__description">
+                      This is a description of the project.
+                    </p>
+                  </div>
+                </div>
+                <!-- Button that links to group website -->
+                <div style="text-align: center">
+                  <button class="card__button">
+                    <a
+                      style="color: white; text-decoration: none;"
+                      href="https://www.isuig.com/"
+                      target="_blank"
+                      rel="noopener noreferrer">Learn More</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://content.cdntwrk.com/files/aHViPTExOTYyMCZjbWQ9aXRlbWVkaXRvcmltYWdlJmZpbGVuYW1lPWl0ZW1lZGl0b3JpbWFnZV81ZmMxNDkxNmU3YjA1LnBuZyZ2ZXJzaW9uPTAwMDAmc2lnPTBmZTM4MGIxMGVjNTEwNzNmOGU5ZTE4YTVmNWQyNDI2"
+                    alt="Other Project 2"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3
+                    class="card__title"
+                    style="margin-top: 2rem; margin-bottom: 1rem;"
+                  >
+                    Capital One SWE Summit Hackathon
+                  </h3>
+                  <div class="card__tags">
+                    <p
+                      class="job-detail"
+                      style="font-weight: bold; margin-bottom: 1rem;"
+                    >
+                      2nd Place
+                    </p>
+                    <p class="card__description">
+                      This is a description of the project.
+                    </p>
+                  </div>
+                </div>
+                <!-- Button that links to group website -->
+                <div style="text-align: center">
+                  <button class="card__button">
+                    <a
+                      class="learn__more"
+                      href="https://www.isuig.com/"
+                      target="_blank"
+                      rel="noopener noreferrer">Learn More</a
+                    >
+                  </button>
+                </div>
+              </div>
+            </li>
+          </Grid>
+          <ContactCTA />
 
           <style>
             /* Logo styling for each company in a card */
@@ -374,8 +513,7 @@ import Hero from "../components/Hero.astro";
             }
 
             .job-detail {
-              margin-top: 0px;
-              margin-bottom: 0px;
+              margin-bottom: 1rem;
               display: flex;
               flex-direction: column;
               justify-content: space-between;
@@ -450,6 +588,16 @@ import Hero from "../components/Hero.astro";
               color: var(--color-white);
               font-size: 0.75rem;
               font-weight: 600;
+              text-decoration: none;
+            }
+
+            .card__title {
+              margin-top: 1rem;
+              margin-bottom: 2rem;
+            }
+
+            .learn__more {
+              color: var(--color-primary);
               text-decoration: none;
             }
           </style>
