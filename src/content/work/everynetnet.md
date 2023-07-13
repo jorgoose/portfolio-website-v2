@@ -27,10 +27,10 @@ The mission of EveryNetNet is to provide a platform where investors can discover
 
 ### Long-Term Vision
 
-My vision is to create a community of knowledgeable investors who understand the principles of net-net investing and can identify high-potential opportunities in the market. We aim to be the go-to platform for net-net investing, offering comprehensive data, analysis tools, and educational resources.
+My vision is to create a community of knowledgeable investors who understand the principles of net-net investing and can identify high-potential opportunities in the market. I aim to make EveryNetNet the go-to platform for net-net investing, offering comprehensive data, analysis tools, and educational resources.
 
-#### Our Values
+#### Project Values
 
-- **Commitment to Data Accuracy:** We prioritize the accuracy and reliability of the data we provide, ensuring that investors can trust the information on our platform.
-- **Empowering Investors:** We believe in empowering investors with the knowledge and tools they need to succeed in net-net investing. We aim to demystify the investment process and make it accessible to all.
-- **Continuous Improvement:** We are committed to continuously improving our platform, incorporating user feedback, and staying up-to-date with the latest developments in net-net investing. We strive to provide the best possible user experience for our community.
+- **Commitment to Data Accuracy:** My goal is to prioritize the accuracy and reliability of the data provided by EveryNetNet, ensuring that investors can trust the information on our platform.
+- **Empowering Investors:** I believe in empowering investors with the knowledge and tools they need to succeed in net-net investing. We aim to demystify the investment process and make it accessible to all.
+- **Continuous Improvement:** I am committed to continuously improving our platform, incorporating user feedback, and staying up-to-date with the latest developments in net-net investing. We strive to provide the best possible user experience for our community.
