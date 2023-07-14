@@ -8,13 +8,16 @@ interface Props {
 
 const {
   title = "Home | Logan Jorgensen",
-  description = "The personal site of Logan Jorgensen",
+  description = "The personal site of Logan Jorgensen. Discover my portfolio and learn about my experience as a developer. Explore projects, skills, and more on my personal website.",
 } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
+<meta property="og:title" content={title} />
+
 <meta name="description" property="og:description" content={description} />
 <meta name="viewport" content="width=device-width" />
+<meta property="og:type" content="website" />
 <meta name="generator" content={Astro.generator} />
 <meta
   property="og:image"
