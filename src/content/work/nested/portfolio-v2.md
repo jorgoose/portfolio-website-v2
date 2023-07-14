@@ -1,7 +1,7 @@
 ---
 title: Portfolio Website v2
 publishDate: 2023-03-04 00:00:00
-img: /assets/projects/portfolio-site-v2.png
+img: /assets/projects/portfolio-site-v2.JPG
 img_alt: Pearls of silky soft white cotton, bubble up under vibrant lighting
 description: |
   We developed a virtual showcase for the softest bedding imaginable.
