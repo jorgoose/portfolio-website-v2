@@ -4,7 +4,7 @@ publishDate: 2023-07-06 00:00:00
 img: /assets/projects/everynetnetlogo.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
-  EveryNetNet.com is a platform designed to provide a comprehensive database of net-net companies (companies trading below their net current asset value). The platform is designed to help investors access or filter data about net-net companies in a simple and intuitive manner, to allow them to make more informed investment decisions.
+  EveryNetNet.com is a platform designed to provide a comprehensive database of net-net companies (companies trading below their net current asset value). The platform is designed to help investors and investment-related firms access or filter data about net-net companies in a simple and intuitive manner, to allow them to make more informed investment decisions.
 tags:
   - React
   - JavaScript
@@ -24,6 +24,8 @@ Net-net investing, a strategy popularized by Benjamin Graham, focuses on identif
 ### Project Mission
 
 The mission of EveryNetNet is to provide a platform where investors can discover undervalued net-net companies. EveryNetNet strives to offer valuable insights and resources that empower investors to make informed investment decisions.
+
+The platform automates the search process for net-net stocks, which investors would typically have to do manually by sifting through SEC and other financial filings. By providing this streamlined solution, we help independent investors and investment firms better research these companies and capitalize on their growth potential.
 
 ### Long-Term Vision
 
