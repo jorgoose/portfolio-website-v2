@@ -17,9 +17,9 @@ tags:
 
 > "Just buy something for less than it’s worth." - Warren Buffett
 
-Welcome to EveryNetNet.com, a platform dedicated to bringing you the world of net-net companies. Our mission is to help you discover undervalued companies with great investment potential. Inspired by my passion for investing, capital markets, and the strategies of Benjamin Graham, author of "The Intelligent Investor" and "Security Analysis," as well as Warren Buffett during the early years of his partnership, EveryNetNet.com aims to empower investors with valuable insights and opportunities in the realm of net-net investing.
+Welcome to EveryNetNet.com, a platform dedicated to bringing you the world of net-net companies. Inspired by my passion for investing, capital markets, and the strategies of Benjamin Graham, author of "The Intelligent Investor" and "Security Analysis," as well as Warren Buffett during the early years of his partnership, EveryNetNet.com aims to empower investors with valuable insights and opportunities in the realm of net-net investing.
 
-Net-net investing, a strategy popularized by Benjamin Graham, focuses on identifying companies trading at a significant discount to their net current asset value (NCAV). These undervalued companies often have strong potential for future growth and can provide attractive investment opportunities. Our platform dives deep into the world of net-net investing, providing comprehensive information on companies that meet these criteria.
+Net-net investing, a strategy popularized by Benjamin Graham, focuses on identifying companies trading at a significant discount to their net current asset value (NCAV). These undervalued companies often have strong potential for future growth and can provide attractive investment opportunities. The platform helps you dive deep into the world of net-net investing, providing comprehensive information on companies that meet these criteria.
 
 ### Project Mission
 
@@ -33,6 +33,6 @@ My vision is to create a community of knowledgeable investors who understand the
 
 #### Project Values
 
-- **Commitment to Data Accuracy:** My goal is to prioritize the accuracy and reliability of the data provided by EveryNetNet, ensuring that investors can trust the information on our platform.
+- **Commitment to Data Accuracy:** My goal is to prioritize the accuracy and reliability of the data provided by EveryNetNet, ensuring that investors can trust the information on the platform.
 - **Empowering Investors:** I believe in empowering investors with the knowledge and tools they need to succeed in net-net investing. We aim to demystify the investment process and make it accessible to all.
-- **Continuous Improvement:** I am committed to continuously improving our platform, incorporating user feedback, and staying up-to-date with the latest developments in net-net investing. We strive to provide the best possible user experience for our community.
+- **Continuous Improvement:** I am committed to continuously improving the platform, incorporating user feedback, and staying up-to-date with the latest developments in net-net investing. We strive to provide the best possible user experience for the EveryNetNet community.
