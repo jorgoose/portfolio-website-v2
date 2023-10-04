@@ -23,6 +23,7 @@ Frogstagram employs a tech stack that includes React for the frontend, TailwindC
 
 Overall, Frogstagram offers a unique and engaging social media experience for frog enthusiasts, allowing them to connect, share, and appreciate the captivating world of frogs while celebrating the beauty and diversity of these amazing creatures.
 
-<!-- Link to GitHub Repository -->
-
-[GitHub Repository](https://github.com/jorgoose/frogstagram)
+<!-- Link to GitHub Repository in a Button at the Bottom of the Page -->
+<div class="flex justify-center">
+  <a href="https://github.com/jorgoose/frogstagram" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
+</div>
