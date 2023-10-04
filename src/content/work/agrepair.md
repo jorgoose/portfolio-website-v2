@@ -1,8 +1,8 @@
 ---
 title: Agrepair
 publishDate: 2023-10-06 00:00:00
-img: /assets/projects/agrepair.jpg
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img: /assets/projects/agrepair.png
+img_alt: Agrepair project logo
 description: |
   Agrepair is a platform designed to connect equipment owners with skilled contractors for repair and maintenance services. It provides a seamless way to manage equipment, schedule maintenance, and communicate with contractors. This project was created for HackISU v2 with the goal of simplifying the process of finding reliable contractors for agricultural equipment repairs.
 tags:
