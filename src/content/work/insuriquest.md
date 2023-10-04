@@ -4,7 +4,7 @@ publishDate: 2023-09-20 00:00:00
 img: /assets/projects/insuriquest.png
 img_alt: InsuriQuest
 description: |
-  InsuriQuest is an innovative platform designed for HackUIowa that transforms the complex world of insurance into engaging, interactive stories, making learning both fun and memorable.
+  InsuriQuest is an innovative platform developed during HackUIowa (University of Iowa's hackathon) that transforms the complex world of insurance into engaging, interactive stories, making learning both fun and memorable.
 tags:
   - NextJS
   - TailwindCSS
