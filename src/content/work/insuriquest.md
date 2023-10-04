@@ -11,7 +11,7 @@ tags:
   - OpenAI API
 ---
 
-## Introduction
+## Background
 
 InsuriQuest was born out of a desire to revolutionize the way people learn about insurance. Traditional methods often involve sifting through dense documents or navigating uninspiring websites. We envisioned a platform where users could immerse themselves in captivating narratives, making the learning process not just informative, but also enjoyable.
 
