@@ -22,3 +22,7 @@ However, if a photo fails to be recognized as a frog, the user is redirected to 
 Frogstagram employs a tech stack that includes React for the frontend, TailwindCSS for styling, FastAPI for the backend, and TensorFlow for image classification. The backend relies on a SQLite database and employs SQLAlchemy as an Object-Relational Mapping (ORM) tool. By utilizing the power of TensorFlow and its pre-trained image classification model, Frogstagram ensures that the platform remains exclusively dedicated to frog-related content.
 
 Overall, Frogstagram offers a unique and engaging social media experience for frog enthusiasts, allowing them to connect, share, and appreciate the captivating world of frogs while celebrating the beauty and diversity of these amazing creatures.
+
+<!-- Link to GitHub Repository -->
+
+[GitHub Repository](https://github.com/jorgoose/frogstagram)
