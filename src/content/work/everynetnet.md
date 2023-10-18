@@ -13,6 +13,14 @@ tags:
 # Section for tech stack
 ---
 
+<!-- Link to Project Website -->
+
+#### [Visit EveryNetNet.com](https://everynetnet.com/)
+
+## <!-- Horizontal Line -->
+
+---
+
 ## Introduction
 
 > "Just buy something for less than it’s worth." - Warren Buffett
@@ -36,7 +44,3 @@ My vision is to create a community of knowledgeable investors who understand the
 - **Commitment to Data Accuracy:** My goal is to prioritize the accuracy and reliability of the data provided by EveryNetNet, ensuring that investors can trust the information on the platform.
 - **Empowering Investors:** I believe in empowering investors with the knowledge and tools they need to succeed in net-net investing. We aim to demystify the investment process and make it accessible to all.
 - **Continuous Improvement:** I am committed to continuously improving the platform, incorporating user feedback, and staying up-to-date with the latest developments in net-net investing. We strive to provide the best possible user experience for the EveryNetNet community.
-
-<!-- Link to Project Website -->
-
-[Visit EveryNetNet.com](https://everynetnet.com/)
