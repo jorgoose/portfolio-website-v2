@@ -12,6 +12,14 @@ tags:
   - TypeScript
 ---
 
+<!-- Big Button for Link to GitHub -->
+
+### [View on GitHub](https://github.com/kygoben/agrepair)
+
+## <!-- Horizontal Line -->
+
+---
+
 ### Background
 
 Agrepair was developed to address the challenges faced by equipment owners in the agricultural industry. Equipment maintenance and repairs are critical for smooth operations, but finding the right contractor can be time-consuming and challenging. Agrepair streamlines this process by connecting equipment owners with skilled contractors, making it easier to schedule and manage repair services.
