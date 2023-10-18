@@ -15,6 +15,14 @@ tags:
   - SpringBoot
 ---
 
+<!-- Big Button for Link to GitHub -->
+
+#### [View on GitHub](https://github.com/jorgoose/dungeon_ai)
+
+## <!-- Horizontal Line -->
+
+---
+
 ## Iowa State Computer Science Hackathon 2023
 
 Team Members: Logan Jorgensen, Sam McGrath, David Szczepanik, Eli Brady
