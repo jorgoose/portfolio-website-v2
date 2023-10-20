@@ -21,7 +21,7 @@ tags:
 
 ### Background
 
-This project was created to explore the capabilities of image classification models using TensorFlow. The goal was to train a model to identify images of Pokémon, and then use the model to classify images of Pokémon that were not included in the training dataset.
+This project was created to explore the capabilities of image classification models using TensorFlow. The goal was to train a model to identify images of Pokémon, and then use the model to classify Pokémon images that were not included in the training dataset.
 
 ### Results
 
