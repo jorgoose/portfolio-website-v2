@@ -6,8 +6,8 @@ img_alt: FinTeach
 description: |
   TODO: Description of FinTeach goes here.
 tags:
-  - Flutter
   - Dart
+  - Flutter
   - OpenAI API
 ---
 
