@@ -21,9 +21,15 @@ const projects = (await getCollection("work")).sort(
     <main class="wrapper stack gap-8">
       <Hero
         title="Software Projects"
-        tagline="See my most recent projects below to get an idea of my past experience."
+        tagline="Below are some selected projects I've worked on. If you'd like to see more, click the button below to see the full list."
         align="start"
       />
+
+      <!-- View List of All Projects Button -->
+      <div class="view-all-projects-button">
+        <a href="/all-projects" class="button">View List of All Projects</a>
+      </div>
+
       <Grid variant="offset">
         {
           projects.map((project) => (
@@ -33,49 +39,30 @@ const projects = (await getCollection("work")).sort(
           ))
         }
       </Grid>
-      <!--
-      <Hero
-        title="Other Projects"
-        tagline="Things I've worked on that don't fit into the ''software'' category"
-        align="start"
-      />
-      <Grid variant="offset">
-        <li>
-          <div class="card">
-            <div class="card__image">
-              <img
-                src="/images/projects/non-software/other-projects-1.png"
-                alt="Other Project 1"
-              />
-            </div>
-            <div class="card__content">
-              <h3 class="card__title">Other Project 1</h3>
-              <p class="card__description">
-                This is a description of the project.
-              </p>
-              <a href="#" class="card__link">View Project</a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <div class="card__image">
-              <img
-                src="/images/projects/non-software/other-projects-2.png"
-                alt="Other Project 2"
-              />
-            </div>
-            <div class="card__content">
-              <h3 class="card__title">Other Project 2</h3>
-              <p class="card__description">
-                This is a description of the project.
-              </p>
-              <a href="#" class="card__link">View Project</a>
-            </div>
-          </div>
-        </li>
-      </Grid> -->
+
+      <!-- Rest of the content including Other Projects and ContactCTA -->
+      
       <ContactCTA />
     </main>
   </div>
 </BaseLayout>
+
+<style>
+  .view-all-projects-button {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0.50rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+</style>
