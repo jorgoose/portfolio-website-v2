@@ -1,0 +1,213 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+
+// Define the allProjects object with an optional 'award' field
+const allProjects = [
+  {
+    name: "Minecraft Server on Microsoft Azure",
+    description: "Deployed and managed a modded Minecraft server on Microsoft Azure.",
+    tags: ["Computer Networking", "Shell Scripting", "Microsoft Azure Virtual Machine"],
+  },
+  {
+    name: "Insuriquest",
+    description: "Web app that turns insurance education into a dynamic, story-driven adventure.",
+    tags: ["NextJS", "Tailwind CSS", "Vercel"],
+    award: "HackUIowa 2023 - Best Insurance Hack",
+  },
+  {
+    name: "AgRepair",
+    description: "Web app designed to provide a network of contractors and ag equipment owners for efficient repair contracts.",
+    tags: ["Svelte", "Tailwind CSS", "Supabase", "Vercel"],
+    award: "HackIowaState v2 - 2nd Place",
+  },
+  {
+    name: "FinTeach",
+    description: "An educational app for financial learning, aimed at young students.",
+    tags: ["Flutter", "Vercel"],
+    award: "Fidelity Challenge at HackUTD X - 3rd Place",
+  },
+  {
+    name: "EveryNetNet",
+    description: "A platform providing a comprehensive database of net-net companies for investors.",
+    tags: ["React", "Firebase", "Google Cloud Platform", "Puppeteer"],
+  },
+  {
+    name: "Portfolio Website v2",
+    description: "An overhaul of my portfolio website using Astro and other web technologies.",
+    tags: ["Astro", "HTML", "CSS",  "TypeScript", "Cloudflare Pages"],
+  },
+  {
+    name: "dungeon_ai",
+    description: "A full-stack web app for D&D scenario generation using AI technologies.",
+    tags: ["Python", "PyTorch", "FastAPI", "MySQL", "React", "Tailwind CSS"],
+    award: "ISU CS Hackathon, 2023 - 2nd Place",
+  },
+  {
+    name: "Frogstagram",
+    description: "A frog-centric social media app with image classification to ensure only frog photos.",
+    tags: ["Python", "TensorFlow", "FastAPI", "React", "Tailwind CSS"],
+  },
+  {
+    name: "föd",
+    description: "An Android app for managing nutrition and sharing meal ideas, made for COM S 309 at Iowa State University.",
+    tags: ["Java", "SpringBoot", "Android Studio", "MySQL"],
+  },
+  {
+    name: "Portfolio Website v1",
+    description: "The first iteration of my portfolio website.",
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+  },
+  {
+    name: "Stock Performance vs. Annual Report Complexity",
+    description: "Statistical analysis of text complexity in annual reports vs stock performance.",
+    tags: ["Python", "Pandas", "NumPy", "SEC EDGAR API"],
+  },
+  {
+    name: "Steam Games Directory",
+    description: "A web app utilizing the Steam API to display games and trends.",
+    tags: ["React", "Tailwind CSS"],
+  },
+  {
+    name: "AssetNext",
+    description: "A digital platform to digitize the asset-based financing process.",
+    tags: ["Python", "Flask"],
+    award: "ekipa Future Finance Innovation Challenge - 3rd Place",
+  },
+  {
+    name: "FinCord",
+    description: "A social media bot for Discord to improve financial literacy.",
+    tags: ["Python", "Firebase", "NLTK", "QuickChart API", "Discord API"],
+  },
+  {
+    name: "National Park Navigator",
+    description: "A Java-based web app for searching national parks by state.",
+    tags: ["Vaadin", "Java", "CSS", "National Park Service API"],
+  },
+  {
+    name: "Terminal-Based Pokemon Game",
+    description: "A terminal based Pokemon game for COM S 327 at Iowa State University.",
+    tags: ["C++", "C"],
+  },
+  {
+    name: "LEGv8 Reverse Compiler",
+    description: "A Python program that decodes binary into LEGv8 Assembly.",
+    tags: ["Python"],
+  },
+  {
+    name: "EconoBeats",
+    description: "Analysis of correlation between GDP and music features using Spotify and World Bank data.",
+    tags: ["R", "GitHub Actions"],
+  },
+  {
+    name: "Chocolatey Bloomberg Terminal",
+    description: "Creation and maintenance of a Chocolatey package for Bloomberg terminal software.",
+    tags: ["Chocolatey", "Windows PowerShell"],
+  },
+  {
+    name: "Pokémon Image Classifier",
+    description: "Training an image classification model to identify Pokémon images.",
+    tags: ["TensorFlow", "Keras", "Python"],
+  },
+  {
+    name: "Acute",
+    description: "An internal application at Capital One for managing auto finance metrics.",
+    tags: ["Python", "FastAPI", "LitElement", "JavaScript", "Snowflake", "Chart.js"],
+  },
+  {
+    name: "CityScope",
+    description: "A full-stack web application to identify the best city based on user preferences.",
+    tags: ["Python", "Flask", "PyTorch", "React"],
+  },
+];
+
+
+// Function to alphabetically sort projects
+const sortedProjects = allProjects.sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<BaseLayout
+  title="All Projects | Logan Jorgensen"
+  description="A comprehensive list of all projects by Logan Jorgensen, categorized alphabetically."
+>
+  <div class="stack gap-20">
+    <main class="wrapper projects">
+      <Hero
+        title="All Projects"
+        tagline="Explore my complete project portfolio, listed alphabetically."
+      />
+
+      <section>
+        <h2 class="section-title">Project List</h2>
+        <div class="content">
+          <p>
+            Below is an alphabetical list of all my projects, along with the technologies and frameworks used in each.
+          </p>
+          <div class="project-list">
+            {
+              sortedProjects.map(project => (
+                <div class="project-item">
+                  <h3>
+                    {project.name}
+                    {project.award && <span class="award">🏆 {project.award}</span>}
+                  </h3>
+                  <p class="project-description">{project.description}</p>
+                  <div class="project-tags">
+                    {project.tags.map(tag => (
+                      <span class="tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <style>
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    .project-item h3 {
+      font-size: var(--text-xl);
+      color: var(--gray-0);
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .project-description {
+      color: var(--gray-200);
+      margin: 0.5rem 0;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background-color: var(--gray-800);
+      border-radius: 9999px;
+      padding: 0.25rem 0.75rem;
+      font-size: var(--text-sm);
+      color: var(--gray-200);
+    }
+
+    .award {
+      font-size: var(--text-md);
+      color: var(--gray-500);
+      display: inline-flex;
+      align-items: center;
+    }
+
+    /* Rest of the styling similar to the 'about' page */
+  </style>
+</BaseLayout>
