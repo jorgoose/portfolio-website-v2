@@ -19,661 +19,369 @@ import Hero from "../components/Hero.astro";
         align="start"
       />
       <!-- List of previous employers with name of role and associated dates. They should each have a picture for a logo and centered on the page -->
-      <div class="stack gap-8 justify-content-center">
-        <div class="stack gap-4 justify-content-center">
-          <div class="card gap-2 justify-content-center">
-            <h3>FloVision</h3>
-            <p class="job-detail">Software Engineer Intern</p>
-            <p class="job-detail">February 2024 - Present</p>
-            <p class="job-detail">Ames, IA</p>
-            <span class="card__tag"></span>
+      <!-- Grid for Work Experience -->
+      <Grid>
+        <!-- EveryNetNet -->
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
+                src="/assets/projects/everynetnetlogo.jpg"
+                alt="EveryNetNet"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">EveryNetNet</h3>
+              <p class="job-detail">Founder</p>
+              <p class="job-detail">December 2024 - Present</p>
+              <p class="job-detail">Ames, IA</p>
+              <span class="card__tag">React · Google Cloud · Stripe API</span>
+        <!-- FloVision -->
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
+                src="/assets/flovision.jpeg"
+                alt="FloVision"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">FloVision Solutions</h3>
+              <p class="job-detail">Software Engineer Intern</p>
+              <p class="job-detail">February 2024 - May 2024</p>
+              <p class="job-detail">Ames, IA</p>
+              <span class="card__tag">Python · OpenCV · AWS</span>
+            </div>
           </div>
-          <!-- Horizontal Line to Seperate Job -->
-          <hr class="line" />
-          <div class="card gap-2 justify-content-center">
-            <h3>Iowa State University</h3>
-            <p class="job-detail">Peer Mentor (Computer Science)</p>
-            <p class="job-detail">August 2023 - Present</p>
-            <p class="job-detail">Ames, IA</p>
-            <span class="card__tag">Git · Mentoring · Teaching</span>
+        </li>
+        <!-- Iowa State University - Peer Mentor -->
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
+                src="/assets/iowastate.png"
+                alt="Iowa State University"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Iowa State University</h3>
+              <p class="job-detail">Peer Mentor (Computer Science)</p>
+              <p class="job-detail">August 2023 - March 2024</p>
+              <p class="job-detail">Ames, IA</p>
+              <span class="card__tag">Git · Mentoring · Teaching</span>
+            </div>
           </div>
-          <!-- Horizontal Line to Seperate Job -->
-          <hr class="line" />
-          <div class="card gap-2 justify-content-center">
-            <h3>Capital One</h3>
-            <p class="job-detail">Software Engineer Intern</p>
-            <p class="job-detail">June 2023 - August 2023</p>
-            <p class="job-detail">New York, NY</p>
-            <span class="card__tag">Python · AWS · Jenkins · Locust</span>
+        </li>
+        <!-- Capital One -->
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
+                src="/assets/capitalone.webp"
+                alt="Capital One"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Capital One</h3>
+              <p class="job-detail">Software Engineer Intern</p>
+              <p class="job-detail">June 2023 - August 2023</p>
+              <p class="job-detail">New York, NY</p>
+              <span class="card__tag">Python · AWS · Jenkins · Locust</span>
+            </div>
           </div>
-          <!-- Horizontal Line to Seperate Job -->
-          <hr class="line" />
-          <div class="card gap-2 justify-content-center">
-            <h3>Setwise Technology</h3>
-            <p class="job-detail">Software Engineer Intern</p>
-            <p class="job-detail">May 2023 - October 2022</p>
-            <p class="job-detail">Ames, IA</p>
-            <span class="card__tag">PHP · Laravel · Vue.js</span>
+        </li>
+        <!-- Setwise Technology -->
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
+                src="/assets/setwisetechnology.png"
+                alt="Setwise Technology"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Setwise Technology</h3>
+              <p class="job-detail">Software Engineer Intern</p>
+              <p class="job-detail">May 2022 - October 2022</p>
+              <p class="job-detail">Ames, IA</p>
+              <span class="card__tag">PHP · Laravel · Vue.js</span>
+            </div>
           </div>
-          <!-- Horizontal Line to Seperate Job -->
-          <hr class="line" />
-          <div class="card gap-2 justify-content-center">
-            <h3>Capital One</h3>
-            <p class="job-detail" style="font-weight: bold;">
-              Software Engineer Intern
-            </p>
-            <p class="job-detail">June 2022 - August 2022</p>
-            <p class="job-detail">McLean, VA</p>
-            <span class="card__tag"
-              >Python · Go · Git · PostgreSQL · FastAPI · Lit</span
-            >
+        </li>
+        <!-- Additional Experiences -->
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
+                src="/assets/capitalone.webp"
+                alt="Capital One"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Capital One</h3>
+              <p class="job-detail">Software Engineer Intern</p>
+              <p class="job-detail">June 2022 - August 2022</p>
+              <p class="job-detail">McLean, VA</p>
+              <span class="card__tag">Python · Go · Git · PostgreSQL · FastAPI · Lit</span>
+            </div>
           </div>
-          <!-- Horizontal Line to Seperate Job -->
-          <hr class="line" />
-          <div class="card gap-2 justify-content-center">
-            <h3>Iowa State University</h3>
-            <p class="job-detail" style="font-weight: bold;">
-              IT Support Specialist
-            </p>
-            <p class="job-detail">November 2021 - June 2022</p>
-            <p class="job-detail">Ames, IA</p>
-            <span class="card__tag"
-              >Troubleshooting · Technical Communication · Customer Service</span
-            >
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
+                src="/assets/iowastate.png"
+                alt="Iowa State University"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Iowa State University</h3>
+              <p class="job-detail">IT Support Specialist</p>
+              <p class="job-detail">November 2021 - June 2022</p>
+              <p class="job-detail">Ames, IA</p>
+              <span class="card__tag">Troubleshooting · Technical Communication · Customer Service</span>
+            </div>
           </div>
-          <!-- Horizontal Line to Seperate Job -->
-          <hr class="line" />
-          <div class="card gap-2 justify-content-center">
-            <h3>DoorDash</h3>
-            <p class="job-detail" style="font-weight: bold;">Delivery Driver</p>
-            <p class="job-detail">February 2021 - November 2021</p>
-            <p class="job-detail">Ames, IA</p>
-            <span class="card__tag"
-              >Problem Solving · Time Management · Customer Service
-            </span>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
+                src="/assets/doordash.png"
+                alt="DoorDash"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">DoorDash</h3>
+              <p class="job-detail">Delivery Driver</p>
+              <p class="job-detail">February 2021 - November 2021</p>
+              <p class="job-detail">Ames, IA</p>
+              <span class="card__tag">Problem Solving · Time Management · Customer Service</span>
+            </div>
           </div>
-          <hr
-            class="line"
-            style="margin-top: 1rem; margin-top: 1rem; margin-bottom: 1rem;"
-          />
-          <!-- Render Non-Software Projects, Hard Coded. Do not use the component types (PortfolioPreview). Just use HTML and CSS. -->
-          <!-- Each Non-Software Project will be rendered in the grid -->
-          <Hero title="Involvement" align="start" />
-          <Grid variant="offset">
-            <li>
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="https://iowastateinvestmentgroup.files.wordpress.com/2015/08/photo2.jpg"
-                    alt="Other Project 1"
-                  />
-                </div>
-                <div class="card__content">
-                  <h3
-                    class="card__title"
-                    style="margin-top: 2rem; margin-bottom: 1rem;"
-                  >
-                    Iowa State Investment Group
-                  </h3>
-                  <!-- Similar to tag styling in the div below -->
-                  <div
-                    class="card__tags"
-                    style="margin-top: 1rem; margin-bottom: 1rem;"
-                  >
-                    <p
-                      class="job-detail"
-                      style="font-weight: bold; margin-bottom: 1rem;"
-                    >
-                      Technology & Financial Sector Leader, Previous Technology
-                      Sector Analyst
-                    </p>
-                    <p class="card__description">
-                      <ul>
-                        <li>
-                          Coordinated team of analysts to cover technology
-                          companies with total AUM of over $40,000 across three
-                          consecutive semesters
-                        </li>
-                        <li>
-                          Conducted financial analysis, research and
-                          presentations regarding technology companies
-                          (including Sony, Applied Materials, Intel, Microsoft,
-                          Qualcomm), as well as financial services companies
-                          (including Aflac, Visa, W.R. Berkley, Fairfax
-                          Financial, and Apollo). Also presented on
-                          macroeconomic and industry trends in the technology
-                          and financial sectors.
-                        </li>
-                      </ul>
-                    </p>
-                  </div>
-                  <!-- Button that links to group website -->
-                  <div style="text-align: center">
-                    <button class="card__button">
-                      <a
-                        class="learn__more"
-                        href="https://www.stuorg.iastate.edu/isuinvestmentgroup"
-                        target="_blank"
-                        rel="noopener noreferrer">Learn More</a
-                      >
-                    </button>
-                  </div>
-                </div>
-                <li>
-                  <div class="card">
-                    <div class="card__image">
-                      <img
-                        src="https://www.stuorg.iastate.edu/uploads/org-site/ckuploads/2120/Logo_WSC_ISU_Red%20%286%29.png"
-                        alt="Other Project 2"
-                      />
-                    </div>
-                    <div class="card__content">
-                      <h3
-                        class="card__title"
-                        style="margin-top: 2rem; margin-bottom: 1rem;"
-                      >
-                        Iowa State Wall Street Club
-                      </h3>
-                      <div class="card__tags">
-                        <p
-                          class="job-detail"
-                          style="font-weight: bold; margin-bottom: 1rem;"
-                        >
-                          Member
-                        </p>
-                        <p class="card__description">
-                          <ul>
-                            <li>
-                              Selected for membership Wall Street club as one
-                              few freshmen, dedicated to fostering knowledge and
-                              interest in high finance roles like investment
-                              banking, private equity, and adjacent fields.
-                            </li>
-                            <li>
-                              Actively engaged in educational activities and
-                              discussions within the club, aimed at developing
-                              skills and understanding of the intricacies of the
-                              finance industry.
-                            </li>
-                          </ul>
-                        </p>
-                      </div>
-                    </div>
-                    <!-- Button that links to group website -->
-                    <div style="text-align: center">
-                      <button class="card__button">
-                        <a
-                          class="learn__more"
-                          href="https://www.stuorg.iastate.edu/2813"
-                          target="_blank"
-                          rel="noopener noreferrer">Learn More</a
-                        >
-                      </button>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="card">
-                    <div class="card__image">
-                      <img
-                        src="https://cse.cs.iastate.edu/files/styles/banner/public/2021-02/CSE_Club.jpg?itok=KZTnhjK8"
-                        alt="Other Project 2"
-                      />
-                    </div>
-                    <div class="card__content">
-                      <h3
-                        class="card__title"
-                        style="margin-top: 2rem; margin-bottom: 1rem;"
-                      >
-                        Iowa State CSE Club
-                      </h3>
-                      <div class="card__tags">
-                        <p
-                          class="job-detail"
-                          style="font-weight: bold; margin-bottom: 1rem;"
-                        >
-                          Member
-                        </p>
-                        <p class="card__description">
-                          <ul>
-                            <li>
-                              Participated in the club's programming contest and
-                              encouraged fellow members to join, fostering
-                              simultaneously supportive yet competetive
-                              environment.
-                            </li>
-                            <li>
-                              Attended informative meetings and engaging
-                              workshops on various technologies like React,
-                              gaining valuable insights into the ever-evolving
-                              tech industry and enhancing technical skills.
-                            </li>
-                          </ul>
-                        </p>
-                      </div>
-                    </div>
-                    <!-- Button that links to group website -->
-                    <div style="text-align: center">
-                      <button class="card__button">
-                        <a
-                          class="learn__more"
-                          href="https://cse.cs.iastate.edu/"
-                          target="_blank"
-                          rel="noopener noreferrer">Learn More</a
-                        >
-                      </button>
-                    </div>
-                  </div>
-                </li>
+        </li>
+      </Grid>
+      <!-- Render Non-Software Projects, Hard Coded. Do not use the component types (PortfolioPreview). Just use HTML and CSS. -->
+      <!-- Each Non-Software Project will be rendered in the grid -->
+      <Hero title="Involvement" align="start" />
+      <Grid variant="offset">
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
+                src="https://iowastateinvestmentgroup.files.wordpress.com/2015/08/photo2.jpg"
+                alt="Iowa State Investment Group"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Iowa State Investment Group</h3>
+              <div class="card__tags">
+                <p class="job-detail">Technology & Financial Sector Leader, Previous Technology Sector Analyst</p>
+                <p class="card__description">
+                  <ul>
+                    <li>Coordinated team of analysts to cover technology companies with total AUM of over $40,000 across three consecutive semesters</li>
+                    <li>Conducted financial analysis, research and presentations regarding technology companies (including Sony, Applied Materials, Intel, Microsoft, Qualcomm), as well as financial services companies (including Aflac, Visa, W.R. Berkley, Fairfax Financial, and Apollo). Also presented on macroeconomic and industry trends in the technology and financial sectors.</li>
+                  </ul>
+                </p>
               </div>
-            </li>
-          </Grid>
-          <Hero title="Competitions" align="start" />
-          <Grid variant="offset">
-            <li>
-              <div class="card">
-                <div class="card__image">
-                  <img src="/assets/hackutd.jpeg" alt="Other Project 2" />
-                </div>
-                <div class="card__content">
-                  <h3
-                    class="card__title"
-                    style="margin-top: 2rem; margin-bottom: 1rem;"
-                  >
-                    HackUTD X
-                  </h3>
-                  <div class="card__tags">
-                    <p
-                      class="job-detail"
-                      style="font-weight: bold; margin-bottom: 1rem;"
-                    >
-                      3rd Place - Fidelity Challenge
-                    </p>
-                    <p class="card__description">
-                      A team of me and three other Iowa State Students made the
-                      eleven-hour drive to Dallas, Texas to participate in
-                      HackUTD X. We developed "FinTeach", a multi-platform
-                      application that aims to help students from all
-                      backgrounds learn about personal finance, particularly
-                      those from underfunded schools that may lack the resources
-                      to teach financial literacy. We leveraged Flutter to
-                      create a dynamic and fun mobile app that allows users to
-                      learn about personal finance through an interactive,
-                      level-based game.
-                    </p>
-                  </div>
-                </div>
-                <!-- Button that links to group website -->
-                <div style="text-align: center">
-                  <button class="card__button">
-                    <a
-                      class="learn__more"
-                      href="https://x.hackutd.co/"
-                      target="_blank"
-                      rel="noopener noreferrer">Learn More</a
-                    >
-                  </button>
-                </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
+                src="https://www.stuorg.iastate.edu/uploads/org-site/ckuploads/2120/Logo_WSC_ISU_Red%20%286%29.png"
+                alt="Iowa State Wall Street Club"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Iowa State Wall Street Club</h3>
+              <div class="card__tags">
+                <p class="job-detail">Member</p>
+                <p class="card__description">
+                  <ul>
+                    <li>Selected for membership Wall Street club as one few freshmen, dedicated to fostering knowledge and interest in high finance roles like investment banking, private equity, and adjacent fields.</li>
+                    <li>Actively engaged in educational activities and discussions within the club, aimed at developing skills and understanding of the intricacies of the finance industry.</li>
+                  </ul>
+                </p>
               </div>
-            </li>
-            <li>
-              <div class="card">
-                <div class="card__image">
-                  <img src="/assets/hackisuv2.png" alt="Other Project 2" />
-                </div>
-                <div class="card__content">
-                  <h3
-                    class="card__title"
-                    style="margin-top: 2rem; margin-bottom: 1rem;"
-                  >
-                    HackIowaState v2
-                  </h3>
-                  <div class="card__tags">
-                    <p
-                      class="job-detail"
-                      style="font-weight: bold; margin-bottom: 1rem;"
-                    >
-                      2nd Place
-                    </p>
-                    <p class="card__description">
-                      <!-- Description of Agprepair: Agrepair was developed to address the challenges faced by equipment owners in the agricultural industry. Equipment maintenance and repairs are critical for smooth operations, but finding the right contractor can be time-consuming and challenging. Agrepair streamlines this process by connecting equipment owners with skilled contractors, making it easier to schedule and manage repair services. -->
-                      At HackIowaState v2, my team and I developed "Agrepair", a
-                      web application that connects equipment owners with skilled
-                      contractors, making it easier to schedule and manage repair
-                      services. We leveraged modern technologies like NextJS, TailwindCSS,
-                      Supabase, and Vercel to create a dynamic platform that streamlined
-                      the process of finding contractors. This experience allowed
-                      us to hone our web development skills and learn new technologies,
-                      while also fostering teamwork and collaboration.
-                    </p>
-                  </div>
-                </div>
-                <!-- Button that links to group website -->
-                <div style="text-align: center">
-                  <button class="card__button">
-                    <a
-                      class="learn__more"
-                      href="https://kreativehorizon.com/events/hackisu-v2"
-                      target="_blank"
-                      rel="noopener noreferrer">Learn More</a
-                    >
-                  </button>
-                </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
+                src="https://cse.cs.iastate.edu/files/styles/banner/public/2021-02/CSE_Club.jpg?itok=KZTnhjK8"
+                alt="Iowa State CSE Club"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Iowa State CSE Club</h3>
+              <div class="card__tags">
+                <p class="job-detail">Member</p>
+                <p class="card__description">
+                  <ul>
+                    <li>Participated in the club's programming contest and encouraged fellow members to join, fostering simultaneously supportive yet competitive environment.</li>
+                    <li>Attended informative meetings and engaging workshops on various technologies like React, gaining valuable insights into the ever-evolving tech industry and enhancing technical skills.</li>
+                  </ul>
+                </p>
               </div>
-            </li>
-            <li>
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="/assets/hackuiowa.jpg"
-                    alt="Other Project 2"
-                  />
-                </div>
-                <div class="card__content">
-                  <h3
-                    class="card__title"
-                    style="margin-top: 2rem; margin-bottom: 1rem;"
-                  >
-                    HackUIowa
-                  </h3>
-                  <div class="card__tags">
-                    <p
-                      class="job-detail"
-                      style="font-weight: bold; margin-bottom: 1rem;"
-                    >
-                      Best Insurance Hack
-                    </p>
-                    <p class="card__description">
-                      At HackUIowa, my team and I developed “InsuriQuest,” an
-                      app aimed at simplifying insurance education for all ages.
-                      Our innovative approach won us the "Best Insurance Hack"
-                      award. This experience honed our app development skills
-                      and provided valuable interactions with industry leaders.
-                      A highlight was our unique "decision tree generation"
-                      system, which dynamically created user stories, optimizing
-                      the use of LLM requests.
-                    </p>
-                  </div>
-                </div>
-                <!-- Button that links to group website -->
-                <div style="text-align: center">
-                  <button class="card__button">
-                    <a
-                      class="learn__more"
-                      href="https://hackuiowa-23.devpost.com/"
-                      target="_blank"
-                      rel="noopener noreferrer">Learn More</a
-                    >
-                  </button>
-                </div>
+            </div>
+          </div>
+        </li>
+      </Grid>
+      <Hero title="Competitions" align="start" />
+      <Grid variant="offset">
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img src="/assets/hackutd.jpeg" alt="HackUTD X" />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">HackUTD X</h3>
+              <div class="card__tags">
+                <p class="job-detail">3rd Place - Fidelity Challenge</p>
+                <p class="card__description">
+                  A team of me and three other Iowa State Students made the eleven-hour drive to Dallas, Texas to participate in HackUTD X. We developed "FinTeach", a multi-platform application that aims to help students from all backgrounds learn about personal finance, particularly those from underfunded schools that may lack the resources to teach financial literacy. We leveraged Flutter to create a dynamic and fun mobile app that allows users to learn about personal finance through an interactive, level-based game.
+                </p>
               </div>
-            </li>
-            <li>
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="https://source.colostate.edu/wp-content/uploads/2017/04/Frank-Smith.jpg"
-                    alt="Other Project 2"
-                  />
-                </div>
-                <div class="card__content">
-                  <h3
-                    class="card__title"
-                    style="margin-top: 2rem; margin-bottom: 1rem;"
-                  >
-                    Rocky Mountain Investment Challenge
-                  </h3>
-                  <div class="card__tags">
-                    <p
-                      class="job-detail"
-                      style="font-weight: bold; margin-bottom: 1rem;"
-                    >
-                      3rd Place
-                    </p>
-                    <p class="card__description">
-                      I participated in the Rocky Mountain Investment Challenge,
-                      an exciting competition where undergraduate students
-                      present investment pitches to industry judges. Our team
-                      selected Fulgent Genetics and conducted comprehensive
-                      research and valuation using various methods, such as DCF
-                      analysis, comparable company analysis and precedent
-                      transaction analysis. We achieved 3rd place and gained
-                      valuable experience in analyzing real-world firms, honing
-                      our presentation skills, and connecting with professionals
-                      in the financial industry. It was a rewarding opportunity
-                      to apply our investment expertise and learn from esteemed
-                      judges.
-                    </p>
-                  </div>
-                </div>
-                <!-- Button that links to group website -->
-                <div style="text-align: center">
-                  <button class="card__button">
-                    <a
-                      class="learn__more"
-                      href="https://biz.colostate.edu/events/2023/april/rocky-mountain-investment-challenge-2023"
-                      target="_blank"
-                      rel="noopener noreferrer">Learn More</a
-                    >
-                  </button>
-                </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img src="/assets/hackisuv2.png" alt="HackIowaState v2" />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">HackIowaState v2</h3>
+              <div class="card__tags">
+                <p class="job-detail">2nd Place</p>
+                <p class="card__description">
+                  At HackIowaState v2, my team and I developed "Agrepair", a web application that connects equipment owners with skilled contractors, making it easier to schedule and manage repair services. We leveraged modern technologies like NextJS, TailwindCSS, Supabase, and Vercel to create a dynamic platform that streamlined the process of finding contractors. This experience allowed us to hone our web development skills and learn new technologies, while also fostering teamwork and collaboration.
+                </p>
               </div>
-            </li>
-            <li>
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="/assets/projects/non-software/prosperity.jpg"
-                    alt="Other Project 2"
-                  />
-                </div>
-                <div class="card__content">
-                  <h3
-                    class="card__title"
-                    style="margin-top: 2rem; margin-bottom: 1rem;"
-                  >
-                    IMC Trading Prosperity Competition
-                  </h3>
-                  <div class="card__tags">
-                    <p
-                      class="job-detail"
-                      style="font-weight: bold; margin-bottom: 1rem;"
-                    >
-                      Participant
-                    </p>
-                    <p class="card__description">
-                      I had the opportunity to participate in "Prosperity," IMC
-                      Trading's global trading competition. Over the course of
-                      10 days, teams were tasked with leveraging their python
-                      skills, strategic insights, and analytics to trade on a
-                      virtual market and strive for prosperity for their
-                      assigned island. It was an excellent platform for honing
-                      my quantitative trading and analysis abilities, and
-                      allowed me to put my skills to the test in a dynamic and
-                      competitive environment.
-                    </p>
-                  </div>
-                </div>
-                <!-- Button that links to group website -->
-                <div style="text-align: center">
-                  <button class="card__button">
-                    <a
-                      class="learn__more"
-                      href="https://www.google.com/search?q=imc+trading+prosperity&sxsrf=AB5stBhcz0cCtZ4dnj5aexzE6vjidMJJwQ%3A1689362381179&source=hp&ei=zZ-xZKKlCIOlptQPjoqg0Ak&iflsig=AD69kcEAAAAAZLGt3cJXpkc7JB9sHJ2Y4G2Dj-o3WW5z&oq=imc+&gs_lp=Egdnd3Mtd2l6IgRpbWMgKgIIADIHECMYigUYJzIHECMYigUYJzIEECMYJzINEC4YigUYxwEY0QMYQzITEC4YigUYsQMYgwEYxwEY0QMYQzIHEAAYigUYQzIHEAAYigUYQzIHEAAYigUYQzIHEAAYigUYQzIREC4YgwEYrwEYxwEYsQMYgARIjA5QigJY5AVwAXgAkAEAmAFvoAGKA6oBAzIuMrgBAcgBAPgBAagCCsICBxAjGOoCGCfCAgoQLhiKBRjUAhhDwgIKEC4Y1AIYigUYQ8ICBxAuGIoFGEPCAgsQABiABBixAxiDAcICDhAuGIoFGMcBGNEDGJECwgIIEAAYigUYkQLCAhAQLhiKBRixAxjHARivARhDwgIKEAAYigUYsQMYQ8ICExAuGIMBGMcBGLEDGNEDGIoFGEPCAgoQABiABBgUGIcCwgINEC4YigUYxwEYrwEYQw&sclient=gws-wiz"
-                      target="_blank"
-                      rel="noopener noreferrer">Learn More</a
-                    >
-                  </button>
-                </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img src="/assets/hackuiowa.jpg" alt="HackUIowa" />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">HackUIowa</h3>
+              <div class="card__tags">
+                <p class="job-detail">Best Insurance Hack</p>
+                <p class="card__description">
+                  At HackUIowa, my team and I developed “InsuriQuest,” an app aimed at simplifying insurance education for all ages. Our innovative approach won us the "Best Insurance Hack" award. This experience honed our app development skills and provided valuable interactions with industry leaders. A highlight was our unique "decision tree generation" system, which dynamically created user stories, optimizing the use of LLM requests.
+                </p>
               </div>
-            </li>
-            <li>
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="https://higherlogicdownload.s3.amazonaws.com/CFAI/e2a1529c-2ed1-405a-8785-3ebb089a06e1/UploadedImages/Team_2.jpg"
-                    alt="Other Project 2"
-                  />
-                </div>
-                <div class="card__content">
-                  <h3
-                    class="card__title"
-                    style="margin-top: 2rem; margin-bottom: 1rem;"
-                  >
-                    CFA Research Challenge (Iowa)
-                  </h3>
-                  <div class="card__tags">
-                    <p
-                      class="job-detail"
-                      style="font-weight: bold; margin-bottom: 1rem;"
-                    >
-                      1st Place
-                    </p>
-                    <p class="card__description">
-                      My team achieved first place in the 2023 CFA Institute
-                      Research Challenge for the state of Iowa. The Research
-                      Challenge is an esteemed competition that brings together
-                      university students and investment professionals from the
-                      CFA Society network. It offers valuable hands-on
-                      mentoring, intensive training in financial analysis and
-                      ethics, and evaluates participants' analytical, valuation,
-                      report writing, and presentation skills. With guidance
-                      from our society members, faculty advisor, and industry
-                      mentor, we conducted thorough research and analysis,
-                      including public comparables and a discounted cash flow
-                      (DCF) with sensitivity testing, to value the assigned
-                      company (Sun Country Airlines, $SNCY).
-                    </p>
-                  </div>
-                </div>
-                <!-- Button that links to group website -->
-                <div style="text-align: center">
-                  <button class="card__button">
-                    <a
-                      class="learn__more"
-                      href="https://cfasociety.org/iowa/society-events/research-challenge"
-                      target="_blank"
-                      rel="noopener noreferrer">Learn More</a
-                    >
-                  </button>
-                </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img src="https://source.colostate.edu/wp-content/uploads/2017/04/Frank-Smith.jpg" alt="Rocky Mountain Investment Challenge" />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Rocky Mountain Investment Challenge</h3>
+              <div class="card__tags">
+                <p class="job-detail">3rd Place</p>
+                <p class="card__description">
+                  I participated in the Rocky Mountain Investment Challenge, an exciting competition where undergraduate students present investment pitches to industry judges. Our team selected Fulgent Genetics and conducted comprehensive research and valuation using various methods, such as DCF analysis, comparable company analysis and precedent transaction analysis. We achieved 3rd place and gained valuable experience in analyzing real-world firms, honing our presentation skills, and connecting with professionals in the financial industry. It was a rewarding opportunity to apply our investment expertise and learn from esteemed judges.
+                </p>
               </div>
-            </li>
-            <li>
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="https://logos-world.net/wp-content/uploads/2022/01/Iowa-State-University-Symbol.png"
-                    alt="Other Project 2"
-                  />
-                </div>
-                <div class="card__content">
-                  <h3
-                    class="card__title"
-                    style="margin-top: 2rem; margin-bottom: 1rem;"
-                  >
-                    Iowa State University Hackathon
-                  </h3>
-                  <div class="card__tags">
-                    <p
-                      class="job-detail"
-                      style="font-weight: bold; margin-bottom: 1rem;"
-                    >
-                      2nd Place
-                    </p>
-                    <p class="card__description">
-                      My team achieved second place in the Iowa State University
-                      Hackathon. Our project, "dungeon_ai," aimed to enhance
-                      accessibility to Dungeons & Dragons-style games by
-                      eliminating the need for an experienced Dungeon Master.
-                      Through collaborative teamwork, we developed a full-stack
-                      web application that allowed users to create characters,
-                      allocate skill points, and embark on exciting adventures
-                      filled with treasure, monsters, and exploration. The
-                      project utilized AI technologies for generating the
-                      virtual Dungeon Master, storyline, and images for
-                      environments and player characters. This fast-paced
-                      development experience not only showcased our technical
-                      skills but also fostered personal growth and teamwork.
-                    </p>
-                  </div>
-                </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img src="/assets/projects/non-software/prosperity.jpg" alt="IMC Trading Prosperity Competition" />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">IMC Trading Prosperity Competition</h3>
+              <div class="card__tags">
+                <p class="job-detail">Participant</p>
+                <p class="card__description">
+                  I had the opportunity to participate in "Prosperity," IMC Trading's global trading competition. Over the course of 10 days, teams were tasked with leveraging their python skills, strategic insights, and analytics to trade on a virtual market and strive for prosperity for their assigned island. It was an excellent platform for honing my quantitative trading and analysis abilities, and allowed me to put my skills to the test in a dynamic and competitive environment.
+                </p>
               </div>
-            </li>
-            <li>
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="https://logos-world.net/wp-content/uploads/2022/01/Iowa-State-University-Symbol.png"
-                    alt="Other Project 2"
-                  />
-                </div>
-                <div class="card__content">
-                  <h3
-                    class="card__title"
-                    style="margin-top: 2rem; margin-bottom: 1rem;"
-                  >
-                    Iowa State University CSE Club Programmning Contest
-                  </h3>
-                  <div class="card__tags">
-                    <p
-                      class="job-detail"
-                      style="font-weight: bold; margin-bottom: 1rem;"
-                    >
-                      3rd Place
-                    </p>
-                    <p class="card__description">
-                      My team achieved third place in the Iowa State University
-                      CSE Club Programming Contest. The contest revolved around
-                      solving programming puzzles on Kattis within a three-hour
-                      time constraint. It tested our problem-solving abilities,
-                      algorithmic thinking, and coding skills under pressure.
-                      Despite the challenging environment, our team demonstrated
-                      resilience and teamwork to secure the third-place
-                      position.
-                    </p>
-                  </div>
-                </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img src="https://higherlogicdownload.s3.amazonaws.com/CFAI/e2a1529c-2ed1-405a-8785-3ebb089a06e1/UploadedImages/Team_2.jpg" alt="CFA Research Challenge (Iowa)" />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">CFA Research Challenge (Iowa)</h3>
+              <div class="card__tags">
+                <p class="job-detail">1st Place</p>
+                <p class="card__description">
+                  My team achieved first place in the 2023 CFA Institute Research Challenge for the state of Iowa. The Research Challenge is an esteemed competition that brings together university students and investment professionals from the CFA Society network. It offers valuable hands-on mentoring, intensive training in financial analysis and ethics, and evaluates participants' analytical, valuation, report writing, and presentation skills. With guidance from our society members, faculty advisor, and industry mentor, we conducted thorough research and analysis, including public comparables and a discounted cash flow (DCF) with sensitivity testing, to value the assigned company (Sun Country Airlines, $SNCY).
+                </p>
               </div>
-            </li>
-            <li>
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="https://content.cdntwrk.com/files/aHViPTExOTYyMCZjbWQ9aXRlbWVkaXRvcmltYWdlJmZpbGVuYW1lPWl0ZW1lZGl0b3JpbWFnZV81ZmMxNDkxNmU3YjA1LnBuZyZ2ZXJzaW9uPTAwMDAmc2lnPTBmZTM4MGIxMGVjNTEwNzNmOGU5ZTE4YTVmNWQyNDI2"
-                    alt="Other Project 2"
-                  />
-                </div>
-                <div class="card__content">
-                  <h3
-                    class="card__title"
-                    style="margin-top: 2rem; margin-bottom: 1rem;"
-                  >
-                    Capital One SWE Summit Hackathon
-                  </h3>
-                  <div class="card__tags">
-                    <p
-                      class="job-detail"
-                      style="font-weight: bold; margin-bottom: 1rem;"
-                    >
-                      2nd Place
-                    </p>
-                    <p class="card__description">
-                      During the hackathon, I worked with my team to develop a
-                      social media bot focused on financial education.
-                      Leveraging the Discord API, Python, Firebase, NLTK, and
-                      the QuickChart API, we created a dynamic platform that
-                      provided users with valuable information about finance.
-                      The experience of the hackathon allowed us to explore and
-                      learn new technologies within a limited time frame,
-                      showcasing our adaptability and quick learning abilities.
-                    </p>
-                  </div>
-                </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img src="/assets/iowastate.png" alt="Iowa State University Hackathon" />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Iowa State University Hackathon</h3>
+              <div class="card__tags">
+                <p class="job-detail">2nd Place</p>
+                <p class="card__description">
+                  My team achieved second place in the Iowa State University Hackathon. Our project, "dungeon_ai," aimed to enhance accessibility to Dungeons & Dragons-style games by eliminating the need for an experienced Dungeon Master. Through collaborative teamwork, we developed a full-stack web application that allowed users to create characters, allocate skill points, and embark on exciting adventures filled with treasure, monsters, and exploration. The project utilized AI technologies for generating the virtual Dungeon Master, storyline, and images for environments and player characters. This fast-paced development experience not only showcased our technical skills but also fostered personal growth and teamwork.
+                </p>
               </div>
-            </li>
-          </Grid>
-          <ContactCTA />
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img src="/assets/iowastate.png" alt="Iowa State University CSE Club Programming Contest" />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Iowa State University CSE Club Programming Contest</h3>
+              <div class="card__tags">
+                <p class="job-detail">3rd Place</p>
+                <p class="card__description">
+                  My team achieved third place in the Iowa State University CSE Club Programming Contest. The contest revolved around solving programming puzzles on Kattis within a three-hour time constraint. It tested our problem-solving abilities, algorithmic thinking, and coding skills under pressure. Despite the challenging environment, our team demonstrated resilience and teamwork to secure the third-place position.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img src="/assets/capitalone.webp" alt="Capital One SWE Summit Hackathon" />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Capital One SWE Summit Hackathon</h3>
+              <div class="card__tags">
+                <p class="job-detail">2nd Place</p>
+                <p class="card__description">
+                  During the hackathon, I worked with my team to develop a social media bot focused on financial education. Leveraging the Discord API, Python, Firebase, NLTK, and the QuickChart API, we created a dynamic platform that provided users with valuable information about finance. The experience of the hackathon allowed us to explore and learn new technologies within a limited time frame, showcasing our adaptability and quick learning abilities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </Grid>
+      <ContactCTA />
+    </main>
+  </div>
 
           <style>
             /* Logo styling for each company in a card */
@@ -707,7 +415,8 @@ import Hero from "../components/Hero.astro";
 
             /* Style for card__tag that makes it like a post tag or button type shape */
             .card__tag {
-              display: inline-block;
+              display: flex;
+              text: center;
               border-radius: 0.25rem;
               background-color: var(--color-primary);
               color: var(--color-white);
@@ -764,7 +473,7 @@ import Hero from "../components/Hero.astro";
             }
 
             .card__title {
-              margin-top: 1rem;
+              margin-top: 2rem;
               margin-bottom: 2rem;
             }
 
