@@ -7,9 +7,9 @@ description: |
   EveryNetNet.com is a platform designed to provide a comprehensive database of net-net companies (companies trading below their net current asset value). The platform is designed to help investors and investment-related firms access or filter data about net-net companies in a simple and intuitive manner, to allow them to make more informed investment decisions.
 tags:
   - React
-  - JavaScript
   - Google Cloud Platform
   - Puppeteer
+  - Stripe API
 # Section for tech stack
 ---
 
