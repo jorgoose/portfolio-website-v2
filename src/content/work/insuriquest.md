@@ -1,5 +1,5 @@
 ---
-title: InsuriQuest
+title: InsuriQuest 🏆
 publishDate: 2023-09-20 00:00:00
 img: /assets/projects/insuriquest.png
 img_alt: InsuriQuest

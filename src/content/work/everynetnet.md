@@ -1,5 +1,5 @@
 ---
-title: everynetnet.com
+title: everynetnet.com 🚀
 publishDate: 2024-10-06 00:00:00
 img: /assets/projects/everynetnetlogo.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
