@@ -1,6 +1,6 @@
 ---
 title: FuzzGuard
-publishDate: 2024-10-06 00:00:00
+publishDate: 2024-08-06 00:00:00
 img: /assets/projects/fuzzguard.jpg
 img_alt: Abstract representation of code being fuzz tested with digital patterns
 description: |
