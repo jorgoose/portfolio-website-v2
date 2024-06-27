@@ -25,6 +25,14 @@ const projects = (await getCollection("work")).sort(
         align="start"
       />
 
+      <!-- Legend for Symbols: 🏆 for Contest Winners, 🎓 for School Project, 🚀 for Startup -->
+      <div class="legend">
+        <p>Legend:</p>
+        <p>🏆 Contest Winner</p>
+        <p>🎓 School Project</p>
+        <p>🚀 Startup</p>
+      </div>
+
       <!-- View List of All Projects Button -->
       <div class="view-all-projects-button">
         <a href="/all-projects" class="button">View List of All Projects</a>
