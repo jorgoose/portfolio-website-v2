@@ -1,5 +1,5 @@
 ---
-title: Marketmon
+title: Marketmon 🏆 (x2)
 publishDate: 2024-09-04 00:00:00
 img: /assets/projects/marketmon.png
 img_alt: Trading card game interface with financial data-based monsters
