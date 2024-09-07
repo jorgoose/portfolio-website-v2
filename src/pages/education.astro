@@ -120,6 +120,28 @@ import Hero from "../components/Hero.astro";
               </li>
             </li>
           </Grid> -->
+
+          <!-- Certification Section -->
+          <Hero title="Certifications" align="start" />
+          <Grid variant="offset">
+            <li>
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://www.hugobarona.com/aws-certification-saa-c03-exam-guide/featured-image.png
+                    "
+                    alt="AWS SAA-C03 Certification Icon"
+                  />
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">AWS Certified Solutions Architect (Associate)</h3>
+                  <div class="card__tags">
+                    <span class="card__tag">Issued: July 2024</span>
+                    </div>
+                </div>
+              </div>
+            </li>
+            </Grid>
           <ContactCTA />
         </div>
       </div>
@@ -178,6 +200,7 @@ import Hero from "../components/Hero.astro";
 
         .card__image {
           position: relative;
+          margin-bottom: 1rem;
           padding-top: 56.25%;
           overflow: hidden;
           border-radius: 0.5rem;
