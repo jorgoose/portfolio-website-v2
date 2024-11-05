@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
 ---
@@ -43,13 +42,12 @@ import Hero from "../components/Hero.astro";
           </p>
         </div>
       </section>
+
       <section>
         <h2 class="section-title">Fun Facts</h2>
         <div class="content">
-          <p>
-            Here are a few fun facts about me:
-          </p>
-          <ul>
+          <p>Here are a few fun facts about me:</p>
+          <ul class="fun-facts">
             <li>
               I once completed the 4x4x48 fitness challenge, where you complete a 4 mile run every 4 hours for 48 hours (48 miles total).
             </li>
@@ -67,328 +65,229 @@ import Hero from "../components/Hero.astro";
       </section>
       <section>
         <h2 class="section-title">Books I've Read</h2>
-        <!-- List of books that I've read. Each book will be contained wtihin a card that that has the book cover image and the book title and author -->
         <div class="content">
           <p>
             I enjoy reading and learning about a variety of topics. Below is a
             list of books that I have read in the past, ordered by how recently I finished reading them.
           </p>
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div
-              class="flex flex-col items-center justify-center p-4 space-y-4 bg-gray-800 rounded-lg"
-            >
+          <div class="book-grid">
+            <div class="book-card">
               <img
                 src="https://m.media-amazon.com/images/I/51GtTMTpNmL.jpg"
-                alt="Atomic Habits by James Clear"
-                class="w-32 rounded-lg"
-                width="40%"
+                alt="Against the Gods: The Remarkable Story of Risk"
               />
-              <h3
-                class="text-xl font-semibold text-gray-100"
-                style="margin-top: 1rem;"
-              >
-                Against the Gods: The Remarkable Story of Risk
-              </h3>
-              <p class="text-gray-300" style="margin-top: 1rem;">
-                Peter L. Bernstein
-              </p>
+              <h3>Against the Gods</h3>
+              <p>Peter L. Bernstein</p>
             </div>
-            <div
-              class="flex flex-col items-center justify-center p-4 space-y-4 bg-gray-800 rounded-lg"
-            >
+            <div class="book-card">
               <img
                 src="https://m.media-amazon.com/images/I/81y4IBu7gzL._SL1500_.jpg"
-                alt="Against the Gods: The Remarkable Story of Risk by Peter L. Bernstein"
-                class="w-32 rounded-lg"
-                width="40%"
+                alt="The Millionaire Next Door"
               />
-              <h3
-                class="text-xl font-semibold text-gray-100"
-                style="margin-top: 1rem;"
-              >
-                The Millionaire Next Door
-              </h3>
-              <p class="text-gray-300" style="margin-top: 1rem;">
-                Thomas J. Stanley and William D. Danko
-              </p>
+              <h3>The Millionaire Next Door</h3>
+              <p>Thomas J. Stanley and William D. Danko</p>
             </div>
-            <div
-              class="flex flex-col items-center justify-center p-4 space-y-4 bg-gray-800 rounded-lg"
-            >
+            <div class="book-card">
               <img
                 src="https://m.media-amazon.com/images/I/71xlR6yDvkL._SL1500_.jpg"
-                alt="The Richest Man in Babylon by George S. Clason"
-                class="w-32 rounded-lg"
-                width="40%"
+                alt="The Richest Man in Babylon"
               />
-              <h3
-                class="text-xl font-semibold text-gray-100"
-                style="margin-top: 1rem;"
-              >
-                The Richest Man in Babylon
-              </h3>
-              <p class="text-gray-300" style="margin-top: 1rem;">
-                George S. Clason
-              </p>
-              <div
-                class="flex flex-col items-center justify-center p-4 space-y-4 bg-gray-800 rounded-lg"
-              >
-                <img
-                  src="https://m.media-amazon.com/images/I/51OPRFQfdmL.jpg"
-                  alt="Common Stocks and Uncommon Profits by Philip A. Fisher"
-                  class="w-32 rounded-lg"
-                  width="40%"
-                />
-                <h3
-                  class="text-xl font-semibold text-gray-100"
-                  style="margin-top: 1rem;"
-                >
-                  Common Stocks and Uncommon Profits
-                </h3>
-                <p class="text-gray-300" style="margin-top: 1rem;">
-                  Philip A. Fisher
-                </p>
-                <div
-                  class="flex flex-col items-center justify-center p-4 space-y-4 bg-gray-800 rounded-lg"
-                >
-                  <img
-                    src="https://m.media-amazon.com/images/I/61jm9GIvL7L._SL1360_.jpg"
-                    alt="The Acquirer's Multiple by Tobias E. Carlisle"
-                    class="w-32 rounded-lg"
-                    width="40%"
-                  />
-                  <h3
-                    class="text-xl font-semibold text-gray-100"
-                    style="margin-top: 1rem;"
-                  >
-                    The Acquirer's Multiple
-                  </h3>
-                  <p class="text-gray-300" style="margin-top: 1rem;">
-                    Tobias E. Carlisle
-                  </p>
-                </div>
-                <div
-                  class="flex flex-col items-center justify-center p-4 space-y-4 bg-gray-800 rounded-lg"
-                >
-                  <img
-                    src="https://m.media-amazon.com/images/I/71iHghF0oxL._SL1500_.jpg"
-                    alt="Atomic Habits by James Clear"
-                    class="w-32 rounded-lg"
-                    width="40%"
-                  />
-                  <h3
-                    class="text-xl font-semibold text-gray-100"
-                    style="margin-top: 1rem;"
-                  >
-                    Warren Buffett and the Interpretation of Financial
-                    Statements
-                  </h3>
-                  <p class="text-gray-300" style="margin-top: 1rem;">
-                    Mary Buffett and David Clark
-                  </p>
-                </div>
-                <div
-                  class="flex flex-col items-center justify-center p-4 space-y-4 bg-gray-800 rounded-lg"
-                >
-                  <img
-                    src="https://m.media-amazon.com/images/I/71pvFCvMM2L._SL1360_.jpg"
-                    alt="One Up On Wall Street by Peter Lynch"
-                    class="w-32 rounded-lg"
-                    width="40%"
-                  />
-                  <h3
-                    class="text-xl font-semibold text-gray-100"
-                    style="margin-top: 1rem;"
-                  >
-                    One Up On Wall Street
-                  </h3>
-                  <p class="text-gray-300" style="margin-top: 1rem;">
-                    Peter Lynch
-                  </p>
-                </div>
-                <div
-                  class="flex flex-col items-center justify-center p-4 space-y-4 bg-gray-800 rounded-lg"
-                >
-                  <img
-                    src="https://m.media-amazon.com/images/I/71pL0Jk9+nL._SL1500_.jpg"
-                    alt="How Life Imitates Chess by Garry Kasparov"
-                    class="w-32 rounded-lg"
-                    width="40%"
-                  />
-                  <h3
-                    class="text-xl font-semibold text-gray-100"
-                    style="margin-top: 1rem;"
-                  >
-                    How Life Imitates Chess
-                  </h3>
-                  <p class="text-gray-300" style="margin-top: 1rem;">
-                    Garry Kasparov
-                  </p>
-                </div>
-                <div
-                  class="flex flex-col items-center justify-center p-4 space-y-4 bg-gray-800 rounded-lg"
-                >
-                  <img
-                    src="https://m.media-amazon.com/images/I/71Uh5iMqrqL._SL1500_.jpg"
-                    alt="The Essays of Warren Buffett by Lawrence A. Cunningham and Warren E. Buffett"
-                    class="w-32 rounded-lg"
-                    width="40%"
-                  />
-                  <h3
-                    class="text-xl font-semibold text-gray-100"
-                    style="margin-top: 1rem;"
-                  >
-                    The Essays of Warren Buffett
-                  </h3>
-                  <p class="text-gray-300" style="margin-top: 1rem;">
-                    Lawrence A. Cunningham and Warren E. Buffett
-                  </p>
-                </div>
-                <div
-                  class="flex flex-col items-center justify-center p-4 space-y-4 bg-gray-800 rounded-lg"
-                >
-                  <img
-                    src="https://m.media-amazon.com/images/I/71Xygne8+qL._SL1500_.jpg"
-                    alt="Zero to One by Peter Thiel and Blake Masters"
-                    class="w-32 rounded-lg"
-                    width="40%"
-                  />
-                  <h3
-                    class="text-xl font-semibold text-gray-100"
-                    style="margin-top: 1rem;"
-                  >
-                    Zero to One
-                  </h3>
-                  <p class="text-gray-300" style="margin-top: 1rem;">
-                    Peter Thiel and Blake Masters
-                  </p>
-                </div>
-                <div
-                  class="flex flex-col items-center justify-center p-4 space-y-4 bg-gray-800 rounded-lg"
-                >
-                  <img
-                    src="https://m.media-amazon.com/images/I/61nTspM+BYL._SL1033_.jpg"
-                    alt="Man's Search for Meaning by Viktor E. Frankl"
-                    class="w-32 rounded-lg"
-                    width="40%"
-                  />
-                  <h3
-                    class="text-xl font-semibold text-gray-100"
-                    style="margin-top: 1rem;"
-                  >
-                    Man's Search for Meaning
-                  </h3>
-                  <p class="text-gray-300" style="margin-top: 1rem;">
-                    Viktor E. Frankl
-                  </p>
-                </div>
-                <div
-                  class="flex flex-col items-center justify-center p-4 space-y-4 bg-gray-800"
-                >
-                  <img
-                    src="https://m.media-amazon.com/images/I/61pDNU9qEGL._SL1360_.jpg"
-                    alt="Can't Hurt Me by David Goggins"
-                    class="w-32"
-                    width="40%"
-                  />
-                  <h3
-                    class="text-xl font-semibold text-gray-100"
-                    style="margin-top: 1rem;"
-                  >
-                    Can't Hurt Me
-                  </h3>
-                  <p class="text-gray-300" style="margin-top: 1rem;">
-                    David Goggins
-                  </p>
-                </div>
-                <div
-                  class="flex flex-col items-center justify-center p-4 space-y-4 bg-gray-800 rounded-lg"
-                >
-                  <img
-                    src="https://m.media-amazon.com/images/I/41P3AE+9GeL.jpg"
-                    alt="How to Win Friends and Influence People by Dale Carnegie"
-                    class="w-32 rounded-lg"
-                    width="40%"
-                  />
-                  <h3
-                    class="text-xl font-semibold text-gray-100"
-                    style="margin-top: 1rem;"
-                  >
-                    How to Win Friends and Influence People
-                  </h3>
-                  <p class="text-gray-300" style="margin-top: 1rem;">
-                    Dale Carnegie
-                  </p>
-
-                  <ContactCTA />
-                </div>
-              </div>
-
-              <style>
-                .about {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 3.5rem;
-                }
-
-                p {
-                  margin-bottom: 1.5rem;
-                }
-
-                img {
-                  margin-top: 1.5rem;
-
-                  box-shadow: var(--shadow-md);
-                }
-
-                section {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 0.5rem;
-                  color: var(--gray-200);
-                }
-
-                .section-title {
-                  grid-column-start: 1;
-                  font-size: var(--text-xl);
-                  color: var(--gray-0);
-                }
-
-                .content {
-                  grid-column: 2 / 4;
-                }
-
-                .content :global(a) {
-                  text-decoration: 1px solid underline transparent;
-                  text-underline-offset: 0.25em;
-                  transition: text-decoration-color var(--theme-transition);
-                }
-
-                .content :global(a:hover),
-                .content :global(a:focus) {
-                  text-decoration-color: currentColor;
-                }
-
-                @media (min-width: 50em) {
-                  .about {
-                    display: grid;
-                    grid-template-columns: 1fr 60% 1fr;
-                  }
-
-                  .about > :global(:first-child) {
-                    grid-column-start: 2;
-                  }
-
-                  section {
-                    display: contents;
-                    font-size: var(--text-lg);
-                  }
-                }
-              </style>
+              <h3>The Richest Man in Babylon</h3>
+              <p>George S. Clason</p>
+            </div>
+            <div class="book-card">
+              <img
+                src="https://m.media-amazon.com/images/I/51OPRFQfdmL.jpg"
+                alt="Common Stocks and Uncommon Profits"
+              />
+              <h3>Common Stocks and Uncommon Profits</h3>
+              <p>Philip A. Fisher</p>
+            </div>
+            <div class="book-card">
+              <img
+                src="https://m.media-amazon.com/images/I/61jm9GIvL7L._SL1360_.jpg"
+                alt="The Acquirer's Multiple"
+              />
+              <h3>The Acquirer's Multiple</h3>
+              <p>Tobias E. Carlisle</p>
+            </div>
+            <div class="book-card">
+              <img
+                src="https://m.media-amazon.com/images/I/71iHghF0oxL._SL1500_.jpg"
+                alt="Warren Buffett and the Interpretation of Financial Statements"
+              />
+              <h3>Warren Buffett and the Interpretation of Financial Statements</h3>
+              <p>Mary Buffett and David Clark</p>
+            </div>
+            <div class="book-card">
+              <img
+                src="https://m.media-amazon.com/images/I/71pvFCvMM2L._SL1360_.jpg"
+                alt="One Up On Wall Street"
+              />
+              <h3>One Up On Wall Street</h3>
+              <p>Peter Lynch</p>
+            </div>
+            <div class="book-card">
+              <img
+                src="https://m.media-amazon.com/images/I/71pL0Jk9+nL._SL1500_.jpg"
+                alt="How Life Imitates Chess"
+              />
+              <h3>How Life Imitates Chess</h3>
+              <p>Garry Kasparov</p>
+            </div>
+            <div class="book-card">
+              <img
+                src="https://m.media-amazon.com/images/I/71Uh5iMqrqL._SL1500_.jpg"
+                alt="The Essays of Warren Buffett"
+              />
+              <h3>The Essays of Warren Buffett</h3>
+              <p>Lawrence A. Cunningham and Warren E. Buffett</p>
+            </div>
+            <div class="book-card">
+              <img
+                src="https://m.media-amazon.com/images/I/71Xygne8+qL._SL1500_.jpg"
+                alt="Zero to One"
+              />
+              <h3>Zero to One</h3>
+              <p>Peter Thiel and Blake Masters</p>
+            </div>
+            <div class="book-card">
+              <img
+                src="https://m.media-amazon.com/images/I/61nTspM+BYL._SL1033_.jpg"
+                alt="Man's Search for Meaning"
+              />
+              <h3>Man's Search for Meaning</h3>
+              <p>Viktor E. Frankl</p>
+            </div>
+            <div class="book-card">
+              <img
+                src="https://m.media-amazon.com/images/I/61pDNU9qEGL._SL1360_.jpg"
+                alt="Can't Hurt Me"
+              />
+              <h3>Can't Hurt Me</h3>
+              <p>David Goggins</p>
+            </div>
+            <div class="book-card">
+              <img
+                src="https://m.media-amazon.com/images/I/41P3AE+9GeL.jpg"
+                alt="How to Win Friends and Influence People"
+              />
+              <h3>How to Win Friends and Influence People</h3>
+              <p>Dale Carnegie</p>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <ContactCTA />
   </div>
 </BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .section-title {
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    max-width: 85ch;
+    margin-inline: auto;
+  }
+
+  .content p {
+    color: var(--gray-300);
+    margin-bottom: 1.5rem;
+  }
+
+  .fun-facts {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    color: var(--gray-300);
+  }
+
+  .fun-facts li {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .book-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    margin-top: 2rem;
+  }
+
+  .book-card {
+    background: var(--gradient-subtle);
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .book-card:hover {
+    transform: translateY(-2px);
+    background: var(--gradient-inverse);
+  }
+
+  .book-card img {
+    width: 120px;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .book-card h3 {
+    font-size: var(--text-sm);
+    color: var(--gray-200);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .book-card p {
+    color: var(--gray-400);
+    font-size: var(--text-sm);
+    margin: 0;
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+
+    .section-title {
+      grid-column-start: 2;
+    }
+
+    .content {
+      grid-column: 2 / 3;
+    }
+
+    .book-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+</style>
