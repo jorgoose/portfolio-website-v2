@@ -1,101 +1,117 @@
 ---
 import Icon from "./Icon.astro";
-import Pill from "./Pill.astro";
 ---
-<h2>Technical Skills</h2>
+
 <section class="box skills">
-  <!-- Programming Languages -->
-  <div class="skills-category" style="text-align: center;">
-    <h3 style="margin-bottom: 1rem;">Languages</h3>
-    <ul class="skills-list">
-      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        <Pill>Python</Pill>
-        <Pill>Go</Pill>
-        <Pill>Java</Pill>
-        <Pill>JavaScript</Pill>
-        <Pill>SQL</Pill>
-        <Pill>PHP</Pill>
-        <Pill>HTML</Pill>
-        <Pill>CSS</Pill>
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skills-category">
+      <h3>Programming Languages</h3>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <Icon icon="python" size="2em" />
+          <span>Python</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="golang" size="2em" />
+          <span>Go</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="javascript" size="2em" />
+          <span>JavaScript</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="typescript" size="2em" />
+          <span>TypeScript</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="java" size="2em" />
+          <span>Java</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="php" size="2em" />
+          <span>PHP</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="database" size="2em" />
+          <span>SQL</span>
+        </div>
       </div>
-    </ul>
-  </div>
+    </div>
 
-  <!-- Back-End Technologies -->
-  <div class="skills-category" style="text-align: center;">
-    <h3 style="margin-bottom: 1rem;">Back-End</h3>
-    <ul class="skills-list">
-      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        <Pill>Django</Pill>
-        <Pill>FastAPI</Pill>
-        <Pill>Flask</Pill>
-        <Pill>Express.js</Pill>
-        <Pill>PostgreSQL</Pill>
-        <Pill>MySQL</Pill>
-        <Pill>SpringBoot</Pill>
+    <div class="skills-category">
+      <h3>Frameworks & Libraries</h3>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <Icon icon="fastapi" size="2em" />
+          <span>FastAPI</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="nodejs" size="2em" />
+          <span>Node.js</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="spring" size="2em" />
+          <span>Spring Boot</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="react" size="2em" />
+          <span>React</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="nextjs" size="2em" />
+          <span>Next.js</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="svelte" size="2em" />
+          <span>Svelte</span>
+        </div>
       </div>
-    </ul>
-  </div>
+    </div>
 
-  <!-- Front-End Technologies -->
-  <div class="skills-category" style="text-align: center;">
-    <h3 style="margin-bottom: 1rem;">Front-End</h3>
-    <ul class="skills-list">
-      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        <Pill>React</Pill>
-        <Pill>Lit</Pill>
-        <Pill>Bootstrap</Pill>
-        <Pill>Tailwind CSS</Pill>
-        <Pill>Chart.js</Pill>
-        <Pill>Vaadin</Pill>
-        <Pill>Svelte</Pill>
+    <div class="skills-category">
+      <h3>Developer Technologies</h3>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <Icon icon="aws" size="2em" />
+          <span>AWS</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="gcp" size="2em" />
+          <span>GCP</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="postgresql" size="2em" />
+          <span>PostgreSQL</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="pytorch" size="2em" />
+          <span>PyTorch</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="snowflake" size="2em" />
+          <span>Snowflake</span>
+        </div>
       </div>
-    </ul>
-  </div>
+    </div>
 
-  <!-- Python Libraries -->
-  <div class="skills-category" style="text-align: center;">
-    <h3 style="margin-bottom: 1rem;">ML and Big Data</h3>
-    <ul class="skills-list">
-      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        <Pill>PyTorch</Pill>
-        <Pill>Pandas</Pill>
-        <Pill>TensorFlow</Pill>
-        <Pill>Seaborn</Pill>
-        <Pill>NLTK</Pill>
-        <Pill>Snowflake</Pill>
+    <div class="skills-category">
+      <h3>Business & Finance</h3>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <Icon icon="excel" size="2em" />
+          <span>Microsoft Excel</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="chart" size="2em" />
+          <span>Financial Modeling</span>
+        </div>
+        <div class="tech-card">
+          <Icon icon="file-spreadsheet" size="2em" />
+          <span>Financial Statement Analysis</span>
+        </div>
       </div>
-    </ul>
-  </div>
-
-  <!-- Software Development -->
-  <div class="skills-category" style="text-align: center;">
-    <h3 style="margin-bottom: 1rem;">Cloud and Agile</h3>
-    <ul class="skills-list">
-      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        <Pill>AWS</Pill>
-        <Pill>GCP</Pill>
-        <Pill>Git</Pill>
-        <Pill>Jira</Pill>
-        <Pill>Jenkins</Pill>
-        <Pill>Confluence</Pill>
-        <Pill>CI/CD</Pill>
-        <Pill>Locust</Pill>
-      </div>
-    </ul>
-  </div>
-
-  <!-- Finance Skills -->
-  <div class="skills-category" style="text-align: center;">
-    <h3 style="margin-bottom: 1rem;">Finance Skills</h3>
-    <ul class="skills-list">
-      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        <Pill>Excel</Pill>
-        <Pill>Financial Modeling</Pill>
-        <Pill>Quantitative Investing</Pill>
-        <Pill>Financial Statements</Pill>
-      </div>
-    </ul>
+    </div>
   </div>
 </section>
 
@@ -108,33 +124,51 @@ import Pill from "./Pill.astro";
     box-shadow: var(--shadow-sm);
   }
 
-  .skills {
+  .skills h2 {
+    font-size: var(--text-xl);
+    margin-bottom: 2rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .skills-category h3 {
+    color: var(--gray-200);
+    font-size: var(--text-lg);
+    margin-bottom: 1rem;
+  }
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+
+  .tech-card {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--gradient-subtle);
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    color: var(--gray-300);
+    transition: transform 0.2s ease, background 0.2s ease;
   }
 
-  .skills h2 {
-    font-size: var(--text-lg);
+  .tech-card:hover {
+    transform: translateY(-2px);
+    background: var(--gradient-inverse);
+    color: var(--gray-200);
   }
 
-  .skills p {
-    color: var(--gray-400);
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--accent-regular);
-    color: var(--white);
-    border-radius: 0.375rem;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-
-  .btn:hover {
-    background-color: var(--accent-dark);
+  .tech-card span {
+    font-size: var(--text-sm);
+    text-align: center;
   }
 
   @media (min-width: 50em) {
@@ -143,14 +177,17 @@ import Pill from "./Pill.astro";
       padding: 2.5rem;
     }
 
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 5rem;
-    }
-
     .skills h2 {
       font-size: var(--text-2xl);
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem 3rem;
+    }
+
+    .tech-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
   }
 </style>
