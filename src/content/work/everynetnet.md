@@ -7,40 +7,63 @@ description: |
   EveryNetNet.com is a platform designed to provide a comprehensive database of net-net companies (companies trading below their net current asset value). The platform is designed to help investors and investment-related firms access or filter data about net-net companies in a simple and intuitive manner, to allow them to make more informed investment decisions.
 tags:
   - React
+  - Next.js
+  - Go
   - Google Cloud Platform
   - Puppeteer
   - Stripe API
-# Section for tech stack
 ---
-
-<!-- Link to Project Website -->
 
 #### [Visit EveryNetNet.com](https://everynetnet.com/)
 
-## <!-- Horizontal Line -->
+<br />
 
 ---
 
 ## Introduction
+What started as a personal tool to automate my own investment research evolved into a full-featured platform serving hundreds of users. As a value investor following Benjamin Graham's (Warren Buffett's mentor) principles, I found myself manually searching through financial statements to find net-net stocks (companies trading below their net current asset value). After building a tool to automate this process for myself, I recognized the broader market need and developed it into a comprehensive platform.
 
-> "Just buy something for less than it’s worth." - Warren Buffett
+<br />
 
-Welcome to EveryNetNet.com, a platform dedicated to bringing you the world of net-net companies. Inspired by my passion for investing, capital markets, and the strategies of Benjamin Graham, author of "The Intelligent Investor" and "Security Analysis," as well as Warren Buffett during the early years of his partnership, EveryNetNet.com aims to empower investors with valuable insights and opportunities in the realm of net-net investing.
+---
 
-Net-net investing, a strategy popularized by Benjamin Graham, focuses on identifying companies trading at a significant discount to their net current asset value (NCAV). These undervalued companies often have strong potential for future growth and can provide attractive investment opportunities. The platform helps you dive deep into the world of net-net investing, providing comprehensive information on companies that meet these criteria.
+<br />
 
-### Project Mission
+## Technical Development
 
-The mission of EveryNetNet is to provide a platform where investors can discover undervalued net-net companies. EveryNetNet strives to offer valuable insights and resources that empower investors to make informed investment decisions.
+#### Frontend Evolution
+The platform launched with React.js as a single-page application, using React Router and Tailwind CSS for responsive design. After several months of user growth, I migrated to Next.js to address SEO challenges and enhance page load performance through server-side rendering. This migration improved search engine crawlability while maintaining styling consistency through Tailwind CSS.
 
-The platform automates the search process for net-net stocks, which investors would typically have to do manually by sifting through SEC and other financial filings. By providing this streamlined solution, we help independent investors and investment firms better research these companies and capitalize on their growth potential.
+#### Backend Infrastructure
+The initial version ran on Node.js with Google Cloud Functions, handling daily data aggregation tasks. As the dataset grew, I rewrote the system in Go and deployed it to Google Cloud Run, allowing us to bundle browser binaries directly with the code. This migration, scheduled through Google Cloud Scheduler, reduced processing times by 66% and significantly decreased cloud costs.
 
-### Long-Term Vision
+#### Data Collection System
+Built a multi-source data aggregation system combining:
+- Puppeteer web scraping capabilities
+- Direct API integrations, including SEC EDGAR API for US-listed companies
+- Automated ETL processes for daily market data updates
+- Comprehensive validation logic for financial calculations
 
-My vision is to create a community of knowledgeable investors who understand the principles of net-net investing and can identify high-potential opportunities in the market. I aim to make EveryNetNet the go-to platform for net-net investing, offering comprehensive data, analysis tools, and educational resources.
+#### Payment Integration
+- Implemented Stripe API for subscription management
+- Built secure payment flow with webhook handling
 
-#### Project Values
+<br />
 
-- **Commitment to Data Accuracy:** My goal is to prioritize the accuracy and reliability of the data provided by EveryNetNet, ensuring that investors can trust the information on the platform.
-- **Empowering Investors:** I believe in empowering investors with the knowledge and tools they need to succeed in net-net investing. We aim to demystify the investment process and make it accessible to all.
-- **Continuous Improvement:** I am committed to continuously improving the platform, incorporating user feedback, and staying up-to-date with the latest developments in net-net investing. We strive to provide the best possible user experience for the EveryNetNet community.
+---
+
+<br />
+
+## Growth & Impact
+- Grew to 700+ unique users through organic growth and direct marketing
+- Achieved 40% month-over-month user growth through targeted email campaigns
+- Maintained over 90% gross margins through efficient infrastructure design
+- Automated financial calculations that previously took hours of manual work
+- Processed thousands of financial records daily through automated collection
+
+## Key Technical Achievements
+- Successfully migrated from React to Next.js for improved SEO
+- Reduced data processing time by 66% through Go migration
+- Built scalable infrastructure handling hundreds of concurrent users
+- Designed cost-efficient serverless architecture that scaled with user growth
+- Implemented automated data collection from multiple authoritative sources
