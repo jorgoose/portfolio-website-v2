@@ -1,87 +1,125 @@
 <section class="section with-background">
-    <header class="section-header stack gap-2 lg:gap-4">
-      <h3>Thoughts & Articles</h3>
-      <p>Some of my perspectives on technology, finance, and finding opportunities:</p>
-    </header>
-  
-    <div class="blog-preview">
-      <article class="post-card">
-        <div class="content">
-          <h4>Decoding Fedspeak: ML Analysis of FOMC Statements</h4>
-          <p>Exploring how machine learning can be used to analyze Federal Reserve communications and predict the potential direction of interest rate changes.</p>
-          <a href="https://jorgensen-logan.medium.com/decoding-fedspeak-a-machine-learning-approach-to-analyzing-fomc-statements-and-predicting-federal-ea50f6c63cc1" target="_blank">Read on Medium →</a>
-        </div>
-      </article>
-  
-      <article class="post-card">
-        <div class="content">
-          <h4>Arbitraging Xbox One Kinects</h4>
-          <p>How I discovered and executed an arbitrage opportunity with Xbox Kinects during high school across two seperate online auction platforms, learning valuable lessons about markets and entrepreneurship.</p>
-          <a href="https://jorgensen-logan.medium.com/arbitrage-adventures-how-i-made-money-buying-and-selling-xbox-one-kinects-in-high-school-9feb82cb978e" target="_blank">Read on Medium →</a>
-        </div>
-      </article>
-    </div>
-  </section>
-  
-  <style>
-    .section-header {
-      margin-bottom: 3rem; /* Added spacing after header */
-    }
+  <header class="section-header stack gap-2 lg:gap-4">
+    <h3>Thoughts & Articles</h3>
+    <p>
+      Some of my perspectives on technology, finance, and finding opportunities:
+    </p>
+  </header>
 
+  <div class="blog-preview">
+    <article class="post-card">
+      <div class="content">
+        <img src="https://miro.medium.com/v2/format:webp/0*q0xSTYfVx2uFcRk_.jpg" alt="The Future of Testing LLMs" class="post-image" />
+        <h4>The Future of Testing LLMs: You Can’t Test Chaos with Constants</h4>
+        <p>
+          Software testing methods that have served us for decades are falling
+          short with non-deterministic AI systems - here's why I believe
+          fighting fire with fire might be our best path forward.
+        </p>
+        <a
+          href="https://jorgensen-logan.medium.com/the-future-of-testing-llms-you-cant-test-chaos-with-constants-191b2ee48c0b"
+          target="_blank">Read on Medium →</a>
+      </div>
+    </article>
+    <article class="post-card">
+      <div class="content">
+        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*g3WgNF2S5wzi4RTx.jpg" alt="Decoding Fedspeak" class="post-image" />
+        <h4>Decoding Fedspeak: ML Analysis of FOMC Statements</h4>
+        <p>
+          Exploring how machine learning can be used to analyze Federal Reserve
+          communications and predict the potential direction of interest rate
+          changes.
+        </p>
+        <a
+          href="https://jorgensen-logan.medium.com/decoding-fedspeak-a-machine-learning-approach-to-analyzing-fomc-statements-and-predicting-federal-ea50f6c63cc1"
+          target="_blank">Read on Medium →</a>
+      </div>
+    </article>
+
+    <article class="post-card">
+      <div class="content">
+        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*XOu1o5jpkpnPW40Y4DTb9A.png" alt="Arbitraging Xbox One Kinects" class="post-image" />
+        <h4>Arbitraging Xbox One Kinects</h4>
+        <p>
+          How I discovered and executed an arbitrage opportunity with Xbox
+          Kinects during high school across two seperate online auction
+          platforms, learning valuable lessons about markets and
+          entrepreneurship.
+        </p>
+        <a
+          href="https://jorgensen-logan.medium.com/arbitrage-adventures-how-i-made-money-buying-and-selling-xbox-one-kinects-in-high-school-9feb82cb978e"
+          target="_blank">Read on Medium →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    margin-bottom: 3rem; /* Added spacing after header */
+  }
+
+  .blog-preview {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .post-card {
+    background: var(--gradient-subtle);
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    color: var(--gray-300);
+    transition: transform 0.2s ease;
+  }
+
+  .post-card:hover {
+    transform: translateY(-2px);
+    background: var(--gradient-inverse);
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+
+  .post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem 0.75rem 0 0;
+    margin-bottom: 1rem;
+  }
+
+  .post-card h4 {
+    font-size: var(--text-lg);
+    margin-bottom: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .post-card p {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .post-card a {
+    color: var(--gray-200); /* Changed from accent-regular for better visibility */
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    background: var(--gradient-subtle);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .post-card a:hover {
+    color: var(--gray-100);
+    background: var(--gradient-inverse);
+    transform: translateY(-2px);
+  }
+
+  @media (min-width: 50em) {
     .blog-preview {
-      display: grid;
-      gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
     }
-  
-    .post-card {
-      background: var(--gradient-subtle);
-      border: 1px solid var(--gray-800);
-      border-radius: 0.75rem;
-      color: var(--gray-300);
-      transition: transform 0.2s ease;
-    }
-  
-    .post-card:hover {
-      transform: translateY(-2px);
-      background: var(--gradient-inverse);
-    }
-  
-    .content {
-      padding: 1.5rem;
-    }
-  
-    .post-card h4 {
-      font-size: var(--text-lg);
-      margin-bottom: 0.5rem;
-      color: var(--gray-200);
-    }
-  
-    .post-card p {
-      margin-bottom: 1rem;
-      line-height: 1.4;
-    }
-  
-    .post-card a {
-      color: var(--gray-200); /* Changed from accent-regular for better visibility */
-      text-decoration: none;
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      background: var(--gradient-subtle);
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      transition: all 0.2s ease;
-    }
-  
-    .post-card a:hover {
-      color: var(--gray-100);
-      background: var(--gradient-inverse);
-      transform: translateY(-2px);
-    }
-  
-    @media (min-width: 50em) {
-      .blog-preview {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  </style>
+  }
+</style>
