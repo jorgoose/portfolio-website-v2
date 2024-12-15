@@ -25,7 +25,7 @@ Core Technical Features:
   - S3 for scalable image storage and delivery
   - Cognito handling user authentication
 
-When users upload a photo, it's sent to a Lambda function running our ML model. The model checks if the image contains a frog - if it does, the image is stored in S3 and appears in feeds. If not, it's rejected. This creates a focused community while demonstrating practical cloud architecture and ML deployment.
+When users upload a photo, it's sent to a Lambda function running the image classification model. The model classificataiomn is used to determine if the image contains a frog - if it does, the image is stored in S3 and appears in feeds to other users. If not, it's rejected and the image is deleted. This process ensures the feed remains only frog photos.
 
 <div class="flex justify-center">
   <a href="https://github.com/jorgoose/frogstagram-live" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
