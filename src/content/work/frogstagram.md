@@ -1,7 +1,7 @@
 ---
 title: Frogstagram
 publishDate: 2019-10-02 00:00:00
-img: /assets/projects/frogstagram.jpg
+img: /assets/projects/frogstagram_feed_page.jpg
 img_alt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |
   Frogstagram is a frog-centric social media application inspired by Instagram. It allows users to create an account, upload photos, and follow other users. The platform incorporates an image classification model to ensure that only frog photos can be uploaded.
