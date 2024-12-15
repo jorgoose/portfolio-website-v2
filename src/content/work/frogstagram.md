@@ -1,29 +1,32 @@
 ---
 title: Frogstagram
-publishDate: 2019-10-02 00:00:00
+publishDate: 2024-10-05 00:00:00
 img: /assets/projects/frogstagram_feed_page.jpg
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
+img_alt: Frogstagram web application interface showing image feed
 description: |
-  Frogstagram is a frog-centric social media application inspired by Instagram. It allows users to create an account, upload photos, and follow other users. The platform incorporates an image classification model to ensure that only frog photos can be uploaded.
+  An Instagram-inspired platform with a twist: it only allows frog photos. Uses AWS services and computer vision to automatically filter uploads, ensuring only frog images make it to the feed.
 tags:
-  - TensorFlow
   - Python
   - FastAPI
-  - React
+  - AWS
+  - SvelteKit
   - Tailwind CSS
+  - Docker
 ---
 
-Frogstagram is an exciting social media application that revolves around frogs. Inspired by Instagram, this platform allows users to create an account, share photos, and connect with other frog enthusiasts. The distinguishing feature of Frogstagram is its image classification model, which ensures that only frog photos can be uploaded to the platform.
+Frogstagram is Instagram with one key difference: it only allows photos of frogs. Using a YOLOv11 computer vision model, the platform automatically filters uploads to maintain a strictly frog-focused feed. This creates a unique use case for deploying ML in production while serving a specific community.
+Core Technical Features:
+- Frontend built with SvelteKit and Tailwind CSS for responsive, modern UI
+- Backend Service:
+  - FastAPI running on AWS Lambda for efficient API handling
+  - Computer vision using YOLOv11 model in Docker containers via Amazon ECR
+  - Resulted in automated image filtering ensuring frog-only content
+- Other AWS Infrastructure:
+  - S3 for scalable image storage and delivery
+  - Cognito handling user authentication
 
-When users upload a photo, the image classification model kicks in. If the photo is recognized as a frog, the user is redirected to the success page, and the photo is added to the database. The uploaded photo can then be viewed on the homepage, where other users can appreciate and interact with it. Likes on Frogstagram are called "ribbits," and comments are referred to as "croaks," giving the platform a fun and frog-themed twist.
+When users upload a photo, it's sent to a Lambda function running our ML model. The model checks if the image contains a frog - if it does, the image is stored in S3 and appears in feeds. If not, it's rejected. This creates a focused community while demonstrating practical cloud architecture and ML deployment.
 
-However, if a photo fails to be recognized as a frog, the user is redirected to the failure page, and the photo is not uploaded to the database. This restriction ensures that Frogstagram remains a dedicated space for frog lovers to share their favorite amphibious images.
-
-Frogstagram employs a tech stack that includes React for the frontend, TailwindCSS for styling, FastAPI for the backend, and TensorFlow for image classification. The backend relies on a SQLite database and employs SQLAlchemy as an Object-Relational Mapping (ORM) tool. By utilizing the power of TensorFlow and its pre-trained image classification model, Frogstagram ensures that the platform remains exclusively dedicated to frog-related content.
-
-Overall, Frogstagram offers a unique and engaging social media experience for frog enthusiasts, allowing them to connect, share, and appreciate the captivating world of frogs while celebrating the beauty and diversity of these amazing creatures.
-
-<!-- Link to GitHub Repository in a Button at the Bottom of the Page -->
 <div class="flex justify-center">
-  <a href="https://github.com/jorgoose/frogstagram" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
+  <a href="https://github.com/jorgoose/frogstagram-live" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
 </div>
