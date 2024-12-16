@@ -16,7 +16,7 @@ tags:
 
 <!-- Link to Project Website -->
 
-#### [Visit FuzzGuard](https://devpost.com/software/fuzzguard)
+#### [Visit DevPost](https://devpost.com/software/fuzzguard)
 
 ## <!-- Horizontal Line -->
 
