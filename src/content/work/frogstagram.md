@@ -64,11 +64,17 @@ When users upload a photo, it's sent to a Lambda function running the image clas
 </style>
 
 <div class="screenshot-container">
-  <table class="screenshot-table">
+<!-- Row spacing -->
+  <table class="screenshot-table" cellspacing="20">
+    <tr>
+      <td align="center">
+        <img src="/assets/projects/frogstagram_feed_page.jpg" alt="Frogstagram feed interface">
+        <font size="2"><em>Frogstagram feed page</em></font>
+      </td>
+    </tr>
     <tr>
       <td align="center">
         <img src="/assets/projects/frogstagram_upload_page.jpg" alt="Frogstagram upload interface">
-        <br>
         <font size="2"><em>Upload interface with ML-powered verification</em></font>
       </td>
     </tr>
