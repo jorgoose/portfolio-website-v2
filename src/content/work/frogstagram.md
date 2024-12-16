@@ -87,5 +87,5 @@ When users upload a photo, it's sent to a Lambda function running the image clas
 
 #### [Live Demo](https://frogstagram.vercel.app)
 
-> Note: The legacy version of this project, which used vanilla JavaScript and local TensorFlow.js for inference, can be found at [Frogstagram Legacy](https://github.com/jorgoose/frogstagram-legacy). The current production version is at [Frogstagram Live](https://github.com/jorgoose/frogstagram-live).
+> Note: The legacy version of this project, which used vanilla JavaScript for the frontend and FastAPI with SQLAlchemy for the backend, and TensorFlow for inference, can be found at [Frogstagram Legacy](https://github.com/jorgoose/frogstagram). The current production version is at [Frogstagram Live](https://github.com/jorgoose/frogstagram-live).
 
