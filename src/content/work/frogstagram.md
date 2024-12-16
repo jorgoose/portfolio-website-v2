@@ -14,6 +14,8 @@ tags:
   - Docker
 ---
 
+#### [View on GitHub](https://github.com/jorgoose/frogstagram-live)
+
 Frogstagram is Instagram with one key difference: it only allows photos of frogs. Using a YOLOv11 computer vision model, the platform automatically filters uploads to maintain a strictly frog-focused feed. This creates a unique use case for deploying ML in production while serving a specific community.
 
 Core Technical Features:
@@ -84,5 +86,3 @@ When users upload a photo, it's sent to a Lambda function running the image clas
 <br/>
 
 **[Live Demo](https://frogstagram.vercel.app)**
-
-[View on GitHub](https://github.com/jorgoose/frogstagram-live)
