@@ -6,9 +6,8 @@ img_alt: Minecraft server console running on Azure VM
 description: |
   My first experience with cloud services - I modified an existing shell script and used it to deploy a JAR file to run a public Minecraft server on a VM provisioned by Microsoft Azure
 tags:
-  - Computer Networking
-  - Shell Scripting
-  - Microsoft Azure Cloud
+  - Shell Scripting Basics
+  - Microsoft Azure
   - Server Security
 ---
 
