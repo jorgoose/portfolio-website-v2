@@ -85,4 +85,4 @@ When users upload a photo, it's sent to a Lambda function running the image clas
 
 <br/>
 
-**[Live Demo](https://frogstagram.vercel.app)**
+#### [Live Demo](https://frogstagram.vercel.app)**
