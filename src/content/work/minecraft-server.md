@@ -2,12 +2,16 @@
 title: Minecraft Server on Microsoft Azure
 publishDate: 2010-12-01 00:00:00
 img: /assets/projects/mc.jpeg
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+img_alt: Minecraft server console running on Azure VM
 description: |
-  Shell scripting to deploy and manage various Minecraft servers both locally and on Microsoft Azure
+  My first experience with cloud services - I modified an existing shell script and used it to deploy a JAR file to run a public Minecraft server on a VM provisioned by Microsoft Azure
 tags:
   - Computer Networking
   - Shell Scripting
   - Microsoft Azure Cloud
   - Server Security
 ---
+
+I modified an existing shell script and used it to deploy a JAR file to run a public Minecraft server on a VM provisioned by Microsoft Azure.
+
+[View Deployment Script](https://github.com/jorgoose/azureMinecraftServerSnapshot)
