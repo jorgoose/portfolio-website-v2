@@ -21,9 +21,6 @@ import Thoughts from "../components/Thoughts.astro";
 const projects = (await getCollection("work"))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
   .slice(0, 4);
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <BaseLayout>
@@ -32,7 +29,7 @@ const projects = (await getCollection("work"))
       <header class="hero">
         <Hero
           title="Hi, I'm Logan Jorgensen 👋"
-          tagline="I am a software engineer with a passion for technology and problem-solving."
+          tagline="I'm a software engineer who loves building things, solving problems, and constantly improving."
           align="start"
         >
           <div class="roles">
@@ -41,6 +38,19 @@ const projects = (await getCollection("work"))
             <Pill>
               <Icon icon="book-open-text" size="1.33em" /> Lifelong Learner
             </Pill>
+          </div>
+          
+          <!-- New Blurb Section -->
+          <div class="about-me">
+            <p>
+              I enjoy building software, tackling interesting challenges, and constantly improving. 
+              My interests extend beyond coding—above all, I value continuous learning.
+            </p>
+            <p>
+              In my free time, I work on side projects (whether to solve real-world problems or just for fun), 
+              mentor at hackathons, stay active through the gym and fitness challenges, 
+              and explore ideas at the intersection of software, business, finance, history, and more.
+            </p>
           </div>
         </Hero>
 
@@ -129,6 +139,18 @@ const projects = (await getCollection("work"))
       border-radius: 4.5rem;
       object-fit: cover;
     }
+  }
+
+  /* New Blurb Styling */
+  .about-me {
+    margin-top: 1rem;
+    font-size: var(--text-md);
+    color: var(--gray-300);
+    max-width: 50ch;
+  }
+
+  .about-me p {
+    margin-bottom: 0.75rem;
   }
 
   /* ====================================================== */
