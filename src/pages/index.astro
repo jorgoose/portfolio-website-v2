@@ -35,15 +35,12 @@ const projects = (await getCollection("work"))
           <div class="roles">
             <Pill><Icon icon="code" size="1.33em" /> Software Engineer</Pill>
             <Pill><Icon icon="rocket-launch" size="1.33em" /> Technology Enthusiast</Pill>
-            <Pill>
-              <Icon icon="book-open-text" size="1.33em" /> Lifelong Learner
-            </Pill>
+            <Pill><Icon icon="book-open-text" size="1.33em" /> Lifelong Learner</Pill>
           </div>
           
-          <!-- New Blurb Section -->
+          <!-- Updated About Me Section with Link -->
           <div class="about-me">
             <p>
-              I enjoy building software, tackling interesting challenges, and constantly improving. 
               My interests extend beyond coding—above all, I value continuous learning.
             </p>
             <p>
@@ -51,6 +48,7 @@ const projects = (await getCollection("work"))
               mentor at hackathons, stay active through the gym and fitness challenges, 
               and explore ideas at the intersection of software, business, finance, history, and more.
             </p>
+            <a href="/about/" class="about-link">Learn more about me →</a>
           </div>
         </Hero>
 
@@ -151,6 +149,20 @@ const projects = (await getCollection("work"))
 
   .about-me p {
     margin-bottom: 0.75rem;
+  }
+
+  .about-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: var(--text-md);
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .about-link:hover {
+    color: var(--primary-hover);
   }
 
   /* ====================================================== */
