@@ -160,17 +160,26 @@ const projects = (await getCollection("work"))
   }
 
   .about-link {
-    display: inline-block;
-    margin-top: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--gradient-subtle);
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    color: var(--gray-200);
     font-size: var(--text-md);
-    color: var(--primary);
-    text-decoration: none;
     font-weight: 600;
-    transition: color 0.2s ease-in-out;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
   }
 
   .about-link:hover {
-    color: var(--primary-hover);
+    transform: translateY(-2px);
+    background: var(--gradient-inverse);
+    border-color: var(--gray-700);
+    color: var(--gray-100);
   }
 
   /* ====================================================== */
