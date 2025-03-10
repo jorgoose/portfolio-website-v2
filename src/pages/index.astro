@@ -114,6 +114,11 @@ const projects = (await getCollection("work"))
     gap: 2rem;
   }
 
+  /* Move the image above content on mobile */
+  .hero .vignette {
+    order: -1;
+  }
+
   .roles {
     display: none;
   }
@@ -132,6 +137,11 @@ const projects = (await getCollection("work"))
       grid-template-columns: 6fr 4fr;
       padding-inline: 2.5rem;
       gap: 3.75rem;
+    }
+
+    /* Reset the image order on desktop */
+    .hero .vignette {
+      order: 0;
     }
 
     .roles {
