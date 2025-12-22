@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Grid from "../components/Grid.astro";
+import Tag from "../components/Tag.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
@@ -8,229 +9,172 @@ import Hero from "../components/Hero.astro";
 
 <BaseLayout
   title="Education | Logan Jorgensen"
-  description="Learn about Logan Jorgensen's most recent projects"
+  description="Learn about Logan Jorgensen's education and certifications"
 >
   <div class="stack gap-20">
     <main class="wrapper stack gap-8 justify-content-center">
       <Hero
-        title="Formal Education"
-        tagline="See what I've been up to in school and through other educational opportunities."
+        title="Education"
+        tagline="My academic background and professional certifications."
         align="start"
       />
-      <!-- List of previous employers with name of role and associated dates. They should each have a picture for a logo and centered on the page -->
-      <div class="stack gap-8 justify-content-center">
-        <div class="stack gap-4 justify-content-center">
-          <div class="card gap-2 justify-content-center">
-            <h3>Iowa State University</h3>
-            <p>GPA: 3.65</p>
-            <p>📚 B.S. in Computer Science, Minor: Data Science</p>
-            <p>🗓️ August 2021 - May 2024</p>
-            <p>📍 Ames, IA</p>
-          </div>
-          <!-- Horizontal Line to Seperate Job -->
-          <hr class="line" />
-          <div class="card gap-2 justify-content-center">
-            <h3>Nihon University</h3>
-            <p>Study Abroad</p>
-            <p>📚 Focus: Technical Communication</p>
-            <p>🗓️ May 2023 - June 2023</p>
-            <p>📍 Tokyo, Japan</p>
-          </div>
-          <!-- Each Non-Software Project will be rendered in the grid -->
-          <!-- <Hero title="Other Education" align="start" />
-          <Grid variant="offset">
-            <li>
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="https://media.licdn.com/dms/image/D5622AQEFwwa82hidrw/feedshare-shrink_2048_1536/0/1682280226200?e=1692230400&v=beta&t=MSZPZFvn8oJgG2vH1fGixljseFAQqF3wDoGW6Th8ugQ"
-                    alt="Other Project 1"
-                  />
-                </div>
-                <div class="card__content">
-                  <h3 class="card__title">Iowa State Investment Group</h3>
-                  <div class="card__tags">
-                    <span class="card__tag"
-                      >Technology Sector Leader, Previous Technology Sector
-                      Analyst</span
-                    >
-                    <p class="card__description">
-                      This is a description of the project.
-                    </p>
-                    <a href="#" class="card__link">View Project</a>
-                  </div>
-                </div>
-              </div>
-              <li>
-                <div class="card">
-                  <div class="card__image">
-                    <img
-                      src="https://developers.google.com/community/gdsc/images/gdsc-social-share.png"
-                      alt="Other Project 2"
-                    />
-                  </div>
-                  <div class="card__content">
-                    <h3 class="card__title">Google Developer Student Clubs</h3>
-                    <div class="card__tags">
-                      <span class="card__tag">Member</span>
-                      <p class="card__description">
-                        This is a description of the project.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="card">
-                  <div class="card__image">
-                    <img
-                      src="https://www.stuorg.iastate.edu/uploads/org-site/ckuploads/2120/Logo_WSC_ISU_Red%20%286%29.png"
-                      alt="Other Project 2"
-                    />
-                  </div>
-                  <div class="card__content">
-                    <h3 class="card__title">Iowa State Wall Street Club</h3>
-                    <div class="card__tags">
-                      <span class="card__tag">Member</span>
-                      <p class="card__description">
-                        This is a description of the project.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="card">
-                  <div class="card__image">
-                    <img
-                      src="https://cse.cs.iastate.edu/files/styles/banner/public/2021-02/CSE_Club.jpg?itok=KZTnhjK8"
-                      alt="Other Project 2"
-                    />
-                  </div>
-                  <div class="card__content">
-                    <h3 class="card__title">Iowa State CSE Club</h3>
-                    <div class="card__tags">
-                      <span class="card__tag">Member</span>
-                      <p class="card__description">
-                        This is a description of the project.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </li>
-          </Grid> -->
 
-          <!-- Certification Section -->
-          <Hero title="Certifications" align="start" />
-          <Grid>
-            <li>
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/twitter_thumb_201604_image.png
-                    "
-                    alt="AWS SAA-C03 Certification Icon"
-                  />
-                </div>
-                <div class="card__content">
-                  <h3 class="card__title">AWS Certified Solutions Architect (Associate)</h3>
-                  <div class="card__tags">
-                    <span class="card__tag">Issued: July 2024</span>
-                    </div>
-                </div>
-              </div>
-            </li>
-            <!-- AWS Certified Developer (Associate) -->
-            <li>
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="https://images.credly.com/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png
-                    "
-                    alt="AWS SAA-C03 Certification Icon"
-                  />
-                </div>
-                <div class="card__content">
-                  <h3 class="card__title">AWS Certified Developer (Associate)</h3>
-                  <div class="card__tags">
-                    <span class="card__tag">Issued: December 2024</span>
-                    </div>
-                </div>
-              </div>
-            </li>
-            </Grid>
-          <ContactCTA />
+      <!-- Education Cards -->
+      <div class="education-grid">
+        <!-- Iowa State University -->
+        <div class="edu-card">
+          <h3 class="edu-card__title">Iowa State University</h3>
+          <p class="edu-card__degree">B.S. in Computer Science</p>
+          <p class="edu-card__detail">Minor: Data Science</p>
+          <p class="edu-card__date">August 2021 - May 2024</p>
+          <p class="edu-card__location">Ames, IA</p>
+          <div class="edu-card__tags">
+            <Tag>GPA: 3.65</Tag>
+          </div>
+        </div>
+        <!-- Nihon University -->
+        <div class="edu-card">
+          <h3 class="edu-card__title">Nihon University</h3>
+          <p class="edu-card__degree">Study Abroad Program</p>
+          <p class="edu-card__detail">Focus: Technical Communication</p>
+          <p class="edu-card__date">May 2023 - June 2023</p>
+          <p class="edu-card__location">Tokyo, Japan</p>
         </div>
       </div>
 
-      <style>
-        /* Logo styling for each company in a card */
-        .logo {
-          width: 25%;
-          height: 100%;
-          object-fit: contain;
-          border-radius: 0.25rem;
-        }
+      <!-- Certifications Section -->
+      <Hero title="Certifications" align="start" />
+      <Grid>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
+                src="https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/twitter_thumb_201604_image.png"
+                alt="AWS Solutions Architect Associate Certification"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">AWS Certified Solutions Architect</h3>
+              <p class="cert-detail">Associate Level</p>
+              <p class="cert-detail">Issued: July 2024</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
+                src="https://images.credly.com/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"
+                alt="AWS Developer Associate Certification"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">AWS Certified Developer</h3>
+              <p class="cert-detail">Associate Level</p>
+              <p class="cert-detail">Issued: December 2024</p>
+            </div>
+          </div>
+        </li>
+      </Grid>
 
-        /* Keep same logo height but stretch the image slightly horizontally. It should occupy the same space overall, but the image should be stretched. */
-        .logo--stretch {
-          width: 20rem;
-          height: 5rem;
-          object-fit: stretch;
-        }
-
-        .line {
-          width: 100%;
-          height: 1px;
-          background-color: var(--color-gray-300);
-        }
-
-        /* Style for card__tag that makes it like a post tag or button type shape */
-        .card__tag {
-          display: inline-block;
-          border-radius: 0.25rem;
-          background-color: var(--color-primary);
-          color: var(--color-white);
-          font-size: 0.75rem;
-          font-weight: 600;
-          text-transform: uppercase;
-        }
-
-        /* Style for card, card__image, and card__content */
-        /* .card {
-          display: flex;
-          flex-direction: column;
-          border-radius: 0.5rem;
-          overflow: hidden;
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        } */
-
-        /* card but with padding for formatting */
-        .card {
-          display: flex;
-          flex-direction: column;
-          border-radius: 0.5rem;
-          overflow: hidden;
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-          padding: 1rem;
-        }
-
-        .card__image {
-          position: relative;
-          margin-bottom: 1rem;
-          padding-top: 56.25%;
-          overflow: hidden;
-          border-radius: 0.5rem;
-        }
-
-        .card__image img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-        }
-      </style>
+      <ContactCTA />
     </main>
   </div>
+
+  <style>
+    /* Education Grid */
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 50em) {
+      .education-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+
+    /* Education Card - Simple text-based design */
+    .edu-card {
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      border: 1px solid var(--gray-800);
+      background: var(--gradient-subtle);
+    }
+
+    .edu-card__title {
+      font-size: var(--text-lg);
+      margin-bottom: 0.75rem;
+    }
+
+    .edu-card__degree {
+      font-size: var(--text-md);
+      color: var(--gray-200);
+      margin-bottom: 0.25rem;
+    }
+
+    .edu-card__detail {
+      color: var(--gray-300);
+      margin-bottom: 0.25rem;
+    }
+
+    .edu-card__date {
+      color: var(--gray-400);
+      font-size: var(--text-sm);
+      margin-bottom: 0.25rem;
+    }
+
+    .edu-card__location {
+      color: var(--gray-400);
+      font-size: var(--text-sm);
+      margin-bottom: 0.75rem;
+    }
+
+    .edu-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Certification Cards */
+    .card {
+      display: flex;
+      flex-direction: column;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      padding: 1rem;
+    }
+
+    .card__image {
+      position: relative;
+      padding-top: 56.25%;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      background: var(--gradient-subtle);
+    }
+
+    .card__image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 1rem;
+    }
+
+    .card__title {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cert-detail {
+      color: var(--gray-300);
+      margin-bottom: 0.25rem;
+    }
+  </style>
 </BaseLayout>
