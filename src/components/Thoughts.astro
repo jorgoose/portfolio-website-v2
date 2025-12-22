@@ -51,6 +51,17 @@
           target="_blank">Read on Medium →</a>
       </div>
     </article>
+
+    <a href="https://jorgensen-logan.medium.com" target="_blank" class="view-all-card">
+      <div class="view-all-content">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" class="medium-icon">
+          <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+        </svg>
+        <h4>View All Articles</h4>
+        <p>Read more of my thoughts on software, finance, and technology on Medium</p>
+        <span class="view-all-link">Visit My Medium →</span>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -146,5 +157,71 @@
     .blog-preview {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+
+  /* View All Card Styles */
+  .view-all-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-999) 100%);
+    border: 1px dashed var(--gray-700);
+    border-radius: 0.75rem;
+    color: var(--gray-300);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-height: 280px;
+  }
+
+  .view-all-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-regular);
+    background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+  }
+
+  .view-all-content {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .view-all-content .medium-icon {
+    color: var(--gray-400);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .view-all-card:hover .medium-icon {
+    color: var(--accent-regular);
+  }
+
+  .view-all-content h4 {
+    font-size: var(--text-lg);
+    color: var(--gray-200);
+    margin-bottom: 0.5rem;
+  }
+
+  .view-all-content p {
+    font-size: var(--text-sm);
+    color: var(--gray-400);
+    margin-bottom: 1rem;
+    max-width: 25ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .view-all-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent-text-over);
+    font-weight: 500;
+    background: var(--gradient-accent-orange);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .view-all-card:hover .view-all-link {
+    background: var(--gradient-inverse);
+    transform: translateY(-2px);
   }
 </style>

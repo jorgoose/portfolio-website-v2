@@ -4,7 +4,10 @@ import Icon from "./Icon.astro";
 ---
 
 <aside>
-  <h2>Want to get in touch with me?</h2>
+  <div class="cta-text">
+    <h2>Want to get in touch with me?</h2>
+    <p class="cta-subtitle">Whether it's about a project, opportunity, or just to say hi — I'd love to hear from you.</p>
+  </div>
   <CallToAction href="mailto:contact.jorgensen@gmail.com">
     Send Me a Message
     <Icon icon="paper-plane-tilt" size="1.2em" />
@@ -24,10 +27,20 @@ import Icon from "./Icon.astro";
     box-shadow: var(--shadow-sm);
   }
 
+  .cta-text {
+    text-align: center;
+  }
+
   h2 {
     font-size: var(--text-xl);
-    text-align: center;
     max-width: 15ch;
+  }
+
+  .cta-subtitle {
+    font-size: var(--text-sm);
+    color: var(--gray-400);
+    margin-top: 0.75rem;
+    max-width: 35ch;
   }
 
   @media (min-width: 50em) {
@@ -38,9 +51,17 @@ import Icon from "./Icon.astro";
       justify-content: space-between;
     }
 
+    .cta-text {
+      text-align: left;
+    }
+
     h2 {
       font-size: var(--text-3xl);
-      text-align: left;
+    }
+
+    .cta-subtitle {
+      font-size: var(--text-md);
+      max-width: 45ch;
     }
   }
 </style>
