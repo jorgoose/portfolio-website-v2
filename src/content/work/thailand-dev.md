@@ -16,6 +16,10 @@ tags:
   - FastAPI
 ---
 
+#### [Visit thailand-dev.com](https://thailand-dev.com)
+
+---
+
 ## Overview
 
 Thailand Dev is a comprehensive job board platform designed specifically for tech professionals seeking opportunities in Thailand. The platform combines cutting-edge AI technology with modern web development practices to create a seamless job discovery experience.
