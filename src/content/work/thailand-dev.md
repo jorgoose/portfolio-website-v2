@@ -1,5 +1,5 @@
 ---
-title: Thailand Dev
+title: ThailandDev
 publishDate: 2024-12-01 00:00:00
 img: /assets/projects/thailand-dev.png
 img_alt: Thailand Dev job board platform interface showing tech job listings
