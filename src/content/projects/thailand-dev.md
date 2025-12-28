@@ -4,7 +4,7 @@ publishDate: 2024-12-01 00:00:00
 img: /assets/projects/thailand-dev.png
 img_alt: Thailand Dev job board platform interface showing tech job listings
 description: |
-  A complete job board platform for tech jobs in Thailand, featuring an AI-powered job scraper using Gemini 2.0, a modern Next.js web application, and an automated weekly email digest system.
+  A job board for developers seeking visa-sponsored tech roles in Thailand, featuring an AI scraper that adapts to any career site and weekly email digests of new opportunities.
 tags:
   - Next.js
   - TypeScript
@@ -20,86 +20,60 @@ tags:
 
 ---
 
-## Overview
+## The Problem
 
-Thailand Dev is a comprehensive job board platform designed specifically for tech professionals seeking opportunities in Thailand. The platform combines cutting-edge AI technology with modern web development practices to create a seamless job discovery experience.
+Finding a developer job in Thailand as a foreigner is harder than it should be. The listings are scattered across dozens of company career pages, each with different formats and navigation. Most aggregators either focus on local-language roles or mix in positions that won't sponsor a work visa. You end up spending hours every week checking the same sites, trying to remember which jobs you've already seen.
 
----
-
-## Architecture
-
-The project is structured as a monorepo with three core components:
-
-### 1. AI-Powered Job Scraper
-
-An intelligent scraper that automatically adapts to ANY career website structure using Google Gemini 2.0 Flash for data extraction.
-
-**Key Features:**
-- **Truly Dynamic**: Works with any career website without manual configuration
-- **AI-Powered Extraction**: Uses Gemini Flash 2.0 to intelligently parse job data
-- **Dual Scraper Support**: Universal AIScraper + optimized WorkdayScraper for Workday sites
-- **Concurrent Processing**: Efficiently scrapes multiple jobs in parallel
-- **Smart Deduplication**: Uses application URLs as unique keys to prevent duplicates
-
-### 2. Next.js Web Application
-
-A modern, responsive web application built with Next.js 15 and React 19.
-
-**Features:**
-- Job browser with advanced filtering
-- Dedicated company profile pages
-- Comprehensive job detail views
-- Job alert subscription system
-- Blog with career insights
-
-### 3. Supabase Backend & Email System
-
-Automated backend infrastructure with weekly email digests.
-
-- **Edge Functions**: Serverless weekly digest emails via Resend
-- **Cron Scheduling**: Automated Monday 9am UTC delivery
-- **Database Migrations**: Version-controlled schema management
+I wanted to move to Thailand and kept running into these frustrations firsthand. The existing job boards didn't filter for what actually mattered: English-speaking roles at companies willing to handle visa sponsorship.
 
 ---
 
-## Data Pipeline
+## The Solution
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     Data Flow Pipeline                          │
-└─────────────────────────────────────────────────────────────────┘
+Thailand Dev aggregates tech jobs from companies known to hire international developers and sponsor visas. Instead of checking twenty career pages every week, you check one site or subscribe to a Monday morning email with the latest postings.
 
-1. SCRAPER → Visits career pages, AI extracts job data
-       ↓
-2. SUPABASE → Stores jobs, companies, subscribers
-       ↓
-3. WEB APP → Displays jobs with filters and search
-       ↓
-4. EMAIL DIGEST → Weekly notifications to subscribers
-```
+The core insight was that the scraping problem had changed. Traditional scrapers break constantly because every company structures their career page differently. But with modern LLMs, I could build a scraper that reads pages the way a human does—understanding context rather than relying on brittle CSS selectors.
 
 ---
 
-## Tech Stack
+## How the Scraper Works
 
-| Component | Technologies |
-|-----------|-------------|
-| **Web App** | Next.js 15, React 19, TypeScript, Tailwind CSS 4, shadcn/ui |
-| **Scraper** | Python, Playwright, Google Gemini 2.0 Flash, FastAPI |
-| **Backend** | Supabase (PostgreSQL), Edge Functions, Resend |
-| **Infrastructure** | Vercel, Supabase Cloud |
+The scraper visits each company's career page using Playwright, captures the rendered HTML, and sends it to Google's Gemini 2.0 Flash model with a structured prompt. The AI extracts job titles, descriptions, locations, and application URLs regardless of how the page is laid out.
 
----
+This approach handles edge cases that would break traditional scrapers. Infinite scroll? The scraper scrolls until content stops loading. Jobs spread across multiple pages? It follows pagination. Unusual HTML structure? The AI figures it out.
 
-## Key Technical Highlights
+For Workday sites—which power a surprising number of enterprise career pages—I built a specialized scraper that's faster and more reliable since Workday's structure is consistent across companies.
 
-- **Zero-Maintenance Scraping**: AI automatically adapts to website changes
-- **Real-time Database Sync**: Instant updates with duplicate prevention
-- **Stale Job Management**: Automatically marks old listings as inactive
-- **Scalable Architecture**: Add new companies by just adding URLs
+New jobs get stored in Supabase with the application URL as a unique key. If a job disappears from a company's site for two consecutive scrape cycles, it gets marked as inactive rather than deleted, keeping the database clean without losing historical data.
 
 ---
 
-## Project Vision
+## The Web Application
 
-To create the most comprehensive and user-friendly job board for tech professionals in Thailand, powered by AI automation and modern web technologies.
+The frontend is a Next.js 15 app with a straightforward goal: help you find relevant jobs quickly. You can filter by company, location, or keywords. Each company has a profile page showing their current openings and a bit of context about what they do.
+
+Job detail pages include the full description and a direct link to apply. No account required, no friction between you and the application.
+
+For people who prefer passive job hunting, there's an email subscription. Every Monday at 9am UTC, subscribers get a digest of jobs posted in the previous week. The emails are sent via Resend through a Supabase Edge Function triggered by a cron job.
+
+---
+
+## Technical Architecture
+
+The system runs as three independent components:
+
+**The scraper** is a Python service using Playwright for browser automation and FastAPI to expose an endpoint for manual triggers. It runs on a schedule and processes companies concurrently, keeping total scrape time reasonable even as the company list grows.
+
+**The database** is Supabase (PostgreSQL underneath) storing jobs, companies, and email subscribers. Schema changes are handled through versioned migrations. Row-level security policies control access, and the web app queries through Supabase's auto-generated API.
+
+**The web app** deploys to Vercel with ISR for job listing pages. Static generation keeps things fast while revalidation ensures new jobs show up within minutes of being scraped.
+
+---
+
+## What I Learned
+
+Building an AI-powered scraper taught me that LLMs are genuinely good at unstructured data extraction—better than I expected. The Gemini API handles messy HTML gracefully, and the cost per job extraction is negligible.
+
+The harder problem was curation. Which companies actually sponsor visas? Which roles are realistic for foreign applicants? That required research and judgment calls that no amount of automation could replace.
+
+The project also reinforced something I already believed: simple tools that solve a specific problem well are more valuable than feature-packed platforms that try to do everything.
