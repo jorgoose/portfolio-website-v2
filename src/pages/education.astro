@@ -86,26 +86,28 @@ import Hero from "../components/Hero.astro";
     .education-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1rem;
     }
 
     @media (min-width: 50em) {
       .education-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+        gap: 4rem;
       }
     }
 
-    /* Education Card - Simple text-based design */
+    /* Education Card - Consistent styling with certifications */
     .edu-card {
       padding: 1.5rem;
       border-radius: 0.75rem;
       border: 1px solid var(--gray-800);
       background: var(--gradient-subtle);
+      box-shadow: var(--shadow-sm);
     }
 
     .edu-card__title {
       font-size: var(--text-lg);
+      color: var(--gray-0);
       margin-bottom: 0.75rem;
     }
 
@@ -139,14 +141,16 @@ import Hero from "../components/Hero.astro";
       margin-top: 0.5rem;
     }
 
-    /* Certification Cards */
+    /* Certification Cards - Matching education card styling */
     .card {
       display: flex;
       flex-direction: column;
-      border-radius: 0.5rem;
+      border-radius: 0.75rem;
+      border: 1px solid var(--gray-800);
+      background: var(--gradient-subtle);
+      box-shadow: var(--shadow-sm);
+      padding: 1.5rem;
       overflow: hidden;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-      padding: 1rem;
     }
 
     .card__image {
@@ -154,7 +158,7 @@ import Hero from "../components/Hero.astro";
       padding-top: 56.25%;
       overflow: hidden;
       border-radius: 0.5rem;
-      background: var(--gradient-subtle);
+      background: var(--gray-999);
     }
 
     .card__image img {
@@ -167,7 +171,14 @@ import Hero from "../components/Hero.astro";
       padding: 1rem;
     }
 
+    .card__content {
+      display: flex;
+      flex-direction: column;
+    }
+
     .card__title {
+      font-size: var(--text-lg);
+      color: var(--gray-0);
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
     }
@@ -175,6 +186,7 @@ import Hero from "../components/Hero.astro";
     .cert-detail {
       color: var(--gray-300);
       margin-bottom: 0.25rem;
+      font-size: var(--text-base);
     }
   </style>
 </BaseLayout>
