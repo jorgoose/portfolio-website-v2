@@ -20,6 +20,18 @@ const { title, description } = Astro.props;
 	<head>
 		<MainHead title={title} description={description} />
 		<ViewTransitions />
+		<script is:inline>
+			function applyTheme() {
+				const theme = localStorage.getItem("theme");
+				if (theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+					document.documentElement.classList.add("theme-dark");
+				} else {
+					document.documentElement.classList.remove("theme-dark");
+				}
+			}
+			applyTheme();
+			document.addEventListener("astro:after-swap", applyTheme);
+		</script>
 	</head>
 	<body>
 		<div class="stack backgrounds">
