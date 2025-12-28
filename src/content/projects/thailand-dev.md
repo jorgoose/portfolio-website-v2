@@ -46,13 +46,11 @@ Jobs go into Supabase. If a listing disappears for two scrape cycles, it gets ma
 
 ---
 
-## The Web Application
+## The Website
 
-The frontend is a Next.js 15 app with a straightforward goal: help you find relevant jobs quickly. You can filter by company, location, or keywords. Each company has a profile page showing their current openings and a bit of context about what they do.
+Simple filtering by company, location, or keywords. Each company has a profile page with their openings. Job pages have the full description and a direct apply link—no account needed.
 
-Job detail pages include the full description and a direct link to apply. No account required, no friction between you and the application.
-
-For people who prefer passive job hunting, there's an email subscription. Every Monday at 9am UTC, subscribers get a digest of jobs posted in the previous week. The emails are sent via Resend through a Supabase Edge Function triggered by a cron job.
+There's also a weekly email digest every Monday with new jobs from the past week for people who'd rather not check the site constantly.
 
 ---
 
