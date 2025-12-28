@@ -70,32 +70,38 @@ import Icon from "./Icon.astro";
   }
 </style>
 
-<script>
-  class ThemeToggle extends HTMLElement {
-    constructor() {
-      super();
+<script is:inline>
+  (function() {
+    if (customElements.get("theme-toggle")) return;
 
-      const button = this.querySelector("button")!;
+    class ThemeToggle extends HTMLElement {
+      constructor() {
+        super();
 
-      /** Set the theme to dark/light mode. */
-      const setTheme = (dark: boolean) => {
-        document.documentElement.classList[dark ? "add" : "remove"](
-          "theme-dark"
-        );
-        button.setAttribute("aria-pressed", String(dark));
-        localStorage.setItem("theme", dark ? "dark" : "light");
-      };
+        const button = this.querySelector("button");
+        if (!button) return;
 
-      // Toggle the theme when a user clicks the button.
-      button.addEventListener("click", () => setTheme(!this.isDark()));
+        /** Set the theme to dark/light mode. */
+        const setTheme = (dark) => {
+          document.documentElement.classList.toggle("theme-dark", dark);
+          button.setAttribute("aria-pressed", String(dark));
+          localStorage.setItem("theme", dark ? "dark" : "light");
+        };
 
-      // Initialize button state to reflect current theme.
-      button.setAttribute("aria-pressed", String(this.isDark()));
+        // Toggle the theme when a user clicks the button.
+        button.addEventListener("click", () => setTheme(!this.isDark()));
+
+        // Initialize button state from localStorage (source of truth)
+        const stored = localStorage.getItem("theme");
+        const prefersDark = stored === "dark" ||
+          (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        button.setAttribute("aria-pressed", String(prefersDark));
+      }
+
+      isDark() {
+        return document.documentElement.classList.contains("theme-dark");
+      }
     }
-
-    isDark() {
-      return document.documentElement.classList.contains("theme-dark");
-    }
-  }
-  customElements.define("theme-toggle", ThemeToggle);
+    customElements.define("theme-toggle", ThemeToggle);
+  })();
 </script>

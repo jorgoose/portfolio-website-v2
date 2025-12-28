@@ -21,30 +21,35 @@ const { title, description } = Astro.props;
 		<MainHead title={title} description={description} />
 		<ClientRouter />
 		<script is:inline>
-			function getThemePreference() {
-				const theme = localStorage.getItem("theme");
-				if (theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-					return "dark";
+			// Theme management for view transitions
+			(function() {
+				const storageKey = "theme";
+
+				function getThemePreference() {
+					const stored = localStorage.getItem(storageKey);
+					if (stored) return stored;
+					return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 				}
-				return "light";
-			}
 
-			function applyTheme() {
-				if (getThemePreference() === "dark") {
-					document.documentElement.classList.add("theme-dark");
-				} else {
-					document.documentElement.classList.remove("theme-dark");
+				function setTheme(theme) {
+					const isDark = theme === "dark";
+					document.documentElement.classList.toggle("theme-dark", isDark);
 				}
-			}
 
-			// Apply on initial load
-			applyTheme();
+				// Apply theme immediately on script parse (prevents flash)
+				setTheme(getThemePreference());
 
-			// Before swap: copy theme class to incoming document
-			document.addEventListener("astro:before-swap", (e) => {
-				const isDark = getThemePreference() === "dark";
-				e.newDocument.documentElement.classList[isDark ? "add" : "remove"]("theme-dark");
-			});
+				// Before navigation: transfer ALL classes to the new document
+				document.addEventListener("astro:before-swap", (e) => {
+					const currentClasses = document.documentElement.className;
+					e.newDocument.documentElement.className = currentClasses;
+				});
+
+				// After navigation: ensure theme is correct from localStorage
+				document.addEventListener("astro:after-swap", () => {
+					setTheme(getThemePreference());
+				});
+			})();
 		</script>
 	</head>
 	<body>
