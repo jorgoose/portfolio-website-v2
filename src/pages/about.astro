@@ -254,6 +254,23 @@ import Hero from "../components/Hero.astro";
         </div>
       </div>
       </section>
+
+      <section>
+      <h2 class="section-title">What I'm Up To</h2>
+      <div class="content">
+        <ul class="current-activities">
+        <li>
+          Studying for the FM and P actuarial exams
+        </li>
+        <li>
+          Learning C++ and CUDA to better understand low-level systems and GPU programming
+        </li>
+        <li>
+          Building Hachiquant, a quantitative trading research platform
+        </li>
+        </ul>
+      </div>
+      </section>
     </main>
 
     <ContactCTA />
@@ -345,6 +362,38 @@ import Hero from "../components/Hero.astro";
 
   @media (max-width: 50em) {
     section:nth-of-type(2) .content {
+      padding: 1.5rem;
+    }
+  }
+
+  /* Enhanced styling for the "What I'm Up To" section */
+  section:nth-of-type(4) .content {
+    background: var(--gradient-subtle);
+    border: 1px solid var(--gray-800);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .current-activities {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    color: var(--gray-300);
+  }
+
+  .current-activities li {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    font-size: 1.05em;
+    color: var(--gray-200);
+  }
+
+  .current-activities li:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 50em) {
+    section:nth-of-type(4) .content {
       padding: 1.5rem;
     }
   }
