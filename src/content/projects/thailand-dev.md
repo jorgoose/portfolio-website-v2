@@ -36,15 +36,13 @@ The core insight was that the scraping problem had changed. Traditional scrapers
 
 ---
 
-## How the Scraper Works
+## How It Works
 
-The scraper visits each company's career page using Playwright, captures the rendered HTML, and sends it to Google's Gemini 2.0 Flash model with a structured prompt. The AI extracts job titles, descriptions, locations, and application URLs regardless of how the page is laid out.
+The scraper uses Playwright to load career pages and Google's Gemini AI to extract job data. The AI reads the page like a human would, pulling out titles, descriptions, and application links regardless of the site's structure.
 
-This approach handles edge cases that would break traditional scrapers. Infinite scroll? The scraper scrolls until content stops loading. Jobs spread across multiple pages? It follows pagination. Unusual HTML structure? The AI figures it out.
+This handles all the annoying edge cases—infinite scroll, pagination, weird layouts—without writing custom code for each company. For Workday-powered sites (there are a lot of them), I built a faster specialized scraper since their structure is predictable.
 
-For Workday sites—which power a surprising number of enterprise career pages—I built a specialized scraper that's faster and more reliable since Workday's structure is consistent across companies.
-
-New jobs get stored in Supabase with the application URL as a unique key. If a job disappears from a company's site for two consecutive scrape cycles, it gets marked as inactive rather than deleted, keeping the database clean without losing historical data.
+Jobs go into Supabase. If a listing disappears for two scrape cycles, it gets marked inactive instead of deleted.
 
 ---
 
@@ -58,15 +56,9 @@ For people who prefer passive job hunting, there's an email subscription. Every 
 
 ---
 
-## Technical Architecture
+## Tech Stack
 
-The system runs as three independent components:
-
-**The scraper** is a Python service using Playwright for browser automation and FastAPI to expose an endpoint for manual triggers. It runs on a schedule and processes companies concurrently, keeping total scrape time reasonable even as the company list grows.
-
-**The database** is Supabase (PostgreSQL underneath) storing jobs, companies, and email subscribers. Schema changes are handled through versioned migrations. Row-level security policies control access, and the web app queries through Supabase's auto-generated API.
-
-**The web app** deploys to Vercel with ISR for job listing pages. Static generation keeps things fast while revalidation ensures new jobs show up within minutes of being scraped.
+Python scraper with Playwright and FastAPI, running on a schedule. Supabase for the database. Next.js frontend deployed on Vercel with ISR to keep pages fast while showing new jobs quickly.
 
 ---
 
