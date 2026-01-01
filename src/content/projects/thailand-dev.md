@@ -24,7 +24,7 @@ tags:
 
 Finding a developer job in Thailand as a foreigner is harder than it should be. The listings are scattered across dozens of company career pages, each with different formats and navigation. Most aggregators either focus on local-language roles or mix in positions that won't sponsor a work visa. You end up spending hours every week checking the same sites, trying to remember which jobs you've already seen.
 
-I wanted to move to Thailand and kept running into these frustrations firsthand. The existing job boards didn't filter for what actually mattered: English-speaking roles at companies willing to handle visa sponsorship.
+I noticed that developers who wanted to move to Thailand lacked a platform specific to their needs. The existing job boards didn't filter for what actually mattered: English-speaking roles at companies willing to handle visa sponsorship.
 
 ---
 
