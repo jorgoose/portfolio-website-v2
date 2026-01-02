@@ -10,5 +10,5 @@ tags:
   - CSS
   - HTML
   - TypeScript
-  - Cloudfare Pages
+  - Cloudflare Pages
 ---
