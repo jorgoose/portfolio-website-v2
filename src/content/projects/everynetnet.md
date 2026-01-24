@@ -48,7 +48,7 @@ The first 100 users felt like a lot. Now there are over 700, which still surpris
 
 ### Frontend
 
-Started with React because I knew it. Moved to Next.js when I realized Google wasn't indexing the pages properly. Page loads dropped from 2.8s to 1.2s after the migration, and SEO improved noticeably.
+Started with React because I knew it. Moved to Next.js to improve the end user experience with server-side rendering. Page loads dropped from 2.8s to 1.2s after the migration, time to first contentful paint improved significantly, and SEO got noticeably better.
 
 ### Backend
 
