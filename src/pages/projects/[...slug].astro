@@ -42,7 +42,7 @@ const { Content } = await entry.render();
               </div>
 
               <p class="publish-date">
-                {entry.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                {entry.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
               </p>
 
               <p class="description">{entry.data.description}</p>
