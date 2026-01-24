@@ -42,7 +42,7 @@ const { Content } = await entry.render();
               </div>
 
               <p class="publish-date">
-                {entry.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
+                {entry.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
               </p>
 
               <p class="description">{entry.data.description}</p>
@@ -105,9 +105,11 @@ const { Content } = await entry.render();
   }
 
   .publish-date {
-    font-size: var(--text-md);
-    color: var(--gray-300);
+    font-size: var(--text-sm);
+    color: var(--gray-400);
     margin: 0;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
   }
 
   .description {
