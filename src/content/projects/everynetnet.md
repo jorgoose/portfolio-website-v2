@@ -34,9 +34,9 @@ I spent a weekend doing this manually and got annoyed enough to write a script. 
 
 ## Going from script to product
 
-The jump from "thing I built for myself" to "thing 700+ people pay for" happened gradually. Early users would email me about missing data or confusing UI, and I'd fix it. Most features exist because someone asked for them.
+The jump from "thing I built for myself" to "thing 700+ people use" happened gradually. Early users would email me about missing data or confusing UI, and I'd fix it. Most features exist because someone asked for them.
 
-The first 100 subscribers felt like a lot. Now there are over 700, which still surprises me. Individual investors using the same data that used to require a Bloomberg terminal or a team of analysts.
+The first 100 users felt like a lot. Now there are over 700, which still surprises me. Individual investors using the same data that used to require a Bloomberg terminal or a team of analysts.
 
 <br />
 
