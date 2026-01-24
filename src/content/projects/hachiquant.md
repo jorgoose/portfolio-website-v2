@@ -1,10 +1,10 @@
 ---
-title: Hachiko 🚀
+title: Hachiquant 🚀
 publishDate: 2025-03-09 00:00:00
-img: /assets/projects/hachiko-logo.jpg
-img_alt: Silhouette of the loyal Akita dog Hachiko
+img: /assets/projects/hachiquant-logo.png
+img_alt: Silhouette of the loyal Akita dog Hachiquant
 description: |
-  Hachiko is a modern, developer-friendly platform that makes financial data for Japanese companies accessible and consistent. It transforms the complex, scattered financial disclosures from Japan's Financial Services Agency into clean, structured data through a streamlined ETL process and API.
+  Hachiquant is a modern, developer-friendly platform that makes financial data for Japanese companies accessible and consistent. It transforms the complex, scattered financial disclosures from Japan's Financial Services Agency into clean, structured data through a streamlined ETL process and API.
 tags:
   - Rust
   - Axum
@@ -12,13 +12,13 @@ tags:
   - SQLite
 ---
 
-#### [Visit Hachiko](#) *(Coming Soon)*
+#### [Visit Hachiquant](#) *(Coming Soon)*
 
 <br />
 
 ---
 
-## The Problem Hachiko Solves
+## The Problem Hachiquant Solves
 
 Accessing financial statement data for Japanese companies is, frankly, a mess. The Financial Services Agency (FSA) of Japan—the government's integrated financial regulator—does provide this data, but in formats that reflect the archaic and scattered technology environment you find across many long-lasting businesses in Japan. Here's what you're up against:
 
@@ -27,7 +27,7 @@ Accessing financial statement data for Japanese companies is, frankly, a mess. T
 - ZIP files filled with UTF-16 TSVs and XBRL/XML documents instead of structured JSON
 - Scattered documentation across multiple PDFs with limited English support
 
-After banging my head against these problems in previous projects one too many times, I decided enough was enough. I wanted to build something that would make this valuable data accessible to everyone. Just as the loyal Akita dog Hachiko faithfully waited at Shibuya Station for nearly 10 years, my goal is to make access to Japanese financial data equally consistent and reliable.
+After banging my head against these problems in previous projects one too many times, I decided enough was enough. I wanted to build something that would make this valuable data accessible to everyone. Just as the loyal Akita dog Hachiquant faithfully waited at Shibuya Station for nearly 10 years, my goal is to make access to Japanese financial data equally consistent and reliable.
 
 <br />
 
@@ -35,9 +35,9 @@ After banging my head against these problems in previous projects one too many t
 
 <br />
 
-## The Vision For Hachiko
+## The Vision For Hachiquant
 
-Hachiko is meant to be a modern, developer-friendly platform built on top of the official FSA data sources. Instead of wading through scattered files and inconsistent formats, Hachiko transforms everything into a consolidated, centralized API with a clean JSON schema. The idea is simple:
+Hachiquant is meant to be a modern, developer-friendly platform built on top of the official FSA data sources. Instead of wading through scattered files and inconsistent formats, Hachiquant transforms everything into a consolidated, centralized API with a clean JSON schema. The idea is simple:
 
 - Search by company name or ticker
 - Get clean, structured financial statements
@@ -101,7 +101,7 @@ I'm currently working on the next pieces:
 
 ## Roadmap
 
-Here's where Hachiko is headed:
+Here's where Hachiquant is headed:
 
 - **Phase 1**: Build data extraction layer (Complete)
 - **Phase 2**: Develop API layer with Rust and Axum (In Progress)
