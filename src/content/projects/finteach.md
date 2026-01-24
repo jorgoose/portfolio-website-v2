@@ -11,33 +11,35 @@ tags:
   - OpenAI API
 ---
 
-<!-- Big Button for Link to GitHub -->
-
 #### [View on GitHub](https://github.com/jorgoose/insuriquest)
-
-## <!-- Horizontal Line -->
 
 ---
 
-## Background
+This one has a fun story behind it. We showed up to a hackathon with a completely different idea, realized it didn't fit the theme, and pivoted to something new about six hours in. Somehow, that panic-driven change turned into a winning project.
 
-FinTeach was conceived to address the noticeable gap in financial education for younger audiences, especially in underfunded schools. Our goal was to transform the often complex and dull subject of finance into an intriguing, easy-to-understand format for students. This led to the creation of an application that is not just educational but also fun and engaging.
+## The Idea
 
-### Challenges
+Kids don't learn enough about money in school. That's especially true in underfunded districts where financial literacy just isn't a priority. We wanted to build something that could help with that - an app that teaches basic finance concepts in a way that's actually engaging for younger students.
 
-Our journey to creating FinTeach was filled with unique challenges. We navigated through a complete pivot in our project idea to align with the hackathon's themes and grappled with mastering Flutter, a new technology for our team. Our persistence and adaptability were key in overcoming these obstacles.
+The core concept is pretty simple: make learning about money feel like a game rather than a lecture. We built interactive lessons and quizzes around topics like saving, budgeting, and basic economics, all designed to be approachable for elementary and middle school students.
 
-### Design and Development
+## Learning Flutter On The Fly
 
-FinTeach's user-friendly design was achieved using Flutter, chosen for its cross-platform capabilities, ensuring accessibility on various devices. The app's interface, built with Dart and Material Design, focuses on simplicity and ease of use, keeping our young target audience in mind.
+None of us had used Flutter before this hackathon. That was... a choice. We picked it because we wanted the app to work on both iOS and Android without building two separate codebases, which made sense for the time constraints. But it meant we were learning the framework while simultaneously trying to ship a product.
 
-### Tech Stack
+There's something humbling about Googling "how to center a button in Flutter" at 2 AM during a hackathon. But we figured it out, and honestly, Flutter's hot reload feature saved us. Being able to see changes instantly made the learning curve way more manageable.
 
-FinTeach is developed using Flutter, which allowed us to create a seamless and responsive application across different platforms. Dart was used for programming, providing a strong, yet flexible structure for our app. The Material Design principles guided our UI/UX design, ensuring an intuitive and attractive interface.
+## How It Works
 
-### Future Prospects
+The app uses the OpenAI API to generate age-appropriate explanations and quiz questions. A student picks a topic, works through a short lesson, and then answers some questions to reinforce what they learned. We kept the interface really simple - big buttons, clear text, nothing overwhelming.
 
-Looking forward, we aim to enhance FinTeach by introducing adaptive question generation to match user skill levels, expanding topic sub-modules for depth, and incorporating dictation features for inclusivity.
+We leaned heavily on Material Design because it gave us a clean, consistent look without having to make a million design decisions under time pressure. Sometimes the best choice is the one that just works.
+
+## What We'd Do Differently
+
+If we kept building this, I'd want to add adaptive difficulty so the questions get harder as students improve. We'd also expand the topics and add audio support so kids who struggle with reading can still use the app.
+
+But for a hackathon project built in under 24 hours with a framework none of us knew? I'm pretty happy with where it landed.
 
 ## Demo Video
 
