@@ -1,6 +1,6 @@
 ---
 title: everynetnet.com
-publishDate: 2024-10-06 00:00:00
+publishDate: 2024-08-01 00:00:00
 img: /assets/projects/everynetnetlogo.jpg
 img_alt: EveryNetNet logo
 description: |
