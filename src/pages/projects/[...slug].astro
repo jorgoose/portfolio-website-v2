@@ -41,6 +41,10 @@ const { Content } = await entry.render();
                 {entry.data.tags.map((t) => <Pill>{t}</Pill>)}
               </div>
 
+              <p class="publish-date">
+                {entry.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
+              </p>
+
               <p class="description">{entry.data.description}</p>
             </div>
           </Hero>
@@ -98,6 +102,12 @@ const { Content } = await entry.render();
     justify-content: center;
     max-width: 100%;
     padding: 0 1rem;
+  }
+
+  .publish-date {
+    font-size: var(--text-md);
+    color: var(--gray-300);
+    margin: 0;
   }
 
   .description {
