@@ -20,7 +20,7 @@ tags:
 
 ## The Problem Hachiko Solves
 
-Accessing financial statement data for Japanese companies is, frankly, a mess. The Financial Services Agency (FSA) of Japan—the government's integrated financial regulator—does provide this data, but in formats that feel like they were designed to keep people out rather than let them in. Here's what you're up against:
+Accessing financial statement data for Japanese companies is, frankly, a mess. The Financial Services Agency (FSA) of Japan—the government's integrated financial regulator—does provide this data, but in formats that reflect the archaic and scattered technology environment you find across many long-lasting businesses in Japan. Here's what you're up against:
 
 - Japanese PDFs with no English translation
 - A barebones API with only two main endpoints, neither of which easily provide data at the company level
