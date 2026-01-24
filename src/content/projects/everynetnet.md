@@ -4,7 +4,7 @@ publishDate: 2024-10-06 00:00:00
 img: /assets/projects/everynetnetlogo.jpg
 img_alt: EveryNetNet logo
 description: |
-  A database of net-net stocks (companies trading below their net current asset value) with filtering and alerts. Built for value investors who don't want to spend weekends in spreadsheets.
+  A database of net-net stocks (companies trading below their net current asset value) with filtering. Built for value investors who don't want to spend weekends in spreadsheets.
 tags:
   - React
   - Next.js
