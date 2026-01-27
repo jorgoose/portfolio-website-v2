@@ -1,5 +1,5 @@
 ---
-title: Hachiko 🚀
+title: Hachiko
 publishDate: 2025-03-09 00:00:00
 img: /assets/projects/hachiko-logo.jpg
 img_alt: Silhouette of the loyal Akita dog Hachiko
@@ -10,6 +10,7 @@ tags:
   - Axum
   - SvelteKit
   - SQLite
+emoji: 🚀
 ---
 
 #### [Visit Hachiko](#) *(Coming Soon)*

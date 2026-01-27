@@ -1,5 +1,5 @@
 ---
-title: Agrepair 🏆
+title: Agrepair
 publishDate: 2023-10-02 00:00:00
 img: /assets/projects/agrepair.png
 img_alt: Agrepair project logo
@@ -10,6 +10,7 @@ tags:
   - TailwindCSS
   - Supabase
   - TypeScript
+emoji: 🏆
 ---
 
 <!-- Big Button for Link to GitHub -->
