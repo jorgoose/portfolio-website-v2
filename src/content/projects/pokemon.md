@@ -11,28 +11,22 @@ tags:
   - Python
 ---
 
-<!-- Big Button for Link to GitHub -->
-
 #### [View on GitHub](https://github.com/jorgoose/pokemon-classification)
-
-## <!-- Horizontal Line -->
 
 ---
 
-### Background
+### Why Pokemon?
 
-This project was created to explore the capabilities of image classification models using TensorFlow. The goal was to train a model to identify images of Pokémon, and then use the model to classify Pokémon images that were not included in the training dataset.
+Back in 2016, I was getting into machine learning and wanted a project that would actually be fun to work on. I grew up playing Pokemon, so when I needed a dataset for image classification, the choice was obvious. Why train a model on boring stock photos when you could teach a computer to tell Pikachu from Charizard?
 
-### Results
+### How It Works
 
-The model was able to achieve an accuracy of 95% on the test dataset, and was able to correctly classify images of Pokémon that were not included in the training dataset.
+I scraped together images of different Pokemon and fed them into a convolutional neural network. The model learns to pick up on visual patterns - Pikachu's pointy ears, Bulbasaur's spots, that kind of thing. After training, you can throw a new Pokemon image at it and it'll tell you what it's looking at.
 
-### Tech Stack
+The fun part was watching the model improve. Early on it was basically guessing, but after enough training it hit 95% accuracy on images it had never seen before. Pretty satisfying to see a computer correctly identify a Pokemon from a random screenshot.
 
-The model was built using the following technologies:
+### What I Used
 
-- **TensorFlow:** TensorFlow is an open-source machine learning framework that provides a simple and efficient way to build and train machine learning models.
+- **TensorFlow and Keras** - These made building the neural network way more approachable than writing everything from scratch. Keras especially is great for prototyping quickly.
 
-- **Keras:** Keras is a high-level API that provides an intuitive interface for building and training machine learning models. It is built on top of TensorFlow, and provides a simple way to build and train machine learning models.
-
-- **Python:** Python is a high-level programming language that is used for a wide variety of applications, including machine learning and data science.
+- **Python** - The go-to language for ML projects. All the libraries you need are already there.

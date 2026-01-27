@@ -17,60 +17,50 @@ emoji: 🏆
 
 #### [Visit Marketmon](https://marketmon.vercel.app)
 
-## <!-- Horizontal Line -->
-
 ---
 
-## Inspiration
+## The Idea
 
-Marketmon was inspired by the desire to create an engaging and educational experience that combines the excitement of trading card games like Pokemon or Yugioh with the world of finance and investing. By linking each card to a real-world company, players can learn about different businesses, their performance, and how various financial metrics influence their strength in the game.
+I grew up obsessed with Pokemon and Yu-Gi-Oh cards. There's something deeply satisfying about collecting creatures, building decks, and battling friends. At the same time, I've always been curious about finance and what makes companies tick.
 
-## What is Marketmon?
+One day it clicked: what if the monsters *were* the companies? What if Apple's market dominance made its creature stronger, or a company's earnings growth literally powered up its attacks?
 
-Marketmon is a web-based trading card game where players battle with cards representing S&P 500 companies. Each card's stats are directly impacted by real-time financial metrics such as market cap, free cash flow, and earnings growth. As companies grow and expand, so do the strength and abilities of their corresponding cards.
+That's Marketmon. Every card represents a real S&P 500 company, and their stats update based on actual financial metrics. It's a trading card game where the meta shifts with the market.
 
-## How We Built It
+## How It Works
 
-Marketmon's architecture includes:
+You pick a deck of company-monsters and battle against an AI opponent. Each card has stats derived from real financial data - market cap affects health, free cash flow influences attack power, earnings growth boosts special abilities. When Apple has a good quarter, the Apple creature gets stronger. When a company struggles, so does its monster.
 
-- **Svelte with TypeScript**: For the frontend development
-- **Tailwind CSS**: For styling
-- **Python**: For data scraping
-- **Claude Haiku API**: To generate creature descriptions
-- **Stability API**: To generate creature images
-- **Yahoo Finance API**: To fetch real-time financial data
+The creatures themselves are AI-generated. I fed company profiles into Claude to create creature descriptions that capture each company's essence, then used Stability AI to generate the artwork. The result is a unique monster for every S&P 500 company, each one thematically tied to what that company actually does.
 
-### Key Steps:
+## Building It
 
-1. **Data Scraping**: Gather company data from Yahoo Finance
-2. **Description Generation**: Use Claude API to create creature descriptions based on company profiles
-3. **Image Generation**: Use Stability API to create unique creature images
-4. **Game Logic**: Implement game state and moves client-side in the browser
-5. **UI Development**: Create an engaging interface using Svelte and Tailwind CSS
+The tech stack came together based on what each problem needed:
 
-## Challenges
+- **Svelte + TypeScript** for the frontend - I wanted something fast and reactive for the card battles, and Svelte's approach to reactivity felt natural for game state
+- **Tailwind CSS** for styling the cards and battle UI
+- **Python scripts** to scrape financial data from Yahoo Finance
+- **Claude Haiku API** to generate creature lore from company descriptions
+- **Stability API** to create the actual creature artwork
 
-Our main challenges included conceptualizing and implementing complex game logic, balancing game mechanics based on financial metrics, and managing state mutability issues.
+The pipeline was fun to build: scrape company data, generate descriptions, create images, then wire it all into a browser-based battle system. All the game logic runs client-side, so there's no server managing game state - just you, the cards, and real market data.
 
-## Accomplishments
+## The Hard Parts
 
-We're proud of developing a functional UI with visually appealing cards displaying real data, successfully integrating multiple APIs (yfinance, Claude, Stability), and creating an engaging experience that blends trading card games with dynamic financial elements.
+Game balance was trickier than I expected. Financial metrics span huge ranges - Apple's market cap is orders of magnitude larger than smaller S&P companies. I had to normalize everything carefully so battles weren't predetermined by company size alone.
 
-## What We Learned
+The state management for battles also got messy fast. Tracking health, energy, status effects, turn order, ability cooldowns - TypeScript saved me here. Every time I thought "this should work," the type checker would catch some edge case I'd missed.
 
-We gained insights into the complexities of game logic development, the benefits of using TypeScript for catching potential bugs, and the importance of careful API integration and variable naming.
+## What Made It Special
 
-## What's Next
+Seeing the creatures come to life was genuinely exciting. Each one feels connected to its company in ways that surprised me. The AI picked up on themes I wouldn't have thought of, creating monsters that somehow *feel* like their companies.
 
-We plan to:
+And there's something satisfying about checking your deck after market close to see if your creatures got buffed or nerfed. It makes financial data weirdly engaging.
 
-- Improve game balance and logic
-- Implement real-time multiplayer functionality
-- Develop a system for leveling up and opening card packs
-- Expand the game to include more companies and industries
-- Introduce leaderboards and competitive elements
+## Where It Could Go
 
-We're committed to continuously improving Marketmon to provide an even more engaging and educational experience for players interested in finance and trading card games.
+The obvious next step is multiplayer - battling friends with your carefully curated decks. I'd also love to add card packs, deck building with rarity tiers, maybe even a system where you can level up creatures by holding them through earnings seasons.
+
+For now though, it's a fun proof of concept that won a couple hackathon awards and taught me a ton about game development, API orchestration, and making financial data actually interesting.
 
 #### [Visit Marketmon](https://marketmon.vercel.app)
----

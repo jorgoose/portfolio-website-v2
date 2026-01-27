@@ -4,7 +4,7 @@ publishDate: 2023-09-20 00:00:00
 img: /assets/projects/insuriquest.png
 img_alt: InsuriQuest
 description: |
-  InsuriQuest is an innovative platform developed during HackUIowa (University of Iowa's hackathon) that transforms the complex world of insurance into engaging, interactive stories, making learning both fun and memorable.
+  A hackathon project that turned insurance education into choose-your-own-adventure stories. Won "Best Insurance Hack" at HackUIowa 2023.
 tags:
   - NextJS
   - TailwindCSS
@@ -12,28 +12,34 @@ tags:
 emoji: 🏆
 ---
 
-<!-- Big Button for Link to GitHub -->
-
 #### [View on GitHub](https://github.com/jorgoose/insuriquest)
-
-## <!-- Horizontal Line -->
 
 ---
 
-## Background
+## The Idea
 
-InsuriQuest was born out of a desire to revolutionize the way people learn about insurance. Traditional methods often involve sifting through dense documents or navigating uninspiring websites. We envisioned a platform where users could immerse themselves in captivating narratives, making the learning process not just informative, but also enjoyable.
+Hackathons always push you to think differently about boring problems. And honestly, few things are as boring as learning about insurance.
 
-Project background... The idea was simple: what if learning about insurance could be as engaging as playing a game? With this in mind, we set out to create InsuriQuest. Our goal was to break down the barriers of complexity and make insurance education accessible to everyone, regardless of age or background.
+We've all been there - trying to understand deductibles, premiums, coverage limits - and giving up halfway through some corporate PDF. So our team asked ourselves: what if we made it feel like a game instead?
 
-### Results
+That's how InsuriQuest was born. The pitch was simple - turn insurance concepts into interactive choose-your-own-adventure stories. You make decisions as a character, face consequences, and actually learn something along the way without feeling like you're studying.
 
-Our efforts paid off when InsuriQuest was awarded the "Best Insurance Hack" at the HackUIowa hackathon. The recognition was a testament to our team's dedication and the potential impact of our platform.
+## How It Works
 
-### Design
+The core mechanic is dynamic story generation. When you start a scenario, the app uses the OpenAI API to create a narrative based on your choices. Every decision branches into new possibilities, building out a decision tree as you play.
 
-At the heart of InsuriQuest is our unique story generation algorithm. Instead of presenting users with static narratives, we developed a system that dynamically crafts stories based on user choices. This ensures that every adventure is unique. As users navigate through the platform, their choices are used to dynamically generate a decision tree, representing and storing their unique journey. This approach not only enhances user engagement but also ensures that learning outcomes are tailored to individual preferences.
+So you might be a first-time homeowner dealing with a flood, or a college student figuring out health insurance options. Each choice teaches you something about how insurance actually works in that situation.
 
-### Tech Stack
+The stories aren't pre-written - they generate in real-time based on your path. That meant no two playthroughs are exactly alike, which kept people engaged during our demo.
 
-Our platform is built using NextJS with TypeScript, ensuring a robust and scalable frontend. For styling, we opted for Tailwind CSS, which allowed us to craft a modern and responsive user interface. Deployment was handled through Vercel, ensuring seamless updates and scalability. The magic behind our dynamic story generation is the OpenAI API, which crafts unique narratives in real-time based on user input.
+## The Build
+
+We had 24 hours to pull this together. Went with NextJS and TypeScript for the frontend since it's what we knew best, styled everything with Tailwind CSS to move fast. Deployed on Vercel so we could push updates without thinking about infrastructure.
+
+The tricky part was getting the AI to generate stories that were both entertaining and actually educational. Took a lot of prompt engineering to hit that balance.
+
+## The Win
+
+We ended up taking home "Best Insurance Hack" at HackUIowa. Pretty surreal moment when they called our name - we genuinely built something we thought was fun, and it was cool to see the judges agree.
+
+Looking back, the project taught me a lot about making complex topics accessible. Sometimes the answer isn't simplifying the content - it's changing the format entirely.

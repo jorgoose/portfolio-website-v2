@@ -16,19 +16,27 @@ tags:
 
 #### [View on GitHub](https://github.com/jorgoose/frogstagram-live)
 
-Frogstagram is Instagram with one key difference: it only allows photos of frogs. Using a YOLOv11 computer vision model, the platform automatically filters uploads to maintain a strictly frog-focused feed. This creates a unique use case for deploying ML in production while serving a specific community.
+What if Instagram only allowed frog photos? That was the ridiculous question that sparked this project.
 
-Core Technical Features:
-- Frontend built with SvelteKit and Tailwind CSS for responsive, modern UI
-- Backend Service:
-  - FastAPI running on AWS Lambda for efficient API handling
-  - Computer vision using YOLOv11 model in Docker containers via Amazon ECR
-  - Resulted in automated image filtering ensuring frog-only content
-- Other AWS Infrastructure:
-  - S3 for scalable image storage and delivery
-  - Cognito handling user authentication
+Frogstagram is exactly what it sounds like: a social photo-sharing platform where the only content allowed is pictures of frogs. Try to upload a selfie? Rejected. A sunset? Nope. Your cat? Not unless it's a very frog-shaped cat. The twist is that I'm not manually reviewing every upload - a computer vision model handles that automatically.
 
-When users upload a photo, it's sent to a Lambda function running the image classification model. The model determines if the image contains a frog - if it does, the image is stored in S3 and appears in feeds. If not, it's rejected. This process ensures the feed remains only frog photos.
+## The Idea
+
+I wanted an excuse to deploy a machine learning model in a real production environment, but I didn't want to build yet another generic image classifier demo. So I thought: what's the most absurdly specific use case I could come up with? Frog detection it was.
+
+The concept is simple but it touches a lot of interesting technical challenges: user authentication, image storage, running ML inference at scale, and building a responsive frontend that doesn't feel like a tech demo.
+
+## How It Works
+
+When you upload a photo, it doesn't just go straight to the feed. First, it gets sent to an AWS Lambda function running a YOLOv11 object detection model (packaged in a Docker container via Amazon ECR). The model analyzes the image and decides: frog or not frog?
+
+If it detects a frog, congratulations - your photo gets stored in S3 and shows up in everyone's feed. If not, you get a rejection message. It's a harsh world out there for non-frog content.
+
+## The Tech Stack
+
+The frontend is built with SvelteKit and Tailwind CSS, which made it easy to create something that actually looks and feels like a modern social app. The backend runs on FastAPI deployed to AWS Lambda, so it scales automatically and I'm not paying for idle servers.
+
+For authentication, I used AWS Cognito so users can create accounts and have their own profiles. All the images live in S3, which handles the storage and delivery.
 
 <style>
 @media (max-width: 768px) {
@@ -37,7 +45,7 @@ When users upload a photo, it's sent to a Lambda function running the image clas
     width: 100%;
     padding: 20px;
   }
-  
+
   .screenshot-table {
     width: 90%;
     margin: 0 auto;
@@ -88,4 +96,3 @@ When users upload a photo, it's sent to a Lambda function running the image clas
 #### [Live Demo](https://frogstagram.vercel.app)
 
 > Note: The legacy version of this project, which used vanilla JavaScript for the frontend and FastAPI with SQLAlchemy for the backend, and TensorFlow for inference, can be found at [Frogstagram Legacy](https://github.com/jorgoose/frogstagram). The current production version is at [Frogstagram Live](https://github.com/jorgoose/frogstagram-live).
-
