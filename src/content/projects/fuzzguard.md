@@ -11,59 +11,42 @@ tags:
   - Supabase
   - GitHub
   - Software Security
-# Section for tech stack
 ---
-
-<!-- Link to Project Website -->
 
 #### [Visit DevPost](https://devpost.com/software/fuzzguard)
 
-## <!-- Horizontal Line -->
-
 ---
 
-## Inspiration
+## The Idea
 
-The rise in the use of Large Language Models (LLMs) for software development has accelerated code creation, but also the speed at which vulnerabilities can appear. To address this, we explored various code testing methodologies and decided on fuzzing due to its dynamic nature and effectiveness in discovering coding errors and security loopholes.
+With everyone using LLMs to write code faster than ever, I started thinking about the flip side: we're probably also introducing vulnerabilities faster than ever. My team and I wanted to tackle this for a hackathon, and we landed on fuzz testing as our approach. There's something satisfying about throwing random, unexpected inputs at code and watching it break in ways you never anticipated.
 
-## What is FuzzGuard?
+## What We Built
 
-FuzzGuard is a SaaS application designed to improve code security by using fuzz testing. It integrates with GitHub, checks your repository for code coverage, and uses an LLM to generate and execute numerous fuzz tests. The results are then displayed on our platform for easy analysis.
+FuzzGuard connects to your GitHub repository, scans through your Python code to find functions worth testing, and then uses an LLM to generate fuzz tests automatically. The idea is that you shouldn't need to be a security expert to catch edge cases in your code.
 
-## How We Built It
+We built it as a web app where you can link your repo, kick off the analysis, and see the results all in one place. Google's Atheris library handles the actual fuzzing, while Supabase stores everything on the backend.
 
-FuzzGuard's architecture includes:
+## How It Works
 
-- **Python**: For code analysis, test generation, and interfacing with the OpenAI API.
-- **Atheris**: Google's open-source fuzzing engine.
-- **Supabase**: For data storage and management.
+The pipeline goes something like this: we parse your code's AST to figure out what functions exist and what inputs they expect. Then we feed that context to an LLM along with some examples of good fuzz tests. The LLM generates test cases, we run them, collect coverage data, and loop back to generate better tests based on what we learn.
 
-### Key Steps:
+It's a pretty classic feedback loop, but getting the LLM to produce tests that actually compile and run reliably took more iteration than I expected.
 
-1. **Analysis**: Parse the repository's AST to identify functions for fuzz testing.
-2. **Test Generation**: Use LLMs to create tests, providing them with context and examples.
-3. **Execution**: Run the tests, gather coverage reports, and refine tests through a feedback loop.
-4. **Reporting**: Store results in Supabase for frontend display.
+## The Hard Parts
 
-## Challenges
+Getting LLMs to generate valid, runnable fuzz tests was trickier than we thought going in. They'd often produce code that looked right but had subtle issues that broke execution. We spent a lot of hackathon hours on prompt engineering and validation logic.
 
-Integrating LLMs into the fuzz testing pipeline and ensuring seamless GitHub integration were our primary challenges.
+The GitHub integration also had its moments. OAuth flows, API rate limits, handling private repos - all the stuff that seems simple until you're debugging it at 2am.
 
-## Accomplishments
+## What I Took Away
 
-We're proud of developing a functional prototype that effectively integrates LLMs for fuzz testing and smoothly integrates with GitHub.
+This project taught me a lot about the gap between "AI can write code" and "AI can write *reliable* code for a specific purpose." You need good context, good examples, and good error handling to make it work in practice.
 
-## What We Learned
-
-We gained insights into the complexities of using LLMs for software testing and improved our skills in fuzz testing, web development, and project management.
+I also got much more comfortable with fuzz testing as a technique. It's one of those things I'd read about but never really used before this project.
 
 ## What's Next
 
-We plan to:
+We'd love to expand this beyond Python - the same approach should work for other languages with the right fuzzing libraries. And integrating directly into GitHub Actions so tests run automatically on every push would make it much more practical for day-to-day use.
 
-- Expand language support beyond Python.
-- Integrate FuzzGuard into GitHub actions for automated testing.
-
-We're committed to continuously improving FuzzGuard to help developers enhance code security.
-
-#### [Visit FuzzGuard](https://devpost.com/software/fuzzguard)
+#### [Visit DevPost](https://devpost.com/software/fuzzguard)
