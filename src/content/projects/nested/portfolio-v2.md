@@ -10,7 +10,7 @@ tags:
   - CSS
   - HTML
   - TypeScript
-  - Cloudfare Pages
+  - Cloudflare Pages
 ---
 
 ## Why I Rebuilt It
