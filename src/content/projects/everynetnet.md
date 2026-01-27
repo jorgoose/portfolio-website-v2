@@ -1,5 +1,5 @@
 ---
-title: everynetnet.com 🚀
+title: everynetnet.com
 publishDate: 2024-10-06 00:00:00
 img: /assets/projects/everynetnetlogo.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
@@ -12,6 +12,7 @@ tags:
   - Google Cloud Platform
   - Puppeteer
   - Stripe API
+emoji: 🚀
 ---
 
 #### [Visit EveryNetNet.com](https://everynetnet.com/)

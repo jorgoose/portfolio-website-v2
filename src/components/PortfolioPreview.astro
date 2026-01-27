@@ -10,7 +10,10 @@ const { data, slug } = Astro.props.project;
 ---
 
 <a class="card" href={`/projects/${slug}`}>
-  <span class="title">{data.title}</span>
+  <span class="title">
+    {data.emoji && <span class="emoji">{data.emoji}</span>}
+    {data.title}
+  </span>
   <img
     src={data.img}
     alt={data.img_alt || ""}
@@ -50,6 +53,10 @@ const { data, slug } = Astro.props.project;
     background: var(--gray-999);
     color: var(--gray-200);
     border-radius: 0.375rem;
+  }
+
+  .emoji {
+    margin-right: 0.5rem;
   }
 
   img {
