@@ -1,5 +1,5 @@
 ---
-title: Marketmon 🏆 (x2)
+title: Marketmon
 publishDate: 2024-09-04 00:00:00
 img: /assets/projects/marketmon.png
 img_alt: Trading card game interface with financial data-based monsters
@@ -12,6 +12,7 @@ tags:
   - Python
   - Claude API
   - Stability API
+emoji: 🏆
 ---
 
 #### [Visit Marketmon](https://marketmon.vercel.app)

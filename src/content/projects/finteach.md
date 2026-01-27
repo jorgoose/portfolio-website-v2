@@ -1,5 +1,5 @@
 ---
-title: FinTeach 🏆
+title: FinTeach
 publishDate: 2023-11-04 00:00:00
 img: /assets/projects/finteach.jpg
 img_alt: FinTeach
@@ -9,6 +9,7 @@ tags:
   - Dart
   - Flutter
   - OpenAI API
+emoji: 🏆
 ---
 
 #### [View on GitHub](https://github.com/jorgoose/insuriquest)

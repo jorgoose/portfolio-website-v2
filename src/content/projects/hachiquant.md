@@ -1,5 +1,5 @@
 ---
-title: Hachiquant 🚀
+title: Hachiquant
 publishDate: 2025-03-09 00:00:00
 img: /assets/projects/hachiquant-logo.png
 img_alt: Silhouette of the loyal Akita dog Hachiquant
@@ -10,6 +10,7 @@ tags:
   - Axum
   - SvelteKit
   - SQLite
+emoji: 🚀
 ---
 
 #### [Visit Hachiquant](#) *(Coming Soon)*

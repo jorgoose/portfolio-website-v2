@@ -1,5 +1,5 @@
 ---
-title: föd 🎓
+title: föd
 publishDate: 2018-12-01 00:00:00
 img: /assets/projects/fod.jpeg
 img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
@@ -11,6 +11,7 @@ tags:
   - Android Studio
   - MySQL
   - Git
+emoji: 🎓
 ---
 
 This was my first real full-stack project - a group assignment where we had to build something with a mobile frontend and a proper backend. We chose to make a nutrition tracking app because everyone on the team had tried MyFitnessPal at some point and had opinions about what could be better.

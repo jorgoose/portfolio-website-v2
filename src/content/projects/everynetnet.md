@@ -12,6 +12,7 @@ tags:
   - Google Cloud Platform
   - Puppeteer
   - Stripe API
+emoji: 🚀
 ---
 
 #### [Visit EveryNetNet.com](https://everynetnet.com/)
