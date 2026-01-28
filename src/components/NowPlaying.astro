@@ -1,0 +1,198 @@
+<section class="now-playing-section">
+  <header class="section-header stack gap-2 lg:gap-4">
+    <h3>On Repeat</h3>
+    <p>What I've been listening to lately</p>
+  </header>
+
+  <div class="now-playing-container">
+    <div id="now-playing" class="now-playing-card">
+      <div class="now-playing-placeholder">
+        <svg class="spotify-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+          <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+        </svg>
+        <span>Loading...</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  async function fetchNowPlaying() {
+    const container = document.getElementById("now-playing");
+    if (!container) return;
+
+    try {
+      const res = await fetch("/api/now-playing");
+      const data = await res.json();
+
+      if (!data.title) {
+        container.innerHTML = `
+          <div class="now-playing-placeholder">
+            <svg class="spotify-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+              <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+            </svg>
+            <span>Nothing playing right now</span>
+          </div>
+        `;
+        return;
+      }
+
+      const statusText = data.isPlaying ? "Now Playing" : "Recently Played";
+      const statusClass = data.isPlaying ? "status--playing" : "status--recent";
+
+      container.innerHTML = `
+        <a href="${data.songUrl}" target="_blank" rel="noopener noreferrer" class="now-playing-link">
+          <img src="${data.albumArt}" alt="${data.album}" class="album-art" width="88" height="88" />
+          <div class="track-info">
+            <span class="status ${statusClass}">
+              ${data.isPlaying ? '<span class="pulse"></span>' : ''}
+              ${statusText}
+            </span>
+            <span class="track-title">${data.title}</span>
+            <span class="track-artist">${data.artist}</span>
+          </div>
+          <svg class="spotify-icon-small" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+          </svg>
+        </a>
+      `;
+    } catch {
+      container.innerHTML = `
+        <div class="now-playing-placeholder">
+          <svg class="spotify-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+          </svg>
+          <span>Unable to load listening activity</span>
+        </div>
+      `;
+    }
+  }
+
+  fetchNowPlaying();
+  setInterval(fetchNowPlaying, 30000);
+</script>
+
+<style>
+  .now-playing-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .now-playing-container {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .now-playing-card {
+    background: var(--gradient-subtle);
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+
+  .now-playing-card:hover {
+    transform: translateY(-2px);
+  }
+</style>
+
+<style is:global>
+  #now-playing .now-playing-link {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  #now-playing .album-art {
+    width: 88px;
+    height: 88px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  #now-playing .track-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 0;
+    flex: 1;
+  }
+
+  #now-playing .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  #now-playing .status--playing {
+    color: #1db954;
+  }
+
+  #now-playing .status--recent {
+    color: var(--gray-400);
+  }
+
+  #now-playing .pulse {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1db954;
+    animation: np-pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes np-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  #now-playing .track-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--gray-200);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #now-playing .track-artist {
+    font-size: var(--text-md);
+    color: var(--gray-400);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #now-playing .spotify-icon-small {
+    width: 32px;
+    height: 32px;
+    color: #1db954;
+    flex-shrink: 0;
+  }
+
+  #now-playing .spotify-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--gray-500);
+  }
+
+  #now-playing .now-playing-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    color: var(--gray-400);
+    font-size: var(--text-sm);
+  }
+</style>

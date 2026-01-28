@@ -16,6 +16,7 @@ import PortfolioPreview from "../components/PortfolioPreview.astro";
 import ContactCTA from "../components/ContactCTA.astro";
 import Skills from "../components/Skills.astro";
 import Thoughts from "../components/Thoughts.astro";
+import NowPlaying from "../components/NowPlaying.astro";
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection("projects"))
@@ -101,6 +102,7 @@ const projects = (await getCollection("projects"))
 
       <Skills />
       <Thoughts />
+      <NowPlaying />
     </main>
 
     <ContactCTA />
