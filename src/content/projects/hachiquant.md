@@ -1,7 +1,7 @@
 ---
 title: Hachiquant
 publishDate: 2025-03-09 00:00:00
-img: /assets/projects/hachiquant-logo.png
+img: /assets/projects/hachiquant-logo.webp
 img_alt: Silhouette of the loyal Akita dog Hachiquant
 description: |
   Hachiquant is a modern, developer-friendly platform that makes financial data for Japanese companies accessible and consistent. It transforms the complex, scattered financial disclosures from Japan's Financial Services Agency into clean, structured data through a streamlined ETL process and API.

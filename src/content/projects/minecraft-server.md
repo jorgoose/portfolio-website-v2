@@ -1,7 +1,7 @@
 ---
 title: Minecraft Server on Microsoft Azure
 publishDate: 2021-11-01 00:00:00
-img: /assets/projects/mc.jpeg
+img: /assets/projects/mc.webp
 img_alt: Minecraft server console running on Azure VM
 description: |
   My first experience with cloud services - I modified an existing shell script and used it to deploy a JAR file to run a public Minecraft server on a VM provisioned by Microsoft Azure

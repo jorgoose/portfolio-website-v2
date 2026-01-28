@@ -1,7 +1,7 @@
 ---
 title: dungeon_ai
 publishDate: 2019-12-01 00:00:00
-img: /assets/projects/dungeon_ai.jpg
+img: /assets/projects/dungeon_ai.webp
 img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: |
   A full-stack web application meant to remove the need for a traditional D&D Dungeon Master and increase accessibility to new players by allowing users to generate scenarios, monsters, and images for their game using a mix of AI technologies.
@@ -40,7 +40,7 @@ The coolest part? No two playthroughs are the same. The AI comes up with differe
 
 ### The Tech Stack
 
-![Tech Stack Logos](/assets/projects/dungeon_ai_tech_stack.png)
+![Tech Stack Logos](/assets/projects/dungeon_ai_tech_stack.webp)
 
 We went a bit ambitious with the stack for a hackathon: React with Tailwind CSS on the frontend, SpringBoot for the main backend, and a separate FastAPI service running PyTorch for the image generation. Was it overkill? Probably. Did it work? Somehow, yes.
 
@@ -54,7 +54,7 @@ We split the project into three main pieces:
 
 ### The Frontend
 
-![Image of "Game" View Page](/assets/projects/game_view.JPG)
+![Image of "Game" View Page](/assets/projects/game_view.webp)
 *The main game view where the magic happens*
 
 I'm pretty happy with how the UI turned out, especially given the time constraints. We used React Router to handle navigation between the different screens:
@@ -66,7 +66,7 @@ I'm pretty happy with how the UI turned out, especially given the time constrain
 
 ### The Backend
 
-![Springboot Logo](https://miro.medium.com/max/700/1*-uckV8DOh3l0bCvqZ73zYg.png)
+![Springboot Logo](https://miro.medium.com/max/700/1*-uckV8DOh3l0bCvqZ73zYg.webp)
 
 The SpringBoot backend ended up being the brain of the operation. It handles:
 
@@ -83,7 +83,7 @@ This was honestly the part that felt most like magic. Watching Stable Diffusion 
 
 |                Image of a Warrior Character                 |                      Image of Paladin Character                      |             Image of Another Paladin Character              |               Image of a Ghoul Character                |
 | :---------------------------------------------------------: | :------------------------------------------------------------------: | :---------------------------------------------------------: | :-----------------------------------------------------: |
-| ![Image of Warrior Character](/assets/projects/warrior.png) | ![Image of Another Paladin Character](/assets/projects/paladin2.png) | ![Image of Paladin Character](/assets/projects/paladin.png) | ![Image of Ghoul Character](/assets/projects/ghoul.png) |
+| ![Image of Warrior Character](/assets/projects/warrior.webp) | ![Image of Another Paladin Character](/assets/projects/paladin2.webp) | ![Image of Paladin Character](/assets/projects/paladin.webp) | ![Image of Ghoul Character](/assets/projects/ghoul.webp) |
 
 The quality varied, and sometimes the AI would give a character three arms or forget what a sword looks like, but when it worked, it really sold the fantasy.
 

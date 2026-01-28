@@ -1,7 +1,7 @@
 ---
 title: everynetnet.com
 publishDate: 2024-08-01 00:00:00
-img: /assets/projects/everynetnetlogo.jpg
+img: /assets/projects/everynetnetlogo.webp
 img_alt: EveryNetNet logo
 description: |
   A database of net-net stocks (companies trading below their net current asset value) with filtering. Built for value investors who don't want to spend weekends in spreadsheets.

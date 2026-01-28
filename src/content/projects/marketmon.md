@@ -1,7 +1,7 @@
 ---
 title: Marketmon
 publishDate: 2024-09-04 00:00:00
-img: /assets/projects/marketmon.png
+img: /assets/projects/marketmon.webp
 img_alt: Trading card game interface with financial data-based monsters
 description: |
   Marketmon is a web-based trading card game that combines the excitement of battling monsters with real-time financial data from S&P 500 companies, offering an engaging and educational experience in finance and investing.

@@ -1,7 +1,7 @@
 ---
 title: Frogstagram
 publishDate: 2024-10-05 00:00:00
-img: /assets/projects/frogstagram_feed_page.jpg
+img: /assets/projects/frogstagram_feed_page.webp
 img_alt: Frogstagram web application interface showing image feed
 description: |
   An Instagram-inspired platform with a twist: it only allows frog photos. Uses AWS services and computer vision to automatically filter uploads, ensuring only frog images make it to the feed.
@@ -78,13 +78,13 @@ For authentication, I used AWS Cognito so users can create accounts and have the
   <table class="screenshot-table" cellspacing="20">
     <tr>
       <td align="center">
-        <img src="/assets/projects/frogstagram_feed_page.jpg" alt="Frogstagram feed interface">
+        <img src="/assets/projects/frogstagram_feed_page.webp" alt="Frogstagram feed interface">
         <font size="2"><em>Frogstagram feed page</em></font>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="/assets/projects/frogstagram_upload_page.jpg" alt="Frogstagram upload interface">
+        <img src="/assets/projects/frogstagram_upload_page.webp" alt="Frogstagram upload interface">
         <font size="2"><em>Upload interface with ML-powered verification</em></font>
       </td>
     </tr>

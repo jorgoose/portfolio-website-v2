@@ -1,7 +1,7 @@
 ---
 title: ThailandDev
 publishDate: 2025-12-01 00:00:00
-img: /assets/projects/thailand-dev.png
+img: /assets/projects/thailand-dev.webp
 img_alt: Thailand Dev job board platform interface showing tech job listings
 description: |
   A job board for developers seeking visa-sponsored tech roles in Thailand, featuring an AI scraper that adapts to any career site and weekly email digests of new opportunities.

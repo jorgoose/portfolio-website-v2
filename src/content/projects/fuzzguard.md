@@ -1,7 +1,7 @@
 ---
 title: FuzzGuard
 publishDate: 2024-08-06 00:00:00
-img: /assets/projects/fuzzguard.jpg
+img: /assets/projects/fuzzguard.webp
 img_alt: Abstract representation of code being fuzz tested with digital patterns
 description: |
   FuzzGuard is a Software-as-a-Service (SaaS) application designed to enhance code security through dynamic fuzz testing techniques, leveraging Large Language Models (LLMs) for automated test generation and execution.

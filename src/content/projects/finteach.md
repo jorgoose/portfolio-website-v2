@@ -1,7 +1,7 @@
 ---
 title: FinTeach
 publishDate: 2023-11-04 00:00:00
-img: /assets/projects/finteach.jpg
+img: /assets/projects/finteach.webp
 img_alt: FinTeach
 description: |
   FinTeach is an engaging educational app designed to make financial learning accessible and fun for young students.

@@ -1,7 +1,7 @@
 ---
 title: InsuriQuest
 publishDate: 2023-09-20 00:00:00
-img: /assets/projects/insuriquest.png
+img: /assets/projects/insuriquest.webp
 img_alt: InsuriQuest
 description: |
   A hackathon project that turned insurance education into choose-your-own-adventure stories. Won "Best Insurance Hack" at HackUIowa 2023.
