@@ -51,9 +51,46 @@ async function getAccessToken(env: Env) {
 }
 
 export const GET: APIRoute = async ({ locals }) => {
+  // Temporary debug endpoint - visit /api/now-playing?debug=1 to see diagnostics
+  const debug = new URL("http://x").searchParams; // placeholder, actual check below
+
   try {
     const env = getEnv(locals);
+
+    // Check for missing env vars
+    const missing = [
+      !env.SPOTIFY_CLIENT_ID && "SPOTIFY_CLIENT_ID",
+      !env.SPOTIFY_CLIENT_SECRET && "SPOTIFY_CLIENT_SECRET",
+      !env.SPOTIFY_REFRESH_TOKEN && "SPOTIFY_REFRESH_TOKEN",
+    ].filter(Boolean);
+
+    if (missing.length > 0) {
+      return new Response(
+        JSON.stringify({
+          isPlaying: false,
+          _debug: {
+            error: "Missing env vars",
+            missing,
+            hasRuntime: !!(locals as any).runtime,
+            hasRuntimeEnv: !!(locals as any).runtime?.env,
+            runtimeEnvKeys: Object.keys((locals as any).runtime?.env || {}),
+          },
+        }),
+        { status: 200, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
     const accessToken = await getAccessToken(env);
+
+    if (!accessToken) {
+      return new Response(
+        JSON.stringify({
+          isPlaying: false,
+          _debug: { error: "Failed to get access token" },
+        }),
+        { status: 200, headers: { "Content-Type": "application/json" } }
+      );
+    }
 
     // Try currently playing first
     const nowPlayingRes = await fetch(SPOTIFY_NOW_PLAYING_URL, {
@@ -116,14 +153,24 @@ export const GET: APIRoute = async ({ locals }) => {
       }
     }
 
-    return new Response(JSON.stringify({ isPlaying: false }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
-  } catch {
-    return new Response(JSON.stringify({ isPlaying: false }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
+    return new Response(
+      JSON.stringify({
+        isPlaying: false,
+        _debug: {
+          error: "No track data",
+          nowPlayingStatus: nowPlayingRes.status,
+          recentStatus: recentRes.status,
+        },
+      }),
+      { status: 200, headers: { "Content-Type": "application/json" } }
+    );
+  } catch (e) {
+    return new Response(
+      JSON.stringify({
+        isPlaying: false,
+        _debug: { error: e instanceof Error ? e.message : String(e) },
+      }),
+      { status: 200, headers: { "Content-Type": "application/json" } }
+    );
   }
 };
