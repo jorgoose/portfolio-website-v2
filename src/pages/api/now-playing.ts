@@ -8,21 +8,41 @@ const SPOTIFY_NOW_PLAYING_URL =
 const SPOTIFY_RECENTLY_PLAYED_URL =
   "https://api.spotify.com/v1/me/player/recently-played?limit=1";
 
-async function getAccessToken() {
-  const clientId = import.meta.env.SPOTIFY_CLIENT_ID;
-  const clientSecret = import.meta.env.SPOTIFY_CLIENT_SECRET;
-  const refreshToken = import.meta.env.SPOTIFY_REFRESH_TOKEN;
+interface Env {
+  SPOTIFY_CLIENT_ID: string;
+  SPOTIFY_CLIENT_SECRET: string;
+  SPOTIFY_REFRESH_TOKEN: string;
+}
 
+function getEnv(locals: App.Locals): Env {
+  // Cloudflare runtime env (production)
+  const runtime = (locals as any).runtime;
+  if (runtime?.env) {
+    return {
+      SPOTIFY_CLIENT_ID: runtime.env.SPOTIFY_CLIENT_ID,
+      SPOTIFY_CLIENT_SECRET: runtime.env.SPOTIFY_CLIENT_SECRET,
+      SPOTIFY_REFRESH_TOKEN: runtime.env.SPOTIFY_REFRESH_TOKEN,
+    };
+  }
+  // Fallback to import.meta.env (local dev)
+  return {
+    SPOTIFY_CLIENT_ID: import.meta.env.SPOTIFY_CLIENT_ID,
+    SPOTIFY_CLIENT_SECRET: import.meta.env.SPOTIFY_CLIENT_SECRET,
+    SPOTIFY_REFRESH_TOKEN: import.meta.env.SPOTIFY_REFRESH_TOKEN,
+  };
+}
+
+async function getAccessToken(env: Env) {
   const response = await fetch(SPOTIFY_TOKEN_URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
       Authorization:
-        "Basic " + btoa(`${clientId}:${clientSecret}`),
+        "Basic " + btoa(`${env.SPOTIFY_CLIENT_ID}:${env.SPOTIFY_CLIENT_SECRET}`),
     },
     body: new URLSearchParams({
       grant_type: "refresh_token",
-      refresh_token: refreshToken,
+      refresh_token: env.SPOTIFY_REFRESH_TOKEN,
     }),
   });
 
@@ -30,9 +50,10 @@ async function getAccessToken() {
   return data.access_token;
 }
 
-export const GET: APIRoute = async () => {
+export const GET: APIRoute = async ({ locals }) => {
   try {
-    const accessToken = await getAccessToken();
+    const env = getEnv(locals);
+    const accessToken = await getAccessToken(env);
 
     // Try currently playing first
     const nowPlayingRes = await fetch(SPOTIFY_NOW_PLAYING_URL, {
