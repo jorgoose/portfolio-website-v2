@@ -64,6 +64,14 @@ export const GET: APIRoute = async ({ locals }) => {
       !env.SPOTIFY_REFRESH_TOKEN && "SPOTIFY_REFRESH_TOKEN",
     ].filter(Boolean);
 
+    // Show partial env var info for debugging (first 4 + last 4 chars)
+    const mask = (s: string) => s ? `${s.slice(0, 4)}...${s.slice(-4)} (len:${s.length})` : "EMPTY";
+    const envDebug = {
+      clientId: mask(env.SPOTIFY_CLIENT_ID || ""),
+      clientSecret: mask(env.SPOTIFY_CLIENT_SECRET || ""),
+      refreshToken: mask(env.SPOTIFY_REFRESH_TOKEN || ""),
+    };
+
     if (missing.length > 0) {
       return new Response(
         JSON.stringify({
@@ -71,6 +79,7 @@ export const GET: APIRoute = async ({ locals }) => {
           _debug: {
             error: "Missing env vars",
             missing,
+            envDebug,
             hasRuntime: !!(locals as any).runtime,
             hasRuntimeEnv: !!(locals as any).runtime?.env,
             runtimeEnvKeys: Object.keys((locals as any).runtime?.env || {}),
@@ -86,7 +95,10 @@ export const GET: APIRoute = async ({ locals }) => {
       return new Response(
         JSON.stringify({
           isPlaying: false,
-          _debug: { error: tokenResult.error || "Failed to get access token" },
+          _debug: {
+            error: tokenResult.error || "Failed to get access token",
+            envDebug,
+          },
         }),
         { status: 200, headers: { "Content-Type": "application/json" } }
       );
