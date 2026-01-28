@@ -32,7 +32,7 @@ function getEnv(locals: App.Locals): Env {
   };
 }
 
-async function getAccessToken(env: Env): Promise<{ token?: string; error?: string }> {
+async function getAccessToken(env: Env): Promise<string | null> {
   const response = await fetch(SPOTIFY_TOKEN_URL, {
     method: "POST",
     headers: {
@@ -47,64 +47,20 @@ async function getAccessToken(env: Env): Promise<{ token?: string; error?: strin
   });
 
   const data: any = await response.json();
-  if (!response.ok || !data.access_token) {
-    return { error: `Spotify token error: ${response.status} - ${data.error || data.error_description || JSON.stringify(data)}` };
-  }
-  return { token: data.access_token };
+  return data.access_token || null;
 }
 
 export const GET: APIRoute = async ({ locals }) => {
   try {
     const env = getEnv(locals);
+    const accessToken = await getAccessToken(env);
 
-    // Check for missing env vars
-    const missing = [
-      !env.SPOTIFY_CLIENT_ID && "SPOTIFY_CLIENT_ID",
-      !env.SPOTIFY_CLIENT_SECRET && "SPOTIFY_CLIENT_SECRET",
-      !env.SPOTIFY_REFRESH_TOKEN && "SPOTIFY_REFRESH_TOKEN",
-    ].filter(Boolean);
-
-    // Show partial env var info for debugging (first 4 + last 4 chars)
-    const mask = (s: string) => s ? `${s.slice(0, 4)}...${s.slice(-4)} (len:${s.length})` : "EMPTY";
-    const envDebug = {
-      clientId: mask(env.SPOTIFY_CLIENT_ID || ""),
-      clientSecret: mask(env.SPOTIFY_CLIENT_SECRET || ""),
-      refreshToken: mask(env.SPOTIFY_REFRESH_TOKEN || ""),
-    };
-
-    if (missing.length > 0) {
-      return new Response(
-        JSON.stringify({
-          isPlaying: false,
-          _debug: {
-            error: "Missing env vars",
-            missing,
-            envDebug,
-            hasRuntime: !!(locals as any).runtime,
-            hasRuntimeEnv: !!(locals as any).runtime?.env,
-            runtimeEnvKeys: Object.keys((locals as any).runtime?.env || {}),
-          },
-        }),
-        { status: 200, headers: { "Content-Type": "application/json" } }
-      );
+    if (!accessToken) {
+      return new Response(JSON.stringify({ isPlaying: false }), {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      });
     }
-
-    const tokenResult = await getAccessToken(env);
-
-    if (tokenResult.error || !tokenResult.token) {
-      return new Response(
-        JSON.stringify({
-          isPlaying: false,
-          _debug: {
-            error: tokenResult.error || "Failed to get access token",
-            envDebug,
-          },
-        }),
-        { status: 200, headers: { "Content-Type": "application/json" } }
-      );
-    }
-
-    const accessToken = tokenResult.token;
 
     // Try currently playing first
     const nowPlayingRes = await fetch(SPOTIFY_NOW_PLAYING_URL, {
@@ -167,24 +123,14 @@ export const GET: APIRoute = async ({ locals }) => {
       }
     }
 
-    return new Response(
-      JSON.stringify({
-        isPlaying: false,
-        _debug: {
-          error: "No track data",
-          nowPlayingStatus: nowPlayingRes.status,
-          recentStatus: recentRes.status,
-        },
-      }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
-    );
-  } catch (e) {
-    return new Response(
-      JSON.stringify({
-        isPlaying: false,
-        _debug: { error: e instanceof Error ? e.message : String(e) },
-      }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
-    );
+    return new Response(JSON.stringify({ isPlaying: false }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch {
+    return new Response(JSON.stringify({ isPlaying: false }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 };
