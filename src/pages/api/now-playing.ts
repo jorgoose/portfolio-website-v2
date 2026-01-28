@@ -32,7 +32,7 @@ function getEnv(locals: App.Locals): Env {
   };
 }
 
-async function getAccessToken(env: Env) {
+async function getAccessToken(env: Env): Promise<{ token?: string; error?: string }> {
   const response = await fetch(SPOTIFY_TOKEN_URL, {
     method: "POST",
     headers: {
@@ -46,14 +46,14 @@ async function getAccessToken(env: Env) {
     }),
   });
 
-  const data = await response.json();
-  return data.access_token;
+  const data: any = await response.json();
+  if (!response.ok || !data.access_token) {
+    return { error: `Spotify token error: ${response.status} - ${data.error || data.error_description || JSON.stringify(data)}` };
+  }
+  return { token: data.access_token };
 }
 
 export const GET: APIRoute = async ({ locals }) => {
-  // Temporary debug endpoint - visit /api/now-playing?debug=1 to see diagnostics
-  const debug = new URL("http://x").searchParams; // placeholder, actual check below
-
   try {
     const env = getEnv(locals);
 
@@ -80,17 +80,19 @@ export const GET: APIRoute = async ({ locals }) => {
       );
     }
 
-    const accessToken = await getAccessToken(env);
+    const tokenResult = await getAccessToken(env);
 
-    if (!accessToken) {
+    if (tokenResult.error || !tokenResult.token) {
       return new Response(
         JSON.stringify({
           isPlaying: false,
-          _debug: { error: "Failed to get access token" },
+          _debug: { error: tokenResult.error || "Failed to get access token" },
         }),
         { status: 200, headers: { "Content-Type": "application/json" } }
       );
     }
+
+    const accessToken = tokenResult.token;
 
     // Try currently playing first
     const nowPlayingRes = await fetch(SPOTIFY_NOW_PLAYING_URL, {
@@ -98,7 +100,7 @@ export const GET: APIRoute = async ({ locals }) => {
     });
 
     if (nowPlayingRes.status === 200) {
-      const data = await nowPlayingRes.json();
+      const data: any = await nowPlayingRes.json();
       if (data.item) {
         return new Response(
           JSON.stringify({
@@ -128,7 +130,7 @@ export const GET: APIRoute = async ({ locals }) => {
     });
 
     if (recentRes.status === 200) {
-      const data = await recentRes.json();
+      const data: any = await recentRes.json();
       const track = data.items?.[0]?.track;
       if (track) {
         return new Response(
