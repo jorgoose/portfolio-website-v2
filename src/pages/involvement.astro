@@ -59,6 +59,26 @@ import Hero from "../components/Hero.astro";
           <div class="card">
             <div class="card__image">
               <img
+                class="card__image--bottom"
+                src="/assets/chipy_video_screenshot.png"
+                alt="Logan presenting Decoding Fedspeak With Python at ChiPy"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">ChiPy (Chicago Python Users Group)</h3>
+              <div class="card__tags">
+                <p class="job-detail">Featured Speaker</p>
+                <p class="card__description">
+                  Gave a featured talk at ChiPy's March 2025 main meeting called "Decoding 'Fedspeak' With Python." The idea was to use ML and NLP to predict Fed interest rate decisions by analyzing FOMC statements and meeting minutes. Built a TensorFlow neural network that outperformed a linear regression baseline at classifying rate actions (raise, lower, or hold) from the deliberately vague language the Fed uses. The whole pipeline, TF-IDF vectorization, stop-word removal, sentiment scoring, and model training, came in under 200 lines of Python. <a href="https://www.youtube.com/watch?v=M0bx6kvH6ck" target="_blank">Watch the talk on YouTube</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <div class="card__image">
+              <img
                 src="/assets/builddsm_crowd_angle-fotor-20240907152143.jpg"
                 alt="Logan Leading a Machine Learning 101 workshop at the BuildDSM Hackathon"
               />
@@ -433,6 +453,10 @@ import Hero from "../components/Hero.astro";
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    .card__image img.card__image--bottom {
+      object-position: bottom;
     }
 
     .card__button {
