@@ -75,6 +75,20 @@ import Hero from "../components/Hero.astro";
             </div>
           </div>
         </li>
+        <li>
+          <div class="card">
+            <div class="card__image card__image--square">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNomaOK73uaPiLsNjt1jHEueqaLunsjmdiBA&s"
+                alt="Adventis Financial Modeling Program"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Adventis Financial Modeling Program</h3>
+              <p class="cert-detail">Covered various valuation methodologies and required participants to build out models like a DCF from scratch.</p>
+            </div>
+          </div>
+        </li>
       </Grid>
 
       <ContactCTA />
@@ -169,6 +183,10 @@ import Hero from "../components/Hero.astro";
       height: 100%;
       object-fit: contain;
       padding: 1rem;
+    }
+
+    .card__image--square {
+      padding-top: 40%;
     }
 
     .card__content {
