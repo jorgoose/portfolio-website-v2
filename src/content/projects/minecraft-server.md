@@ -1,6 +1,6 @@
 ---
 title: Minecraft Server on Microsoft Azure
-publishDate: 2021-11-01 00:00:00
+publishDate: 2021-12-01 00:00:00
 img: /assets/projects/mc.webp
 img_alt: Minecraft server console running on Azure VM
 description: |
