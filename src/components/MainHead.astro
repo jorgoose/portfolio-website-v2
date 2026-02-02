@@ -26,6 +26,46 @@ const {
 
 <title>{title}</title>
 
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Logan Jorgensen",
+  "url": "https://loganjorgensen.com",
+  "image": "https://loganjorgensen.com/assets/profile/linkedin_pfp.webp",
+  "jobTitle": "Software Engineer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Capital One"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chicago",
+    "addressRegion": "IL",
+    "addressCountry": "US"
+  },
+  "email": "contact.jorgensen@gmail.com",
+  "sameAs": [
+    "https://linkedin.com/in/logan-jorgensen",
+    "https://github.com/jorgoose",
+    "https://jorgensen-logan.medium.com"
+  ],
+  "knowsAbout": [
+    "Software Engineering",
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "FastAPI",
+    "AWS",
+    "Machine Learning"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Iowa State University"
+  }
+})} />
+
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
