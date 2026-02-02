@@ -8,10 +8,16 @@ import Icon from "./Icon.astro";
     <h2>Want to get in touch with me?</h2>
     <p class="cta-subtitle">Whether it's about a project, opportunity, or just to say hi — I'd love to hear from you.</p>
   </div>
-  <CallToAction href="mailto:contact.jorgensen@gmail.com">
-    Send Me a Message
-    <Icon icon="paper-plane-tilt" size="1.2em" />
-  </CallToAction>
+  <div class="cta-buttons">
+    <CallToAction href="mailto:contact.jorgensen@gmail.com">
+      Send Me a Message
+      <Icon icon="paper-plane-tilt" size="1.2em" />
+    </CallToAction>
+    <a href="https://calendar.app.google/v4LK3comv61xPtnT6" target="_blank" rel="noopener noreferrer" class="schedule-btn">
+      Schedule a Chat
+      <Icon icon="calendar" size="1.2em" />
+    </a>
+  </div>
 </aside>
 
 <style>
@@ -43,6 +49,45 @@ import Icon from "./Icon.astro";
     max-width: 35ch;
   }
 
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .schedule-btn {
+    display: flex;
+    place-content: center;
+    text-align: center;
+    padding: 0.56em 2em;
+    gap: 0.8em;
+    color: var(--accent-text-over);
+    text-decoration: none;
+    line-height: 1.1;
+    border-radius: 999rem;
+    overflow: hidden;
+    background: var(--gradient-accent);
+    box-shadow: var(--shadow-md);
+    white-space: nowrap;
+    position: relative;
+    font-size: var(--text-lg);
+  }
+
+  .schedule-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    transition: background-color var(--theme-transition);
+    mix-blend-mode: overlay;
+  }
+
+  .schedule-btn:focus::after,
+  .schedule-btn:hover::after {
+    background-color: hsla(var(--gray-999-basis), 0.3);
+  }
+
   @media (min-width: 50em) {
     aside {
       padding: 7.5rem;
@@ -62,6 +107,16 @@ import Icon from "./Icon.astro";
     .cta-subtitle {
       font-size: var(--text-md);
       max-width: 45ch;
+    }
+
+    .cta-buttons {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+
+    .schedule-btn {
+      padding: 1.125rem 2.5rem;
+      font-size: var(--text-xl);
     }
   }
 </style>
