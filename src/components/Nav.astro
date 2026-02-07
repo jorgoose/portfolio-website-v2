@@ -18,7 +18,14 @@ const iconLinks: {
   label: string;
   href: string;
   icon: keyof typeof iconPaths;
+  download?: boolean;
 }[] = [
+  {
+    label: "Resume",
+    href: "/resume.pdf",
+    icon: "file-arrow-down",
+    download: true,
+  },
   {
     label: "LinkedIn",
     href: "https://linkedin.com/in/logan-jorgensen",
@@ -74,8 +81,8 @@ const iconLinks: {
     <div class="menu-footer">
       <div class="socials">
         {
-          iconLinks.map(({ href, icon, label }) => (
-            <a href={href} class="social">
+          iconLinks.map(({ href, icon, label, download }) => (
+            <a href={href} class="social" {...(download ? { download: "" } : {})}>
               <span class="sr-only">{label}</span>
               <Icon icon={icon} />
             </a>
