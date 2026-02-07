@@ -3,12 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 
 // Define the allProjects object with an optional 'award' field
-const allProjects: Array<{
-  name: string;
-  description: string;
-  tags: string[];
-  award?: string;
-}> = [
+const allProjects = [
   {
     name: "Minecraft Server on Microsoft Azure",
     description: "Deployed and managed a modded Minecraft server on Microsoft Azure.",
@@ -134,9 +129,6 @@ const allProjects: Array<{
 
 // Function to alphabetically sort projects
 const sortedProjects = allProjects.sort((a, b) => a.name.localeCompare(b.name));
-
-// Extract all unique tags for filtering
-const allTags = [...new Set(allProjects.flatMap(project => project.tags))].sort();
 ---
 
 <BaseLayout
@@ -152,22 +144,10 @@ const allTags = [...new Set(allProjects.flatMap(project => project.tags))].sort(
 
       <section>
         <div class="content">
-          <!-- Filter Controls -->
-          <div class="filter-controls">
-            <label for="tech-filter" class="filter-label">Filter by technology:</label>
-            <select id="tech-filter" class="filter-select">
-              <option value="">All Technologies</option>
-              {allTags.map(tag => (
-                <option value={tag}>{tag}</option>
-              ))}
-            </select>
-            <span id="project-count" class="project-count">{sortedProjects.length} projects</span>
-          </div>
-
-          <div class="project-list" id="project-list">
+          <div class="project-list">
             {
               sortedProjects.map(project => (
-                <div class="project-item" data-tags={project.tags.join(',')}>
+                <div class="project-item">
                   <h3>
                     {project.name}
                     {project.award && <span class="award">🏆 {project.award}</span>}
@@ -184,32 +164,6 @@ const allTags = [...new Set(allProjects.flatMap(project => project.tags))].sort(
           </div>
         </div>
       </section>
-
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const filter = document.getElementById('tech-filter') as HTMLSelectElement;
-          const projectList = document.getElementById('project-list');
-          const projectCount = document.getElementById('project-count');
-          const projects = projectList?.querySelectorAll('.project-item');
-
-          filter?.addEventListener('change', () => {
-            const selectedTag = filter.value.toLowerCase();
-            let visibleCount = 0;
-
-            projects?.forEach((project) => {
-              const tags = (project as HTMLElement).dataset.tags?.toLowerCase() || '';
-              const shouldShow = !selectedTag || tags.split(',').some(tag => tag.trim() === selectedTag);
-
-              (project as HTMLElement).style.display = shouldShow ? 'block' : 'none';
-              if (shouldShow) visibleCount++;
-            });
-
-            if (projectCount) {
-              projectCount.textContent = `${visibleCount} project${visibleCount !== 1 ? 's' : ''}`;
-            }
-          });
-        });
-      </script>
     </main>
   </div>
 
@@ -218,45 +172,6 @@ const allTags = [...new Set(allProjects.flatMap(project => project.tags))].sort(
       display: flex;
       flex-direction: column;
       gap: 3.5rem;
-    }
-
-    .filter-controls {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      padding: 1rem;
-      background: var(--gradient-subtle);
-      border: 1px solid var(--gray-800);
-      border-radius: 0.75rem;
-    }
-
-    .filter-label {
-      color: var(--gray-200);
-      font-size: var(--text-md);
-    }
-
-    .filter-select {
-      padding: 0.5rem 1rem;
-      font-size: var(--text-md);
-      background-color: var(--gray-999);
-      color: var(--gray-200);
-      border: 1px solid var(--gray-800);
-      border-radius: 0.5rem;
-      cursor: pointer;
-      min-width: 200px;
-    }
-
-    .filter-select:focus {
-      outline: 2px solid var(--accent-regular);
-      outline-offset: 2px;
-    }
-
-    .project-count {
-      margin-left: auto;
-      color: var(--gray-400);
-      font-size: var(--text-sm);
     }
 
     .project-item {
