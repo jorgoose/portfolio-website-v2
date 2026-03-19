@@ -28,7 +28,7 @@ Accessing financial statement data for Japanese companies is, frankly, a mess. T
 - ZIP files filled with UTF-16 TSVs and XBRL/XML documents instead of structured JSON
 - Scattered documentation across multiple PDFs with limited English support
 
-After banging my head against these problems in previous projects one too many times, I decided enough was enough. I wanted to build something that would make this valuable data accessible to everyone. Just as the loyal Akita dog Hachiquant faithfully waited at Shibuya Station for nearly 10 years, my goal is to make access to Japanese financial data equally consistent and reliable.
+After banging my head against these problems in previous projects one too many times, I decided enough was enough. I wanted to build something that would make this valuable data accessible to everyone. Just as the loyal Akita dog Hachiko faithfully waited at Shibuya Station for nearly 10 years, my goal with the Hachiquant project is to make access to Japanese financial data equally consistent and reliable.
 
 <br />
 
